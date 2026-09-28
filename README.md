@@ -1,3 +1,5 @@
+<p><img src="docs/branding/sda-vision-logo.png" alt="SDA Vision" width="420"></p>
+
 # SDA Vision — version 0.1.0
 
 SDA means **Synthetic-media Discourse Analysis**. This software brings model interpretations, content credentials, local file observations and human reflection together for research and community workshops exploring AI-generated and traditional media.
@@ -5,6 +7,10 @@ SDA means **Synthetic-media Discourse Analysis**. This software brings model int
 An academic research project of **Synthetic Realities**, led by **Dr Sam Martin**, Smart Data Research UK (UKRI) Fellow (Grant number UKRI4010.), Manchester Metropolitan University (MMU). [ORCID](https://orcid.org/0000-0002-4466-8374).
 
 This work was supported by Smart Data Research UK, a UKRI investment; Grant number UKRI4010.
+
+[![Community Workshop](docs/images/community-workshop.png)](https://sdavision.io/)
+
+[Explore the live demo](https://sdavision.io/) · [Facilitator guide](docs/Facilitator_Guide.md)
 
 ## Start here
 
@@ -30,8 +36,14 @@ Read [privacy and data flows](PRIVACY.md) and [security contact](SECURITY.md) wh
 
 The project code and documentation use the [MIT licence](LICENSE). [Example credits and permissions](examples/CREDITS.md), [dependency notices](third_party/README.md) and [partner-logo rights](docs/branding/README.md) identify separate terms. Included examples are ten selectable media items plus the opening practice illustration. The withdrawn illustration, credentials, private data, Git history and private facilitator source key are excluded.
 
-Martin, S. (2026) *SDA Vision: Synthetic-media Discourse Analysis* (version 0.1.0) [Computer software]. Manchester Metropolitan University. Available at: https://sdavision.io/. **Reserved DOI: 10.5281/zenodo.23008103**; this draft DOI becomes publicly registered on publication. Machine-readable citation: [CITATION.cff](CITATION.cff). Source development repository: [Synthetic-Realities/sda-vision](https://github.com/Synthetic-Realities/sda-vision), currently private. Public [demo repository](https://github.com/Synthetic-Realities/sda-vision-demo).
+Martin, S. (2026) *SDA Vision: Synthetic-media Discourse Analysis* (version 0.1.0) [Computer software]. Manchester Metropolitan University. Available at: https://sdavision.io/. **Reserved DOI: 10.5281/zenodo.23008103**; this draft DOI becomes publicly registered on publication. Machine-readable citation: [CITATION.cff](CITATION.cff). Public software repository: [Synthetic-Realities/sda-vision-source](https://github.com/Synthetic-Realities/sda-vision-source). Public [demo repository](https://github.com/Synthetic-Realities/sda-vision-demo).
 
 ## Verification
 
-`ARCHIVE_MANIFEST.json` lists SHA-256 hashes for each file. This is a draft prepared for review on 28 September 2026, based on source commit d497ca6 with the citation-label-2026-09-28.1 display and export revision; the example picker lists supported media and transcript files. The accompanying acceptance record distinguishes the baseline fresh installation from checks on this copy revision. Publication awaits researcher review.
+`ARCHIVE_MANIFEST.json` lists SHA-256 hashes for each file. This is a draft prepared for review on 28 September 2026, based on source commit d497ca6 with the citation-label-2026-09-28.1 display and export revision; the example picker lists supported media and transcript files. The accompanying acceptance record distinguishes the baseline fresh installation from checks on this copy revision. The source archive was approved by Dr Sam Martin after format and device review. The matching software and facilitator-guide Zenodo records are saved drafts awaiting publication. See [release origin](RELEASE_ORIGIN.md) for this repository’s archive baseline and publication metadata changes.
+
+## Affiliation and funding
+
+<p><img src="docs/branding/mmu-logo.png" alt="Manchester Metropolitan University" width="160" /> &nbsp; <img src="docs/branding/sdruk-logo.png" alt="Smart Data Research UK" width="115" /> &nbsp; <img src="docs/branding/ukri-logo.png" alt="UK Research and Innovation" width="190" /></p>
+
+Smart Data Research UK (UKRI) Fellowship, Grant number UKRI4010, hosted at Manchester Metropolitan University. Partner logos identify the affiliation and funding; their rights remain with their owners.

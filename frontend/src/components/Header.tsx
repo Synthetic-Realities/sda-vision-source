@@ -146,7 +146,7 @@ export default function Header({ providers, devMode, view, onToggleView }: Heade
       {SHOWCASE && <>
         <PublicDemoNote />
         <div className="developer-resources">
-          <p>Explore the <a href="https://github.com/Synthetic-Realities/sda-vision-demo" target="_blank" rel="noopener noreferrer">project on GitHub</a> and follow its forthcoming open-source software release for installation on your own computer. Bring SDA Vision into teaching and community sessions with the <a href="#facilitator">illustrated facilitator guide</a>.</p>
+          <p>Download the <a href="https://github.com/Synthetic-Realities/sda-vision-source#start-here" target="_blank" rel="noopener noreferrer">open-source software on GitHub</a> and follow the installation guide to run SDA Vision on your own computer. Bring SDA Vision into teaching and community sessions with the <a href="#facilitator">illustrated facilitator guide</a>.</p>
           <details className="developer-citation">
             <summary>Citation</summary>
             {softwareCitationRows(packageInfo.version).map(([label, text]) => <p key={label}><strong>{label}: </strong>{text}</p>)}

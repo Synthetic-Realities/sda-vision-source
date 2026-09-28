@@ -16,7 +16,7 @@ authors:
     affiliation: "Manchester Metropolitan University (MMU)"
     orcid: "https://orcid.org/0000-0002-4466-8374"
 license: MIT
-repository-code: "https://github.com/Synthetic-Realities/sda-vision"
+repository-code: "https://github.com/Synthetic-Realities/sda-vision-source"
 keywords:
   - synthetic media
   - AI-generated image detection

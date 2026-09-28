@@ -16,11 +16,11 @@ Current draft preparation: 28 September 2026. This record supersedes incomplete 
 | Licence | MIT for project code and associated documentation; see the exact root LICENSE |
 | Media and artwork | Per-file terms in examples/CREDITS.md, third_party, frontend/src/assets/README.md and docs/branding/README.md. Institutional marks retain their owners’ rights. |
 | Contact | smartin@mmu.ac.uk, as recorded in SECURITY.md |
-| Source repository | https://github.com/Synthetic-Realities/sda-vision — private |
+| Source repository | https://github.com/Synthetic-Realities/sda-vision-source — public; original development repository retained privately |
 | Public demo | https://sdavision.io/ — saved results for ten menu examples and an opening practice illustration |
 | Demo repository | https://github.com/Synthetic-Realities/sda-vision-demo |
 | Git identity | Synthetic Realities — Dr Sam Martin <smartin@mmu.ac.uk>; IntoTheDigital authenticates repository operations |
-| Publication state | Two separate **unpublished** Zenodo drafts authorised. Publication and the full source repository’s visibility await researcher review. |
+| Publication state | Two separate **unpublished** Zenodo drafts authorised. Zenodo publication awaits researcher review. A fresh public software repository from the approved archive is authorised. |
 
 ## Software description
 
