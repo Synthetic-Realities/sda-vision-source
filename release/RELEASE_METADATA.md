@@ -1,6 +1,6 @@
 # SDA Vision: release metadata
 
-Current draft preparation: 28 September 2026. This record supersedes incomplete release-identity templates from 24–26 September. Historical test records remain evidence of their dated checkpoints.
+Publication record: 28 September 2026. This record supersedes incomplete release-identity templates from 24–26 September. Historical test records remain evidence of their dated checkpoints.
 
 | Field | Agreed value |
 | --- | --- |
@@ -10,8 +10,10 @@ Current draft preparation: 28 September 2026. This record supersedes incomplete 
 | Affiliation | Manchester Metropolitan University (MMU) |
 | Fellowship | Smart Data Research UK (UKRI) Fellow, Grant number **UKRI4010** |
 | ORCID | https://orcid.org/0000-0002-4466-8374 |
-| Software DOI | **10.5281/zenodo.23008103**, reserved for the unpublished draft |
-| Guide DOI | **10.5281/zenodo.23008189**, reserved for the unpublished draft |
+| Software DOI | **10.5281/zenodo.23008103**, published version 0.1.0 |
+| Guide DOI | **10.5281/zenodo.23008189**, published version 1.4 |
+| Software Concept DOI | **10.5281/zenodo.23008102** — latest published software version |
+| Guide Concept DOI | **10.5281/zenodo.23008188** — latest published guide version |
 | Funding | This work was supported by Smart Data Research UK, a UKRI investment; Grant number UKRI4010. |
 | Licence | MIT for project code and associated documentation; see the exact root LICENSE |
 | Media and artwork | Per-file terms in examples/CREDITS.md, third_party, frontend/src/assets/README.md and docs/branding/README.md. Institutional marks retain their owners’ rights. |
@@ -20,7 +22,7 @@ Current draft preparation: 28 September 2026. This record supersedes incomplete 
 | Public demo | https://sdavision.io/ — saved results for ten menu examples and an opening practice illustration |
 | Demo repository | https://github.com/Synthetic-Realities/sda-vision-demo |
 | Git identity | Synthetic Realities — Dr Sam Martin <smartin@mmu.ac.uk>; IntoTheDigital authenticates repository operations |
-| Publication state | Two separate **unpublished** Zenodo drafts authorised. Zenodo publication awaits researcher review. A fresh public software repository from the approved archive is authorised. |
+| Publication state | Both records published on 28 September 2026 after researcher approval. The source repository is public; the development repository remains private. |
 
 ## Software description
 
@@ -32,7 +34,7 @@ Verdicts follow the versioned agreement rules in the method records. Inconclusiv
 
 ## Files and acceptance
 
-The accompanying acceptance record identifies the application baseline, checks and outstanding physical-device work. Each draft archive has its own file-level SHA-256 manifest. The software archive contains source, installation scripts, locked dependencies, the research frontend, selected example originals and documentation. The guide deposit contains its PDF, illustrated previews, credits and metadata. The editable conference PowerPoint stays local.
+The accompanying acceptance record identifies the application baseline, checks and outstanding physical-device work. Each approved archive has its own file-level SHA-256 manifest. The software archive contains source, installation scripts, locked dependencies, the research frontend, selected example originals and documentation. The guide deposit contains its PDF, illustrated previews, credits and metadata. The editable conference PowerPoint stays local.
 
 Participant data, private run records, credentials, private source keys, AGENTS.md and CONTRIBUTING.md are excluded. The withdrawn illustration is excluded. Existing saved replies and historical reports retain their recorded content.
 
