@@ -2,7 +2,7 @@
 
 # SDA Vision — version 0.1.0
 
-[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23008102.svg)](https://doi.org/10.5281/zenodo.23008102) · [![Facilitator guide DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23008188.svg)](https://doi.org/10.5281/zenodo.23008188)
+[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23008102.svg)](https://zenodo.org/doi/10.5281/zenodo.23008102) · [![Facilitator guide DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23008188.svg)](https://zenodo.org/doi/10.5281/zenodo.23008188)
 
 Software and guide badges link to the latest published version in their separate Zenodo series.
 

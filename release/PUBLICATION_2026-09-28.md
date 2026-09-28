@@ -4,8 +4,8 @@ Dr Sam Martin approved both deposits and the clean public software repository. B
 
 | Resource | Published version | Version DOI | Concept DOI (latest published version) |
 | --- | --- | --- | --- |
-| SDA Vision software | 0.1.0 | [10.5281/zenodo.23008103](https://doi.org/10.5281/zenodo.23008103) | [10.5281/zenodo.23008102](https://doi.org/10.5281/zenodo.23008102) |
-| Facilitator field guide | 1.4 | [10.5281/zenodo.23008189](https://doi.org/10.5281/zenodo.23008189) | [10.5281/zenodo.23008188](https://doi.org/10.5281/zenodo.23008188) |
+| SDA Vision software | 0.1.0 | [10.5281/zenodo.23008103](https://doi.org/10.5281/zenodo.23008103) | [10.5281/zenodo.23008102](https://zenodo.org/doi/10.5281/zenodo.23008102) |
+| Facilitator field guide | 1.4 | [10.5281/zenodo.23008189](https://doi.org/10.5281/zenodo.23008189) | [10.5281/zenodo.23008188](https://zenodo.org/doi/10.5281/zenodo.23008188) |
 
 The software record’s publication date is 28 September 2026; the guide retains its issue date of 27 September. Public record pages, file MD5 checksums and Concept DOI links were verified in the browser.
 
@@ -29,3 +29,7 @@ Sources: [Zenodo release guide](https://help.zenodo.org/docs/github/archive-soft
 ## Verification
 
 TypeScript and the public/research builds pass for the publication-link revision. The previously approved acceptance checks remain the evidence for analysis behaviour and physical devices. GitHub visibility, commit authorship, Pages deployment and live publication links are verified separately at completion.
+
+## Final live verification
+
+Pages run [36403850131](https://github.com/Synthetic-Realities/sda-vision-demo/actions/runs/36403850131) succeeded. The public Developer installation link and About-page publication links were inspected live. Both Concept DOIs resolve to the correct published version through Zenodo’s own DOI resolver. At this check, doi.org returned “DOI Not Found” for both newly published Concept DOIs; badges and latest-version navigation therefore use the working Zenodo DOI resolver. DOI identifiers and canonical citation identifiers are unchanged.

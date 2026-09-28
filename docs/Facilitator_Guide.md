@@ -32,7 +32,7 @@ The guide includes the four activity pages below. Read the preparation notes bef
 
 ## Version and publication
 
-Version 1.4, prepared 27 September 2026 with the scope wording reviewed on 28 September, accompanies the current interface. The PDF is distributed with the GitHub demo and source repository. Its published version DOI is [10.5281/zenodo.23008189](https://doi.org/10.5281/zenodo.23008189). The [guide Concept DOI](https://doi.org/10.5281/zenodo.23008188) links to the latest published guide. The editable conference PowerPoint is separate and is excluded from this pack.
+Version 1.4, prepared 27 September 2026 with the scope wording reviewed on 28 September, accompanies the current interface. The PDF is distributed with the GitHub demo and source repository. Its published version DOI is [10.5281/zenodo.23008189](https://doi.org/10.5281/zenodo.23008189). The [guide Concept DOI](https://zenodo.org/doi/10.5281/zenodo.23008188) links to the latest published guide. The editable conference PowerPoint is separate and is excluded from this pack.
 
 The original media and analysis records have separate credits and scope. The withdrawn Illustration 2 is excluded from the current example catalogue; it does not appear in this guide. The practice illustration remains available.
 

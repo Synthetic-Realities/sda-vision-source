@@ -13,4 +13,4 @@ Publication updates following that import concern README presentation, the publi
 
 The development repository remains private. This public repository carries only the approved source snapshot and subsequent publication updates.
 
-The software Concept DOI is [10.5281/zenodo.23008102](https://doi.org/10.5281/zenodo.23008102); the guide Concept DOI is [10.5281/zenodo.23008188](https://doi.org/10.5281/zenodo.23008188). These identify separate version series. Use the version DOIs above for exact citations. The approved deposit files remain byte-for-byte unchanged.
+The software Concept DOI is [10.5281/zenodo.23008102](https://zenodo.org/doi/10.5281/zenodo.23008102); the guide Concept DOI is [10.5281/zenodo.23008188](https://zenodo.org/doi/10.5281/zenodo.23008188). These identify separate version series. Use the version DOIs above for exact citations. The approved deposit files remain byte-for-byte unchanged.
