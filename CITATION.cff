@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use SDA Vision in your research, please cite it as below."
+title: "SDA Vision"
+abstract: >-
+  SDA stands for Synthetic-media Discourse Analysis.
+  A research tool for examining AI-generated and traditional media using model interpretations,
+  content credentials and local forensic cues. Community Workshop and an illustrated facilitator guide
+  support discussion and export, with participant responses kept separate from
+  automated findings. The public website uses prepared examples and saved results.
+type: software
+version: 0.1.0
+doi: 10.5281/zenodo.23008103
+authors:
+  - family-names: Martin
+    given-names: "Dr Sam"
+    affiliation: "Manchester Metropolitan University (MMU)"
+    orcid: "https://orcid.org/0000-0002-4466-8374"
+license: MIT
+repository-code: "https://github.com/Synthetic-Realities/sda-vision"
+keywords:
+  - synthetic media
+  - AI-generated image detection
+  - C2PA content credentials
+  - provenance
+  - misinformation
+  - digital methods
+  - Synthetic-media Discourse Analysis
+# This work was supported by Smart Data Research UK, a UKRI investment; Grant number UKRI4010.
+# Version 0.1.0 is prepared for an unpublished Zenodo draft. DOI reserved, not registered until publication.
+
+# An academic research project of Synthetic Realities, led by Dr Sam Martin, Smart Data Research UK (UKRI) Fellow (Grant number UKRI4010.), Manchester Metropolitan University (MMU). ORCID: https://orcid.org/0000-0002-4466-8374.

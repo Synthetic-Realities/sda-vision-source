@@ -1,0 +1,11 @@
+.audio-preview { position: relative; width: 100%; min-width: 0; padding: 12px; color: #16383b; background: #f3f7f8; border-radius: 6px; }
+.audio-preview-artwork { display: grid; place-items: center; min-height: 100px; }
+.audio-preview-artwork img { display: block; width: 100%; height: auto; object-fit: contain; }
+/* Reserve a clear foreground area so the player leaves all artwork readable. */
+.audio-preview-controls { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 14px; width: fit-content; max-width: 100%; margin: 12px auto 0; padding: 8px 12px; background: #fff; border: 1px solid #b8cdcf; border-radius: 12px; box-shadow: 0 2px 8px #16383b14; }
+.audio-preview-badge { display: flex; align-items: center; gap: 8px; color: #116d73; font-size: 14px; font-weight: 700; }
+.audio-preview-controls audio { display: block; width: 300px; max-width: 100%; height: 42px; }
+@media (max-width: 520px) {
+  .audio-preview { padding: 8px; }
+  .audio-preview-controls { width: 100%; padding: 8px; gap: 4px; }
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "examples": [
+    {
+      "filename": "animal-portrait.jpg",
+      "sha256": "bdc5c19d4211d9c9f9f8dce5bf4e4dec29e9b32e308ff12a60979481e928154f"
+    },
+    {
+      "filename": "earth-image.jpg",
+      "sha256": "a4bad2aba040fd992aff7483eee6166943e232061b82d7149b2060786719753b"
+    },
+    {
+      "filename": "illustration-1.png",
+      "sha256": "137f1b7c292c882be741e1a6c881ab4a2082c7dd6ab2181d63304000a0d92252"
+    },
+    {
+      "filename": "illustration-2.png",
+      "sha256": "6693be931db5fb33a8cacfae382bf3bc79fc23b0d9f8e967015a663688d8c8f5"
+    },
+    {
+      "filename": "infographic.pdf",
+      "sha256": "02915f051b6eb2c9ef0c21f5bb20c4229ca21324bf20172f3867c32c299a5924"
+    },
+    {
+      "filename": "journal-diagram.png",
+      "sha256": "c9a680547869618d7c63648d317b1f27c03ede59d5113a7cd6818f5ce2bd654e"
+    },
+    {
+      "filename": "journal-image.png",
+      "sha256": "b11aa1e8c5c17a9496d362987bd4bf0c00a83bccd3a4a704f0f6ab7a7cf6fc8d"
+    },
+    {
+      "filename": "podcast.m4a",
+      "sha256": "58663a6a9e4b634bdb703ead0aaa7cd6dce7fbf97e70c3c1cc61b3311b94c0b4"
+    },
+    {
+      "filename": "presentation.pptx",
+      "sha256": "d0ec89da564078611922195fca82364f2f8e63d253d02a6d9bb672a8265c5f15"
+    },
+    {
+      "filename": "social-media-image.png",
+      "sha256": "f849e223762889e4d091fdf09caae3de19bff4cdc6e0024b50379276318f9fe7"
+    },
+    {
+      "filename": "animated-video.mov",
+      "sha256": "af5b2c84950d66ce32b4d7f603314a7fc70a9353d397ca71aa78d35e2327ce23"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "source_filename": "presentation.pptx",
+  "source_sha256": "d0ec89da564078611922195fca82364f2f8e63d253d02a6d9bb672a8265c5f15",
+  "slide_count": 14,
+  "render": "Static slide renders from the approved PPTX; original file unchanged. Embedded animations are not played.",
+  "files": [
+    {
+      "path": "slide-01.jpg",
+      "bytes": 895453,
+      "sha256": "11bb3b45bee96d8aea0840ae84597ccbd56f3aa60613058d1aed7e02a2b14fc9"
+    },
+    {
+      "path": "slide-02.jpg",
+      "bytes": 721488,
+      "sha256": "6fa0a8fd4cffd163aab7b2d64dd541733fef6c9c7a446dc889b10fb6872a0cde"
+    },
+    {
+      "path": "slide-03.jpg",
+      "bytes": 556435,
+      "sha256": "0de00d78f96ac6edf30c384bc8d02350714fe5238ddb58b8c0b50fb0cb1f5a2a"
+    },
+    {
+      "path": "slide-04.jpg",
+      "bytes": 666616,
+      "sha256": "5258d236ea33e67a87d1be36f861a4458fbbe45e4aeb2cc793dfbd09c216db4b"
+    },
+    {
+      "path": "slide-05.jpg",
+      "bytes": 525827,
+      "sha256": "b0eaf3c3c9314817a5d61d7d894730a8e1207eefc56c8afda627537d205fd906"
+    },
+    {
+      "path": "slide-06.jpg",
+      "bytes": 567799,
+      "sha256": "8c5b90fe9d3515425ef7f689add07d3db113a7a5bfff861950c08dc958112860"
+    },
+    {
+      "path": "slide-07.jpg",
+      "bytes": 810574,
+      "sha256": "7f1e1eebafaccb5ea715e80c2182516663424be8b2857c59632935d5b6e8aa06"
+    },
+    {
+      "path": "slide-08.jpg",
+      "bytes": 600097,
+      "sha256": "8c287652ec90ffd5eb4679c1713773af3828d28357c731f7a94f4de059313e6a"
+    },
+    {
+      "path": "slide-09.jpg",
+      "bytes": 821528,
+      "sha256": "f57efd914d3c2de55186f083a5f33b73520857d161e0978942b90959bfa65e66"
+    },
+    {
+      "path": "slide-10.jpg",
+      "bytes": 689783,
+      "sha256": "d585991ec07bd5ae23b05c282b284b0de481b318f190f24c9996b971f0b6b7c4"
+    },
+    {
+      "path": "slide-11.jpg",
+      "bytes": 607395,
+      "sha256": "c5e838c71b33393c3a04a4ed53445b4e0884d130bc71e94b07be135d373fbd5b"
+    },
+    {
+      "path": "slide-12.jpg",
+      "bytes": 543815,
+      "sha256": "7ea5bcaf106449a078810243306efd465d01ebeee28b840aa18fbe6722b016b2"
+    },
+    {
+      "path": "slide-13.jpg",
+      "bytes": 804181,
+      "sha256": "26661b67bf8fb15a2065167df0b79b53f77b50dc04720fde27b134bca5e90089"
+    },
+    {
+      "path": "slide-14.jpg",
+      "bytes": 801574,
+      "sha256": "03a7f898013e69671bc08c07f4e2c7e3099897bae35f36d1bc83eaa9192e27e2"
+    }
+  ]
+}

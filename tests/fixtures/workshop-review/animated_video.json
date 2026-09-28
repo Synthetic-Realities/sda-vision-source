@@ -1,0 +1,503 @@
+{
+  "consensus": {
+    "overall_rating": 84,
+    "score_basis": "mean_frame_ratings",
+    "overall_verdict": "synthetic_likely",
+    "confidence": "medium",
+    "headline": "Leaning synthetic",
+    "explanation": "4 of 4 frames read as synthetic or edited.",
+    "agreement": "frames mostly synthetic",
+    "decision_trace": [
+      {
+        "step": "frame_agreement",
+        "frames": 4,
+        "synthetic_frames": 4,
+        "authentic_frames": 0,
+        "rating_spread": 8
+      },
+      {
+        "step": "verdict",
+        "value": "synthetic_likely",
+        "confidence": "medium",
+        "reason": "4 of 4 frames read as synthetic or edited."
+      }
+    ],
+    "supporting": [
+      {
+        "name": "Claude Vision",
+        "rating": 90,
+        "verdict": "synthetic_likely",
+        "note": "Worst of 4 frames (00:09): synthetic likelihood 90/100; tells: glowing swirling portal inside brick archway rendered seamlessly into scene lighting, smooth, waxy skin texture with painterly softness on all three faces, uniformly cinematic teal-orange grade and volumetric haze typical of generative video models, fruit in crates and baskets rendered as repetitive, near-identical blobs with little individual detail"
+      },
+      {
+        "name": "OpenAI Vision",
+        "rating": 88,
+        "verdict": "synthetic_likely",
+        "note": "Worst of 4 frames (00:12): synthetic likelihood 88/100; tells: Translucent figures overlap the storefront with smeared, poorly resolved anatomy., Window figures do not clearly correspond to the foreground woman's pose or position., Dragon-like creature behind the left figure has soft, indistinct anatomical boundaries., Costume details and produce have unusually uniform, painterly surface smoothing."
+      },
+      {
+        "name": "Gemini Vision",
+        "rating": 68,
+        "verdict": "synthetic_likely",
+        "note": "Worst of 4 frames (00:03): synthetic likelihood 68/100; tells: CGI or generative rendering textures on creature scales, unnatural lighting blend between creature and tunnel background, diffuse glow inconsistency around wrist gauntlet projection, smooth plastic-like skin texture on subject"
+      }
+    ],
+    "not_decisive": [
+      {
+        "name": "Local forensic cues",
+        "rating": 47,
+        "verdict": "partially_synthetic",
+        "note": "Supporting observation; considered alongside the model assessments."
+      },
+      {
+        "name": "C2PA Content Credentials",
+        "rating": null,
+        "verdict": "inconclusive",
+        "note": "Embedded credentials: none found. Origin remains unresolved by this check."
+      }
+    ],
+    "visible_text": "SLANE NW EASE (partially legible, likely garbled)",
+    "vaccine_codes": [],
+    "disclaimer": "Research assessment. Review alongside source information and context."
+  },
+  "providers": [
+    {
+      "id": "claude",
+      "name": "Claude Vision",
+      "kind": "vision",
+      "status": "ok",
+      "rating": 90,
+      "verdict": "synthetic_likely",
+      "confidence": "medium",
+      "summary": "Worst of 4 frames (00:09): synthetic likelihood 90/100; tells: glowing swirling portal inside brick archway rendered seamlessly into scene lighting, smooth, waxy skin texture with painterly softness on all three faces, uniformly cinematic teal-orange grade and volumetric haze typical of generative video models, fruit in crates and baskets rendered as repetitive, near-identical blobs with little individual detail",
+      "evidence": [
+        "Frame 00:03: 85/100",
+        "Frame 00:06: 88/100",
+        "Frame 00:09: 90/100",
+        "Frame 00:12: 88/100",
+        "Glowing swirling portal inside brick archway rendered seamlessly into scene lighting",
+        "Smooth, waxy skin texture with painterly softness on all three faces",
+        "Uniformly cinematic teal-orange grade and volumetric haze typical of generative video models",
+        "Fruit in crates and baskets rendered as repetitive, near-identical blobs with little individual detail",
+        "Illegible, smeared signage on building in background portal view",
+        "Left woman's hand-held apple and basket handle show soft, ambiguous edges",
+        "Wet cobblestones with generic, pattern-like texture and reflections lacking consistent light sources",
+        "Filename indicates frame extracted from an animated video",
+        "Caveat: Assessment is based on a single compressed frame. A skilled VFX composite or CGI production could produce similar traits, so the original video, its metadata and its provenance should be checked."
+      ],
+      "visible_text": "SLANE NW EASE (partially legible, likely garbled)",
+      "vaccine_relevance": null,
+      "model": "claude-opus-5-5",
+      "latency_ms": 0,
+      "raw": {
+        "per_frame": [
+          {
+            "frame": "00:03",
+            "rating": 85,
+            "verdict": "synthetic_likely"
+          },
+          {
+            "frame": "00:06",
+            "rating": 88,
+            "verdict": "synthetic_likely"
+          },
+          {
+            "frame": "00:09",
+            "rating": 90,
+            "verdict": "synthetic_likely"
+          },
+          {
+            "frame": "00:12",
+            "rating": 88,
+            "verdict": "synthetic_likely"
+          }
+        ],
+        "representative": "00:09"
+      }
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI Vision",
+      "kind": "vision",
+      "status": "ok",
+      "rating": 88,
+      "verdict": "synthetic_likely",
+      "confidence": "medium",
+      "summary": "Worst of 4 frames (00:12): synthetic likelihood 88/100; tells: Translucent figures overlap the storefront with smeared, poorly resolved anatomy., Window figures do not clearly correspond to the foreground woman's pose or position., Dragon-like creature behind the left figure has soft, indistinct anatomical boundaries., Costume details and produce have unusually uniform, painterly surface smoothing.",
+      "evidence": [
+        "Frame 00:03: 85/100",
+        "Frame 00:06: 83/100",
+        "Frame 00:09: 80/100",
+        "Frame 00:12: 88/100",
+        "Translucent figures overlap the storefront with smeared, poorly resolved anatomy.",
+        "Window figures do not clearly correspond to the foreground woman's pose or position.",
+        "Dragon-like creature behind the left figure has soft, indistinct anatomical boundaries.",
+        "Costume details and produce have unusually uniform, painterly surface smoothing.",
+        "Caveat: Conventional CGI, compositing, and video motion blur could explain these effects; the small shop lettering is not reliably legible."
+      ],
+      "visible_text": "QUICK LANE",
+      "vaccine_relevance": null,
+      "model": "gpt-6-astra",
+      "latency_ms": 0,
+      "raw": {
+        "per_frame": [
+          {
+            "frame": "00:03",
+            "rating": 85,
+            "verdict": "synthetic_likely"
+          },
+          {
+            "frame": "00:06",
+            "rating": 83,
+            "verdict": "synthetic_likely"
+          },
+          {
+            "frame": "00:09",
+            "rating": 80,
+            "verdict": "synthetic_likely"
+          },
+          {
+            "frame": "00:12",
+            "rating": 88,
+            "verdict": "synthetic_likely"
+          }
+        ],
+        "representative": "00:12"
+      }
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini Vision",
+      "kind": "vision",
+      "status": "ok",
+      "rating": 68,
+      "verdict": "synthetic_likely",
+      "confidence": "medium",
+      "summary": "Worst of 4 frames (00:03): synthetic likelihood 68/100; tells: CGI or generative rendering textures on creature scales, unnatural lighting blend between creature and tunnel background, diffuse glow inconsistency around wrist gauntlet projection, smooth plastic-like skin texture on subject",
+      "evidence": [
+        "Frame 00:03: 68/100",
+        "Frame 00:06: 68/100",
+        "Frame 00:09: 38/100",
+        "Frame 00:12: 35/100",
+        "CGI or generative rendering textures on creature scales",
+        "Unnatural lighting blend between creature and tunnel background",
+        "Diffuse glow inconsistency around wrist gauntlet projection",
+        "Smooth plastic-like skin texture on subject",
+        "Caveat: Distinction between high-end commercial VFX/CGI and fully generative AI video frames requires full file or temporal analysis."
+      ],
+      "visible_text": "SEANE NIH BA",
+      "vaccine_relevance": null,
+      "model": "gemini-3.8-flash",
+      "latency_ms": 0,
+      "raw": {
+        "per_frame": [
+          {
+            "frame": "00:03",
+            "rating": 68,
+            "verdict": "synthetic_likely"
+          },
+          {
+            "frame": "00:06",
+            "rating": 68,
+            "verdict": "synthetic_likely"
+          },
+          {
+            "frame": "00:09",
+            "rating": 38,
+            "verdict": "authentic_likely"
+          },
+          {
+            "frame": "00:12",
+            "rating": 35,
+            "verdict": "authentic_likely"
+          }
+        ],
+        "representative": "00:03"
+      }
+    },
+    {
+      "id": "c2pa",
+      "name": "C2PA Content Credentials",
+      "kind": "provenance",
+      "status": "ok",
+      "rating": null,
+      "verdict": "inconclusive",
+      "confidence": null,
+      "summary": "Embedded credentials: none found. Origin remains unresolved by this check.",
+      "evidence": [
+        "Coverage: credentials embedded in the submitted file. External credentials were not retrieved.",
+        "Verifier: c2pa-python 0.37.12; native SDK 0.91.0; specification target 2.4; policy embedded-offline-reviewed-trust-v3.",
+        "Offline embedded-manifest verification; no network trust-list, manifest or revocation refresh.",
+        "No reviewed local C2PA trust snapshot installed. Provenance overrides are disabled."
+      ],
+      "visible_text": null,
+      "vaccine_relevance": null,
+      "model": null,
+      "latency_ms": 64,
+      "raw": {
+        "validation": {
+          "integrity": "absent",
+          "trust": "unknown",
+          "complete": false
+        },
+        "sdk_version": "0.37.12",
+        "native_sdk_version": "0.91.0",
+        "specification_target": "2.4",
+        "verification_policy": "embedded-offline-reviewed-trust-v3",
+        "network_access": false,
+        "trust_policy": {
+          "approved": false,
+          "scope": "sdk-default-unreviewed",
+          "reason": "No reviewed local C2PA trust snapshot installed."
+        }
+      }
+    },
+    {
+      "id": "local",
+      "name": "Local forensic cues",
+      "kind": "forensic",
+      "status": "ok",
+      "rating": 47,
+      "verdict": "partially_synthetic",
+      "confidence": "low",
+      "summary": "Worst of 4 frames (00:03): Heuristic synthetic likelihood 47/100 from metadata + pixel statistics.",
+      "evidence": [
+        "Frame 00:03: 47/100",
+        "Frame 00:06: 47/100",
+        "Frame 00:09: 47/100",
+        "Frame 00:12: 47/100",
+        "No camera EXIF (common in AI exports, screenshots, and re-saves).",
+        "ELA mean 0.5, peak 14 (uniform high ELA can indicate generation/heavy edit).",
+        "High-frequency noise std 2.95 (very low/very uniform noise is a synthesis cue).",
+        "Spectral peakiness 39.98 (periodic frequency peaks can mark generated textures)."
+      ],
+      "visible_text": null,
+      "vaccine_relevance": null,
+      "model": null,
+      "latency_ms": 63,
+      "raw": {
+        "per_frame": [
+          {
+            "frame": "00:03",
+            "rating": 47,
+            "verdict": "partially_synthetic"
+          },
+          {
+            "frame": "00:06",
+            "rating": 47,
+            "verdict": "partially_synthetic"
+          },
+          {
+            "frame": "00:09",
+            "rating": 47,
+            "verdict": "partially_synthetic"
+          },
+          {
+            "frame": "00:12",
+            "rating": 47,
+            "verdict": "partially_synthetic"
+          }
+        ],
+        "representative": "00:03"
+      }
+    }
+  ],
+  "frames": [
+    {
+      "frame": "00:03",
+      "rating": 85,
+      "verdict": "synthetic_likely",
+      "phash": "c5366f61390f21cd"
+    },
+    {
+      "frame": "00:06",
+      "rating": 83,
+      "verdict": "synthetic_likely",
+      "phash": "997262669b9d1d07"
+    },
+    {
+      "frame": "00:09",
+      "rating": 80,
+      "verdict": "synthetic_likely",
+      "phash": "c4ad60432f5b5753"
+    },
+    {
+      "frame": "00:12",
+      "rating": 88,
+      "verdict": "synthetic_likely",
+      "phash": "85e53a3e4a636b38"
+    }
+  ],
+  "phashes": [
+    "c5366f61390f21cd",
+    "997262669b9d1d07",
+    "c4ad60432f5b5753",
+    "85e53a3e4a636b38"
+  ],
+  "audio_inspection": {
+    "method_version": "audio-local-v1",
+    "input_sha256": "af5b2c84950d66ce32b4d7f603314a7fc70a9353d397ca71aa78d35e2327ce23",
+    "status": "present",
+    "stream_count": 1,
+    "tracks": [
+      {
+        "index": 0,
+        "codec": "aac",
+        "channels": 2,
+        "sample_rate": 44100,
+        "duration_seconds": 15.070499,
+        "samples": [
+          {
+            "start_seconds": 0.0,
+            "duration_seconds": 3.0,
+            "peak_dbfs": -11.5,
+            "signal_above_minus_60_dbfs": true
+          },
+          {
+            "start_seconds": 6.035,
+            "duration_seconds": 3.0,
+            "peak_dbfs": -7.9,
+            "signal_above_minus_60_dbfs": true
+          },
+          {
+            "start_seconds": 12.07,
+            "duration_seconds": 3.0,
+            "peak_dbfs": -8.9,
+            "signal_above_minus_60_dbfs": true
+          }
+        ],
+        "decode_status": "decoded"
+      }
+    ],
+    "synthetic_audio_assessed": false,
+    "notes": [
+      "Audio-level measurements cover the sampled windows. The remaining audio has not been inspected by this check."
+    ],
+    "provenance_scope": "Original-file credentials are recorded separately. Credential coverage of this audio track: unresolved."
+  },
+  "meta": {
+    "report_id": "cb156800-47b6-4687-a9fa-67963f5aa819",
+    "input_sha256": "af5b2c84950d66ce32b4d7f603314a7fc70a9353d397ca71aa78d35e2327ce23",
+    "method_version": "pdf-preparation-2026-09-26.1",
+    "context_sha256": "1bc166797a8ce62a5e71aaf8a9e42b5221b28c450082a8d5c22163235595d487",
+    "extraction_policy": {
+      "pdf_mode": "auto",
+      "min_figure_px": 300
+    },
+    "tool": "SDA Vision",
+    "version": "0.1.0",
+    "panel_version": "panel-2026-09-24",
+    "generated_at": "2026-09-27T21:00:50.708133+00:00",
+    "filename": "animated-video.mov",
+    "kind": "video",
+    "frame_count": 4,
+    "frames_found": 4,
+    "notes": [
+      "Duration 15s; sampled 4 frame(s).",
+      "Audio tracks inspected locally. Soundtrack uploads require a separate optional check; AI-origin detection from sound is outside this workflow.",
+      "Visual assessment covers the sampled still frames. Soundtrack checks are recorded separately; continuous motion is outside this assessment.",
+      "Completed provider replies recovered offline after a local thumbnail error. Response-to-frame associations were reconstructed from the distinct scene descriptions; individual API timings were not retained."
+    ],
+    "mode": "general",
+    "elapsed_ms": 0,
+    "models": [
+      "claude-opus-5-5",
+      "gemini-3.8-flash",
+      "gpt-6-astra"
+    ],
+    "thumbnail": "data:image/jpeg;base64,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"
+  },
+  "recording_audit": {
+    "paid_requests": 12,
+    "successful_responses": 12,
+    "raw_response_mapping": [
+      {
+        "provider": "claude",
+        "frame": "00:03",
+        "response_file": "12-api.anthropic.com.json",
+        "response_sha256": "e94cbca10525e55928bc4d08cc7396dc82b46da7412ffda488e2ef24cccf602a",
+        "association_basis": "woman with glowing wrist device and dragon in tunnel"
+      },
+      {
+        "provider": "claude",
+        "frame": "00:06",
+        "response_file": "07-api.anthropic.com.json",
+        "response_sha256": "50525f494d256e56325617d1901ddfa8a818c327b50b778933fb902443c00f55",
+        "association_basis": "circular tiled tunnel with distant CHICK/QUICK LANE sign"
+      },
+      {
+        "provider": "claude",
+        "frame": "00:09",
+        "response_file": "05-api.anthropic.com.json",
+        "response_sha256": "67ab4a0990795ca622f8ee34e370ac72f04dcbfb07196c5721415f6611faed5a",
+        "association_basis": "three market sellers, apple baskets and circular portal"
+      },
+      {
+        "provider": "claude",
+        "frame": "00:12",
+        "response_file": "10-api.anthropic.com.json",
+        "response_sha256": "fc730ed6239954c466d4e206850784f3f7c7bf92ab6a84962fd8b4c599786af7",
+        "association_basis": "storefront, translucent duplicate figures, woman and dragon"
+      },
+      {
+        "provider": "openai",
+        "frame": "00:03",
+        "response_file": "08-api.openai.com.json",
+        "response_sha256": "19027b041b6ce22761d17d57449fa245fc7ddd30e9214d03535ef96c0e9c306a",
+        "association_basis": "woman with glowing wrist device and dragon in tunnel"
+      },
+      {
+        "provider": "openai",
+        "frame": "00:06",
+        "response_file": "09-api.openai.com.json",
+        "response_sha256": "39a85002b0a03f66496a966c95eaebfa30832f7d50b58ed7a4d93b03c1d2a3ff",
+        "association_basis": "circular tiled tunnel with distant CHICK/QUICK LANE sign"
+      },
+      {
+        "provider": "openai",
+        "frame": "00:09",
+        "response_file": "06-api.openai.com.json",
+        "response_sha256": "b4f78c73bd136dd24eb8fee6872c3d21df189361269839a4b3f471338f8ca8d0",
+        "association_basis": "three market sellers, apple baskets and circular portal"
+      },
+      {
+        "provider": "openai",
+        "frame": "00:12",
+        "response_file": "11-api.openai.com.json",
+        "response_sha256": "6faffa1e842087659d6a701b7a08b879f6755cd63908419bb78b9732befd7aed",
+        "association_basis": "storefront, translucent duplicate figures, woman and dragon"
+      },
+      {
+        "provider": "gemini",
+        "frame": "00:03",
+        "response_file": "03-generativelanguage.googleapis.com.json",
+        "response_sha256": "fa5919f0d4a4c7c726c8e0c00bbdd8b9bf32e865d5333f76830ae6b041d25717",
+        "association_basis": "woman with glowing wrist device and dragon in tunnel"
+      },
+      {
+        "provider": "gemini",
+        "frame": "00:06",
+        "response_file": "01-generativelanguage.googleapis.com.json",
+        "response_sha256": "c07172e114b7e24a407300fc17bb48d7d3b4719a31ba2a55e94c12664db40e16",
+        "association_basis": "circular tiled tunnel with distant CHICK/QUICK LANE sign"
+      },
+      {
+        "provider": "gemini",
+        "frame": "00:09",
+        "response_file": "04-generativelanguage.googleapis.com.json",
+        "response_sha256": "d3383370f9c79101f47ecb5e0fe4507e382ea8817a04f93011c2cf0980e103cf",
+        "association_basis": "three market sellers, apple baskets and circular portal"
+      },
+      {
+        "provider": "gemini",
+        "frame": "00:12",
+        "response_file": "02-generativelanguage.googleapis.com.json",
+        "response_sha256": "a26b129c7ce68d4ab95ff7bf5ca6a1e7b6dc587581d7cef8b485f3b7d3a78dfd",
+        "association_basis": "storefront, translucent duplicate figures, woman and dragon"
+      }
+    ],
+    "mapping_status": "manually_reconstructed_from_distinct_scene_content",
+    "network_calls_during_recovery": 0,
+    "latency_values": "unavailable; zero placeholders"
+  }
+}

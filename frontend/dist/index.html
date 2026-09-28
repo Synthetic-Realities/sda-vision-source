@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-theme="studio">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SDA Vision | Synthetic media research and community workshops</title>
+    <link rel="icon" type="image/png" href="./branding/sda-vision-favicon.png?v=20260927">
+    <meta name="description" content="SDA Vision (Synthetic-media Discourse Analysis). Explore AI-generated and traditional media through prepared examples, saved assessments and community workshop activities.">
+    <meta name="author" content="Dr Sam Martin, Synthetic Realities, Manchester Metropolitan University">
+    <link rel="canonical" href="https://synthetic-realities.github.io/sda-vision-demo/">
+    <link rel="sitemap" type="application/xml" href="https://synthetic-realities.github.io/sda-vision-demo/sitemap.xml">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Synthetic Realities — SDA Vision">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="SDA Vision | Synthetic media research and community workshops">
+    <meta property="og:description" content="SDA Vision (Synthetic-media Discourse Analysis). Explore AI-generated and traditional media through prepared examples, saved assessments and community workshop activities.">
+    <meta property="og:url" content="https://synthetic-realities.github.io/sda-vision-demo/">
+    <meta property="og:image" content="https://synthetic-realities.github.io/sda-vision-demo/guides/social-preview.png">
+    <meta property="og:image:alt" content="SDA Vision Community Workshop with an illustrated discussion activity.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SDA Vision | Synthetic media research and community workshops">
+    <meta name="twitter:description" content="SDA Vision (Synthetic-media Discourse Analysis). Explore AI-generated and traditional media through prepared examples, saved assessments and community workshop activities.">
+    <meta name="twitter:image" content="https://synthetic-realities.github.io/sda-vision-demo/guides/social-preview.png">
+    <meta name="twitter:image:alt" content="SDA Vision Community Workshop with an illustrated discussion activity.">
+    <script>
+      // Apply the saved theme and text size before first paint so users do
+      // not see a flash of the defaults. Defaults: Studio bright, standard size.
+      try {
+        var t = localStorage.getItem("sda-theme");
+        document.documentElement.dataset.theme =
+          ["studio", "dark", "light", "console", "pulse", "ppie"].indexOf(t) >= 0 ? t : "studio";
+        var s = localStorage.getItem("sda-textsize");
+        if (s === "large" || s === "workshop")
+          document.documentElement.dataset.textsize = s;
+      } catch (e) { /* storage unavailable: keep the defaults */ }
+    </script>
+    <script type="module" crossorigin src="/assets/main-AUqpQW_o.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-CkisXHJz.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+/* Shared guide styles: explicit prefixes also support older workshop browsers. */
+.facilitator-guide { box-sizing:border-box; width:100%; margin:0; padding:8px 40px 24px; color:#172732; background:#fff; font:1.05rem/1.65 Arial,sans-serif; }
+.facilitator-guide * { box-sizing:border-box; }
+.facilitator-guide a { color:#086f75; text-underline-offset:3px; }
+.facilitator-guide a:focus-visible { outline:3px solid #d50075; outline-offset:5px; }
+.facilitator-guide .eyebrow { color:#b50063; text-transform:uppercase; font-weight:700; font-size:.8rem; letter-spacing:.08em; }
+.facilitator-guide .hero { display:grid; grid-template-columns:minmax(0,1fr) 300px; grid-template-areas:"brand brand" "intro cover" "actions actions"; gap:22px 32px; align-items:stretch; padding:0 0 26px; }
+.facilitator-guide .guide-brand-row { grid-area:brand; }
+.facilitator-guide .guide-intro { grid-area:intro; min-width:0; }
+.facilitator-guide .guide-intro p:last-child { margin-bottom:0; }
+.facilitator-guide .hero > .actions { grid-area:actions; }
+.facilitator-guide .hero > figure { grid-area:cover; position:relative; margin:0; min-width:0; }
+.facilitator-guide .hero .cover { position:absolute; right:0; height:100%; width:auto; max-width:100%; object-fit:contain; object-position:right top; }
+.facilitator-guide h1 { font-size:clamp(2.25rem,5vw,3.6rem); line-height:1.07; letter-spacing:-.025em; margin:12px 0 22px; max-width:720px; }
+.facilitator-guide h2 { font-size:1.8rem; line-height:1.2; margin:0 0 16px; }
+.facilitator-guide h3 { font-size:1.5rem; line-height:1.2; margin:6px 0 12px; }
+.facilitator-guide p { margin:0 0 18px; }
+.facilitator-guide .lead { font-size:1.3rem; line-height:1.5; }
+.facilitator-guide .cover { width:100%; height:auto; box-shadow:0 5px 24px #14373d1a; border:1px solid #dbe6e7; }
+.facilitator-guide .button { display:inline-flex; align-items:center; justify-content:center; background:#007e83; color:white; padding:12px 20px; border-radius:7px; text-decoration:none; font-weight:700; min-height:48px; }
+.facilitator-guide .button:hover { background:#00646a; }
+.facilitator-guide .actions { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+.facilitator-guide .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; padding:10px 0 36px; }
+.facilitator-guide .steps span { padding:12px 16px; border-radius:6px; font-weight:700; }
+.facilitator-guide .steps span:nth-child(1) { background:#ffe36b; }
+.facilitator-guide .steps span:nth-child(2) { background:#bcebed; }
+.facilitator-guide .steps span:nth-child(3) { background:#ccebc9; }
+.facilitator-guide .steps span:nth-child(4) { background:#ffd6bb; }
+.facilitator-guide .how { padding:30px 0; border-top:1px solid #dce5e6; }
+.facilitator-guide .how ol { padding-left:24px; display:grid; gap:12px; }
+.facilitator-guide .previews { padding:30px 0; }
+.facilitator-guide .preview-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; margin-top:24px; }
+.facilitator-guide .activity { padding:22px; background:white; border:1px solid #d5e2e3; border-radius:12px; }
+.facilitator-guide .activity:first-child { border-top:6px solid #edcc45; }
+.facilitator-guide .activity:last-child { border-top:6px solid #36bcc3; }
+.facilitator-guide .activity figure { margin:18px 0 0; }
+.facilitator-guide .activity img { display:block; width:100%; height:auto; border:1px solid #dce5e6; }
+.facilitator-guide .activity figcaption { font-size:.875rem; margin-top:10px; color:#4a6067; }
+.facilitator-guide .download { background:#eef7f7; border-left:5px solid #007e83; padding:28px; border-radius:8px; margin:24px 0 40px; }
+.facilitator-guide .download small { display:block; margin-top:14px; color:#425960; }
+.facilitator-guide .guide-credit { border-top:1px solid #d5e2e3; padding-top:24px; font-size:.875rem; color:#425960; }
+@media(max-width:650px) {
+ .facilitator-guide { padding:8px 20px 20px; }
+ .facilitator-guide .hero { grid-template-columns:1fr; grid-template-areas:"brand" "intro" "cover" "actions"; gap:20px; padding:0 0 16px; }
+ .facilitator-guide .hero > figure { display:block; max-width:300px; width:100%; justify-self:center; }
+ .facilitator-guide .hero .cover { position:static; display:block; height:auto; width:100%; }
+ .facilitator-guide .lead { font-size:1.2rem; }
+ .facilitator-guide .steps { grid-template-columns:repeat(2,1fr); gap:8px; padding-bottom:26px; }
+ .facilitator-guide .preview-grid { grid-template-columns:1fr; gap:22px; }
+ .facilitator-guide .activity { padding:16px; }
+ .facilitator-guide .download { padding:22px; }
+ .facilitator-guide h2 { font-size:1.6rem; }
+}
+
+.facilitator-guide .guide-brand-title { color:#ED116F; font-family:"Arial Black",Arial,sans-serif; font-weight:900; font-size:clamp(1.9rem,3.5vw,2.8rem); line-height:1.15; letter-spacing:0; margin:4px 0 18px; }
+.facilitator-guide .guide-invitation { font-size:1.65rem; font-weight:750; line-height:1.25; margin-bottom:20px; }
+
+.facilitator-guide .guide-brand-row { display:flex; align-items:center; gap:24px; margin-bottom:0; }
+.facilitator-guide .guide-brand-row .sda-brand-logo { width:220px; flex:none; }
+.facilitator-guide .guide-brand-row .guide-brand-title { margin:0; font-size:clamp(1.5rem,2.5vw,2rem); }
+
+@media(max-width:650px) {
+ .facilitator-guide .hero { grid-template-columns:1fr; }
+ .facilitator-guide .guide-brand-row { gap:15px; }
+ .facilitator-guide .guide-brand-row .sda-brand-logo { width:150px; }
+ .facilitator-guide .guide-brand-row .guide-brand-title { font-size:1.25rem; }
+}

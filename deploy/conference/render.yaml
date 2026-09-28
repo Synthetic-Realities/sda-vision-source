@@ -1,0 +1,31 @@
+# Review candidate only. Provisioning and live processing are separate steps.
+services:
+  - type: web
+    name: sda-vision-conference
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    region: frankfurt
+    numInstances: 1
+    autoDeployTrigger: "off"
+    healthCheckPath: /healthz
+    envVars:
+      - key: SDA_PROFILE
+        value: conference
+      - key: DEV_MODE
+        value: "false"
+      - key: SDA_CONFERENCE_PASSWORD
+        generateValue: true
+      - key: SDA_CONFERENCE_MAX_RUNS
+        value: "0"
+      - key: SDA_CONFERENCE_TIMEOUT
+        value: "180"
+      - key: DISABLE_ANTHROPIC
+        value: "true"
+      - key: DISABLE_OPENAI
+        value: "true"
+      - key: DISABLE_GOOGLE
+        value: "true"
+previews:
+  generation: "off"

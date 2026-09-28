@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {createServer} from '../frontend/node_modules/vite/dist/node/index.js';
+import React from '../frontend/node_modules/react/index.js';
+import {renderToStaticMarkup as render} from '../frontend/node_modules/react-dom/server.node.js';
+process.env.VITE_SHOWCASE='1';
+const server=await createServer({root:fileURLToPath(new URL('../frontend',import.meta.url)),configFile:false,esbuild:{jsx:'automatic'},server:{middlewareMode:true,ws:false},appType:'custom',optimizeDeps:{noDiscovery:true}});
+const savedFetch=globalThis.fetch;
+try {
+ const manifest=JSON.parse(await readFile(new URL('./fixtures/workshop-review/manifest.json',import.meta.url)));
+ globalThis.fetch=async()=>({json:async()=>manifest});
+ const showcase=await server.ssrLoadModule('/src/showcase.ts');
+ const preview=await showcase.showcasePreview('animated-video.mov');
+ assert.equal(preview.kind,'video');assert.match(preview.url,/showcase\/originals\/animated-video\.mov$/);
+ await assert.rejects(showcase.showcasePreview('illustration-3.webp'),/not in the showcase set/);
+ const labels=await server.ssrLoadModule('/src/workshopExamples.ts');
+ assert.equal(labels.workshopExampleLabel('animated-video.mov'),'Animated video');
+ assert.equal(labels.developerExampleLabel('animated-video.mov'),'Animated video');
+ const r=JSON.parse(await readFile(new URL('./fixtures/workshop-review/animated_video.json',import.meta.url)));const before=JSON.stringify(r);
+ const {default:Summary}=await server.ssrLoadModule('/src/components/CommunityFindingSummary.tsx');
+ const html=render(React.createElement(Summary,{report:r,status:''}));
+ assert.match(html,/4 sampled still frames/);assert.match(html,/highest-rated sampled frame/);
+ for(const name of ['Claude','OpenAI','Google Gemini','C2PA Content Credentials','Local forensic cues'])assert(html.includes(name));
+ assert.match(html,/AI-origin detection from the sound itself is outside this workflow/);
+ assert.match(html,/No completed excerpt description/);assert.equal(r.audio_assessment,undefined);
+ assert.equal(JSON.stringify(r),before);
+ const {default:Results}=await server.ssrLoadModule('/src/components/Results.tsx');
+ const result=render(React.createElement(Results,{report:r,previewName:r.meta.filename,demo:true}));
+ const fileRecord=result.indexOf('What the file records');
+ const sessionDownload=result.indexOf('Download session with your notes');
+ assert(fileRecord>=0,'Developer file record is present');
+ assert(sessionDownload>=0,'Developer session download is present');
+ assert(fileRecord<sessionDownload,'File record precedes session download');
+ console.log('Animated video: original playback URL, withdrawn-item refusal, neutral labels, all providers, sampled-frame scope and separate unchecked audio description passed.');
+} finally {globalThis.fetch=savedFetch;await server.close();}

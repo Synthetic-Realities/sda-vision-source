@@ -1,0 +1,354 @@
+{
+  "consensus": {
+    "overall_rating": 90,
+    "score_basis": "median_model_ratings",
+    "overall_verdict": "synthetic_likely",
+    "confidence": "high",
+    "headline": "Leaning synthetic",
+    "explanation": "3 models agree this is likely synthetic.",
+    "agreement": "models agree",
+    "decision_trace": [
+      {
+        "step": "override",
+        "outcome": "none",
+        "detail": "No confirmed C2PA AI assertion or SynthID watermark. Origin remains unresolved by these checks."
+      },
+      {
+        "step": "model_agreement",
+        "synthetic": [
+          "Claude Analysis",
+          "OpenAI Analysis",
+          "Gemini Analysis"
+        ],
+        "authentic": [],
+        "uncertain": [],
+        "forensic_supports_synthetic": false
+      },
+      {
+        "step": "verdict",
+        "value": "synthetic_likely",
+        "confidence": "high",
+        "reason": "3 models agree this is likely synthetic."
+      }
+    ],
+    "supporting": [
+      {
+        "name": "Claude Analysis",
+        "rating": 78,
+        "verdict": "synthetic_likely",
+        "note": "Style closely matches AI-generated two-host 'deep dive' audio overviews (e.g. NotebookLM): stock openers ('Imagine holding...', 'Okay, let's unpack this', 'If we connect this to the bigger picture'), constant affirmations ('Exactly', 'Perfectly said'), scripted neutrality disclaimer and a staged host challenge, suggesting likely synthetic origin."
+      },
+      {
+        "name": "OpenAI Analysis",
+        "rating": 90,
+        "verdict": "synthetic_likely",
+        "note": "The highly regular two-host exchanges, repetitive affirmations, scripted explanatory prompts, and formulaic transitions strongly suggest synthetic generation or editing."
+      },
+      {
+        "name": "Gemini Analysis",
+        "rating": 95,
+        "verdict": "synthetic_likely",
+        "note": "The text displays the classic conversational tropes, rapid turn-taking, and synthetic cadence characteristic of an automated AI podcast generator like NotebookLM."
+      }
+    ],
+    "not_decisive": [
+      {
+        "name": "C2PA Content Credentials",
+        "rating": null,
+        "verdict": "not_applicable",
+        "note": "Not checked in this text-analysis pass; no original-media provenance conclusion."
+      }
+    ],
+    "visible_text": "Imagine holding a like a simple piece of cloth in your hand. Let's say it's 2019, and it's just a standard surgical mask. Right, just a boring everyday medical supply, something you'd really only see at the dentist office. Exactly. But then fast-forward to the end of 2020, and that exact same piece of cloth had morphed into like a literal measure of your morality. Oh, absolutely. It became a symbol of your political affiliation, your patriotism, even. It's just wild to think about. I mean, today we are looking at the exact digital moment a basic health mandate turned into a full-blown ideological war. It really is one of the most compressed, intense sociological shifts we've ever witnessed. Yeah. We went from a public that largely didn't think about epidemiology at all to a society where every single person was forced to take a public, highly visible stance on a global health crisis. And usually, you know, when we talk about a massive global event like that, we have to rely on historians decades later to piece together the public mood. Right, digging through old newspaper clippings or a diary entries. Exactly. But for the COVID-19 pandemic, we have this complete, real-time behavioral laboratory. So, we are grounding our conversation today in this fascinating peer-reviewed study from the journal Vaccine. Yes, authored by Sam Martin and Samantha Vanderslott from the Oxford Vaccine Group. And the scale of their research here is what makes it so robust, right? Oh, totally. They analyzed this massive data set of 7.89 million English-language tweets. Wow. Yeah, from the US and the UK, spanning a very specific window, basically June 1st, 2020 to June 1st, 2021. And they didn't just like count how many times the word mask or vaccine was used, which is what I would have assumed. No, they went way deeper. They utilized media monitoring software called Meltwater and text network analysis software called InfraNodus. Which uh we should probably explain how those tools work because it's vital for understanding the whole study. Please do. So Meltwater acts like this giant net scraping the internet and pulling in every public conversation based on specific keywords. Right. But InfraNodus acts as the brain. It actually maps relationships between words. So if the word mask is constantly sitting right next to the word tyranny or sheep in millions of tweets, The software draws a thick digital line between them. Exactly. It lets researchers see the exact architecture of public sentiment. It's almost like looking at a real-time MRI of society's collective anxiety. That's a really great way to visualize it. It moves us past just individual anecdotes, Yeah. Yeah. and it shows us the actual structural flow of ideas. Yeah. So, the mission for our deep dive today is to explore a very specific phenomenon uncovered in this flow. We want to see how pre-existing anti-vaccine groups and newly formed anti-mask groups actually merged into this massive digital powerhouse. And to understand the psychological, social, and political drivers behind how the public reacted to these mandates. Exactly. Now uh a very quick heads up to you the listener before we dive into the timeline, the data we are analyzing today is heavily political. Very heavily. Yeah, it involves major figures from the left and the right. We're talking President Joe Biden, former President Donald Trump, Vice President Kamala Harris along with a bunch of conservative and liberal viewpoints. Right. So, I have to be clear here. We aren't taking sides today. We aren't endorsing any of the politics discussed. We're just impartially reading the digital footprint left behind to help you understand the mechanics of this social media evolution. Our focus is strictly on the mechanics of the discourse. You know, what the data reflects, what was said, and how it spread. Okay, let's unpack this. To really understand the explosion of outrage and compliance in 2020, we have to recognize that human pushback again",
+    "vaccine_codes": [],
+    "disclaimer": "Research assessment. Review alongside source information and context."
+  },
+  "providers": [
+    {
+      "id": "claude",
+      "name": "Claude Analysis",
+      "kind": "analysis",
+      "status": "ok",
+      "rating": 78,
+      "verdict": "synthetic_likely",
+      "confidence": "medium",
+      "summary": "Style closely matches AI-generated two-host 'deep dive' audio overviews (e.g. NotebookLM): stock openers ('Imagine holding...', 'Okay, let's unpack this', 'If we connect this to the bigger picture'), constant affirmations ('Exactly', 'Perfectly said'), scripted neutrality disclaimer and a staged host challenge, suggesting likely synthetic origin.",
+      "evidence": [
+        "Synthetic origin framing: Two-host explainer podcast summarising a peer-reviewed study, with historical context, a stated neutrality disclaimer and interpretive commentary on polarisation",
+        "Summary (content, for the researcher's coding):",
+        "Study by Sam Martin and Samantha Vanderslott (Oxford Vaccine Group) published in journal Vaccine",
+        "Analysed 7.89 million English-language US/UK tweets, June 2020 to June 2021",
+        "Used Meltwater for collection and InfraNodus for text network analysis",
+        "5.91 million tweets on masks, 1.98 million on vaccines",
+        "Caveat: Human podcasters can use similar conventions, and transcription artefacts may mask or mimic synthetic patterns; source audio and provenance should be checked."
+      ],
+      "visible_text": null,
+      "vaccine_relevance": null,
+      "model": "claude-opus-5-5",
+      "latency_ms": 7556,
+      "raw": {
+        "ai_authorship_rating": 78,
+        "claims": [
+          "Study by Sam Martin and Samantha Vanderslott (Oxford Vaccine Group) published in journal Vaccine",
+          "Analysed 7.89 million English-language US/UK tweets, June 2020 to June 2021",
+          "Used Meltwater for collection and InfraNodus for text network analysis",
+          "5.91 million tweets on masks, 1.98 million on vaccines",
+          "Negative mask sentiment: UK 28%, US 22%; vaccine negativity: US 17%, UK 15%",
+          "Anti-Mask League formed in San Francisco in 1919",
+          "Anti-vaccination leagues date to 19th-century smallpox mandates",
+          "Japan's mask culture reinforced in 1990s via commercial and political pressures",
+          "WHO initially advised against general public masking, later reversed",
+          "Researchers identify a 'mask-vaccine' framing in pro-mask discourse, June-December 2020",
+          "Biden and Harris called for national mask mandate in August 2020",
+          "Piers Morgan criticised Sadiq Khan for not wearing a mask, generating high engagement"
+        ],
+        "framing": "Two-host explainer podcast summarising a peer-reviewed study, with historical context, a stated neutrality disclaimer and interpretive commentary on polarisation",
+        "vaccine_misinformation_relevance": "",
+        "confidence": "medium",
+        "summary": "Style closely matches AI-generated two-host 'deep dive' audio overviews (e.g. NotebookLM): stock openers ('Imagine holding...', 'Okay, let's unpack this', 'If we connect this to the bigger picture'), constant affirmations ('Exactly', 'Perfectly said'), scripted neutrality disclaimer and a staged host challenge, suggesting likely synthetic origin.",
+        "caveat": "Human podcasters can use similar conventions, and transcription artefacts may mask or mimic synthetic patterns; source audio and provenance should be checked."
+      }
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI Analysis",
+      "kind": "analysis",
+      "status": "ok",
+      "rating": 90,
+      "verdict": "synthetic_likely",
+      "confidence": "medium",
+      "summary": "The highly regular two-host exchanges, repetitive affirmations, scripted explanatory prompts, and formulaic transitions strongly suggest synthetic generation or editing.",
+      "evidence": [
+        "Synthetic origin framing: Conversational research explainer using staged questions, emphatic agreement, historical parallels, and sociological interpretations.",
+        "Summary (content, for the researcher's coding):",
+        "The cited study reportedly analyzed 7.89 million English-language tweets from June 2020 to June 2021.",
+        "Researchers reportedly used Meltwater and InfraNodus to examine mask and vaccine discourse in the US and UK.",
+        "The text describes convergence between anti-vaccine and anti-mask groups.",
+        "It reports greater negative mask sentiment in the UK than the US.",
+        "Caveat: A human-scripted podcast could share these features; transcript artifacts and absent provenance limit attribution."
+      ],
+      "visible_text": null,
+      "vaccine_relevance": null,
+      "model": "gpt-6-astra",
+      "latency_ms": 5819,
+      "raw": {
+        "ai_authorship_rating": 90,
+        "claims": [
+          "The cited study reportedly analyzed 7.89 million English-language tweets from June 2020 to June 2021.",
+          "Researchers reportedly used Meltwater and InfraNodus to examine mask and vaccine discourse in the US and UK.",
+          "The text describes convergence between anti-vaccine and anti-mask groups.",
+          "It reports greater negative mask sentiment in the UK than the US.",
+          "It links supportive discourse to shifting guidance, social policing, and political signaling.",
+          "It describes historical precedents for mask resistance and organized opposition to vaccination."
+        ],
+        "framing": "Conversational research explainer using staged questions, emphatic agreement, historical parallels, and sociological interpretations.",
+        "vaccine_misinformation_relevance": "",
+        "confidence": "medium",
+        "summary": "The highly regular two-host exchanges, repetitive affirmations, scripted explanatory prompts, and formulaic transitions strongly suggest synthetic generation or editing.",
+        "caveat": "A human-scripted podcast could share these features; transcript artifacts and absent provenance limit attribution."
+      }
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini Analysis",
+      "kind": "analysis",
+      "status": "ok",
+      "rating": 95,
+      "verdict": "synthetic_likely",
+      "confidence": "high",
+      "summary": "The text displays the classic conversational tropes, rapid turn-taking, and synthetic cadence characteristic of an automated AI podcast generator like NotebookLM.",
+      "evidence": [
+        "Synthetic origin framing: An informal two-host podcast script discussing academic research on social media discourse and health mandates.",
+        "Summary (content, for the researcher's coding):",
+        "Oxford Vaccine Group researchers analyzed 7.89 million English-language tweets from the US and UK between June 2020 and June 2021",
+        "Study used Meltwater and InfraNodus network analysis software to examine sentiment around masks and vaccines",
+        "5.91 million analyzed tweets focused on masks, while 1.98 million focused on vaccines",
+        "Negative sentiment toward masks was 28% in the UK compared to 22% in the US",
+        "Caveat: Human podcast hosts discussing academic papers can occasionally use similar rehearsed, highly structured banter."
+      ],
+      "visible_text": null,
+      "vaccine_relevance": null,
+      "model": "gemini-3.8-flash",
+      "latency_ms": 2836,
+      "raw": {
+        "ai_authorship_rating": 95,
+        "claims": [
+          "Oxford Vaccine Group researchers analyzed 7.89 million English-language tweets from the US and UK between June 2020 and June 2021",
+          "Study used Meltwater and InfraNodus network analysis software to examine sentiment around masks and vaccines",
+          "5.91 million analyzed tweets focused on masks, while 1.98 million focused on vaccines",
+          "Negative sentiment toward masks was 28% in the UK compared to 22% in the US",
+          "Negative sentiment toward vaccines was 17% in the US and 15% in the UK",
+          "The Anti-Mask League formed in San Francisco during the 1919 influenza pandemic"
+        ],
+        "framing": "An informal two-host podcast script discussing academic research on social media discourse and health mandates.",
+        "vaccine_misinformation_relevance": "",
+        "confidence": "high",
+        "summary": "The text displays the classic conversational tropes, rapid turn-taking, and synthetic cadence characteristic of an automated AI podcast generator like NotebookLM.",
+        "caveat": "Human podcast hosts discussing academic papers can occasionally use similar rehearsed, highly structured banter."
+      }
+    },
+    {
+      "id": "local",
+      "name": "Local forensic cues",
+      "kind": "forensic",
+      "status": "ok",
+      "rating": null,
+      "verdict": "not_applicable",
+      "confidence": null,
+      "summary": "Pixel forensics: outside text analysis.",
+      "evidence": [],
+      "visible_text": null,
+      "vaccine_relevance": null,
+      "model": null,
+      "latency_ms": 0,
+      "raw": {}
+    },
+    {
+      "id": "c2pa",
+      "name": "C2PA Content Credentials",
+      "kind": "provenance",
+      "status": "ok",
+      "rating": null,
+      "verdict": "inconclusive",
+      "confidence": null,
+      "summary": "Embedded credentials: none found. Origin remains unresolved by this check.",
+      "evidence": [
+        "Coverage: credentials embedded in the submitted file. External credentials were not retrieved.",
+        "Verifier: c2pa-python 0.37.12; native SDK 0.91.0; specification target 2.4; policy embedded-offline-reviewed-trust-v3.",
+        "Offline embedded-manifest verification; no network trust-list, manifest or revocation refresh.",
+        "No reviewed local C2PA trust snapshot installed. Provenance overrides are disabled."
+      ],
+      "visible_text": null,
+      "vaccine_relevance": null,
+      "model": null,
+      "latency_ms": 7,
+      "raw": {
+        "validation": {
+          "integrity": "absent",
+          "trust": "unknown",
+          "complete": false
+        },
+        "sdk_version": "0.37.12",
+        "native_sdk_version": "0.91.0",
+        "specification_target": "2.4",
+        "verification_policy": "embedded-offline-reviewed-trust-v3",
+        "network_access": false,
+        "trust_policy": {
+          "approved": false,
+          "scope": "sdk-default-unreviewed",
+          "reason": "No reviewed local C2PA trust snapshot installed."
+        }
+      }
+    }
+  ],
+  "frames": [],
+  "audio_inspection": {
+    "method_version": "audio-local-v1",
+    "input_sha256": "58663a6a9e4b634bdb703ead0aaa7cd6dce7fbf97e70c3c1cc61b3311b94c0b4",
+    "status": "present",
+    "stream_count": 1,
+    "tracks": [
+      {
+        "index": 0,
+        "codec": "aac",
+        "channels": 2,
+        "sample_rate": 44100,
+        "duration_seconds": 1468.569252,
+        "samples": [
+          {
+            "start_seconds": 0.0,
+            "duration_seconds": 3.0,
+            "peak_dbfs": -13.9,
+            "signal_above_minus_60_dbfs": true
+          },
+          {
+            "start_seconds": 732.785,
+            "duration_seconds": 3.0,
+            "peak_dbfs": -9.4,
+            "signal_above_minus_60_dbfs": true
+          },
+          {
+            "start_seconds": 1465.569,
+            "duration_seconds": 3.0,
+            "peak_dbfs": -19.9,
+            "signal_above_minus_60_dbfs": true
+          }
+        ],
+        "decode_status": "decoded"
+      }
+    ],
+    "synthetic_audio_assessed": false,
+    "notes": [
+      "Audio-level measurements cover the sampled windows. The remaining audio has not been inspected by this check."
+    ],
+    "provenance_scope": "Original-file credentials are recorded separately. Credential coverage of this audio track: unresolved."
+  },
+  "meta": {
+    "report_id": "7e1a6917-52a1-453d-8dda-9c4842232f31",
+    "input_sha256": "58663a6a9e4b634bdb703ead0aaa7cd6dce7fbf97e70c3c1cc61b3311b94c0b4",
+    "method_version": "pdf-preparation-2026-09-26.1",
+    "context_sha256": "1bc166797a8ce62a5e71aaf8a9e42b5221b28c450082a8d5c22163235595d487",
+    "extraction_policy": {
+      "pdf_mode": "auto",
+      "min_figure_px": 300
+    },
+    "tool": "SDA Vision",
+    "version": "0.1.0",
+    "panel_version": "panel-2026-09-24",
+    "generated_at": "2026-09-26T22:31:07+00:00",
+    "filename": "podcast.m4a",
+    "kind": "audio",
+    "frame_count": 0,
+    "frames_found": 0,
+    "notes": [
+      "Transcoded to 5737 KB mono 16 kHz (\u22641800s).",
+      "Transcribed with Gemini.",
+      "Standalone-audio content assessment covers the transcript. AI-origin detection from sound is outside this assessment. Original-file C2PA was checked before transcription and is reported separately.",
+      "Audio tracks inspected locally. Soundtrack uploads require a separate optional check; AI-origin detection from sound is outside this workflow.",
+      "Fresh provider replies acquired for eleven-examples-refresh-20260926-r1; report assembled locally from the saved responses without further API calls.",
+      "Transcript analysis used the first 12000 characters of a fresh 25985-character transcription; this report retains its first 4000 characters. Sound-origin detection is outside this check.",
+      "Provider latency values are restored from the acquisition receipts (maximum sampled-frame latency per provider); raw replies and assessment results are unchanged by this bookkeeping step."
+    ],
+    "mode": "general",
+    "elapsed_ms": 38495,
+    "models": [
+      "claude-opus-5-5",
+      "gemini-3.8-flash",
+      "gpt-6-astra"
+    ],
+    "acquisition_run_id": "eleven-examples-refresh-20260926-r1",
+    "provider_acquired_at": [
+      "2026-09-26T22:29:10.918494+00:00",
+      "2026-09-26T22:30:53.340013+00:00",
+      "2026-09-26T22:30:59.163407+00:00",
+      "2026-09-26T22:31:02.004953+00:00"
+    ],
+    "thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAC0AWgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5/ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAvx6Jq0sayR6XevG4DKy27kEHoQcVMnhrW5IZZV0q72x43AxEMcnHAPLfhnHeu5X4m6eQ++wugRLhdpU5jyPmPPDYz8vI4685E3/CytF2jFtf57/u0/+Lr1o4XBdapxOtiF9g84utI1CyuIbe4tZEnmRXjjxliGOBwOQc8YPNTx+G9bkgkmXS7vZHjOYiCc9MA8t+GcV21z8T7VZMWumTSpt+9LIEOfTADce+anT4l6SY1MlperIQNyqqEA9wDuGR+AoWFwN/4o3WxFvgODg8M65czLEmlXYZs4MkRRfXlmwB+dOn8La7bxxPJpV0RKMqETeR/vAZKnnocfpXen4l6Nxi31A8d40/8Ai6cvxH0YWsEjx3XmuP3kUaAmI+mSQD7Y/HHSqWEwNv4pPt8Rf4DzZtH1NLiK3bTrxZpQTHGYGDPjrgYycVYfw1rccMcp0q7KyZwFiJYY9VHK/iBntXZT/E+FZmFvpTyRfwtJMEY8dwAcfnWg/wARdFSJJNtw5cnEaJ86AcfPkgAnnAUtxjJB4ERwuCba9r+H9XKdaure4ec/2BrP/QJv/wDwGf8AwqS28Na1dyBIdNnLbyhDLt2sFDYbONvDDGcZzxmvQD8StEH3bfUD9Y0H/s9Qn4l6eHQiznMRdg3I3qoAKtjpySRjdxtz3xVfVMF1qi9viHtA4G60HVrPb5+n3CboTP8AcJwg6k46YyM56ZGetRnSNTG/OnXY2MEb9w3yscYB44J3Lx7j1r0ib4kaRFcWwSG4mhdN0zqoDRHHChTgMc9eQPQmqUvxPgGfJ0uR/nYDfMF+TjaeAeTzkdsDk9onhcEm/wB7+F/yHGtXf2DhJdG1SBd02m3kYwTl4GHRSx6jsAT9ATVmw8M6zqYkNrYSMI9u4uQnUZGNxGeCDx2I9RXayfE60F06x6bO1uFOx2cBydvAK8gDdxnJ45welXbH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KACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/9k="
+  },
+  "audio_assessment": {
+    "status": "ok",
+    "input_sha256": "58663a6a9e4b634bdb703ead0aaa7cd6dce7fbf97e70c3c1cc61b3311b94c0b4",
+    "excerpt_sha256": "f9713796490ddc9624cfc92412738eaca7192d9cbde08dd259237e29e2aa2128",
+    "provider": "Google Gemini",
+    "model": "gemini-3.8-flash",
+    "prompt_version": "soundtrack-content-v1",
+    "checked_at": "2026-09-27T19:20:45.393134+00:00",
+    "track_index": 0,
+    "start_seconds": 0,
+    "duration_seconds": 20.0,
+    "consent_to_google": true,
+    "synthetic_audio_assessed": false,
+    "content_type": "speech",
+    "observations": [
+      "A female voice speaks in an interview or conversational tone.",
+      "A male voice responds briefly in agreement.",
+      "The conversation sounds like a podcast or radio broadcast discussion.",
+      "Audio is clean with minimal to no background noise."
+    ],
+    "transcript_excerpt": "Imagine holding, uh, like a simple piece of cloth in your hand. Let's say it's 2019, and it's just a standard surgical mask. Right, just a boring everyday medical supply, something you'd really only see at the dentist's office. Exactly.",
+    "limitations": [
+      "This assessment describes the selected audio excerpt. Origin and credentials are considered separately.",
+      "Analysed excerpt: mono, 16 kHz PCM. Credential checks use the original file."
+    ]
+  }
+}
