@@ -1,16 +1,16 @@
 # SDA Vision: release metadata
 
-Publication record: 28 September 2026. This record supersedes incomplete release-identity templates from 24–26 September. Historical test records remain evidence of their dated checkpoints.
+Software release record: 29 September 2026. This record supersedes incomplete release-identity templates from 24–26 September. Historical test records remain evidence of their dated checkpoints.
 
 | Field | Agreed value |
 | --- | --- |
-| Software | SDA Vision: Synthetic-media Discourse Analysis, version **0.1.0** |
+| Software | SDA Vision: Synthetic-media Discourse Analysis, version **0.1.1** |
 | Facilitator guide | SDA Vision: Facilitator field guide, version **1.4**, issued 27 September 2026 |
 | Creator | **Dr Sam Martin**, sole software and guide creator; citation name Sam Martin |
 | Affiliation | Manchester Metropolitan University (MMU) |
 | Fellowship | Smart Data Research UK (UKRI) Fellow, Grant number **UKRI4010** |
 | ORCID | https://orcid.org/0000-0002-4466-8374 |
-| Software DOI | **10.5281/zenodo.23008103**, published version 0.1.0 |
+| Software DOI | **10.5281/zenodo.23039037**, version 0.1.1 |
 | Guide DOI | **10.5281/zenodo.23008189**, published version 1.4 |
 | Software Concept DOI | **10.5281/zenodo.23008102** — latest published software version |
 | Guide Concept DOI | **10.5281/zenodo.23008188** — latest published guide version |
@@ -22,7 +22,7 @@ Publication record: 28 September 2026. This record supersedes incomplete release
 | Public demo | https://sdavision.io/ — saved results for ten menu examples and an opening practice illustration |
 | Demo repository | https://github.com/Synthetic-Realities/sda-vision-demo |
 | Git identity | Synthetic Realities — Dr Sam Martin <smartin@mmu.ac.uk>; IntoTheDigital authenticates repository operations |
-| Publication state | Both records published on 28 September 2026 after researcher approval. The source repository is public; the development repository remains private. |
+| Publication state | Software 0.1.1 follows the initial 0.1.0 publication. The facilitator record remains at 1.4. The source repository is public; the development repository remains private. |
 
 ## Software description
 

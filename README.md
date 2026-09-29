@@ -1,6 +1,6 @@
 <p><img src="docs/branding/sda-vision-logo.png" alt="SDA Vision" width="420"></p>
 
-# SDA Vision — version 0.1.0
+# SDA Vision — version 0.1.1
 
 [![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23008102.svg)](https://zenodo.org/doi/10.5281/zenodo.23008102) · [![Facilitator guide DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23008188.svg)](https://zenodo.org/doi/10.5281/zenodo.23008188)
 
@@ -18,12 +18,14 @@ This work was supported by Smart Data Research UK, a UKRI investment; Grant numb
 
 Google Lens is available for image files. PDFs, slides, podcasts and videos retain their original-file downloads, with image-search controls reserved for images. [Image-search scope](docs/Image_Search_Scope_2026-09-29.md).
 
+Reflect keeps its findings and Evidence box inside **Revisit the recorded findings**, collapsed until opened. Session notes and New session remain visible. [Software 0.1.1 release details](release/RELEASE_0.1.1.md).
+
 ## Start here
 
 The [public demo](https://sdavision.io/) opens Community Workshop with saved assessments. This archive installs the local Research app, including local file selection and provider configuration. The approved-example Conference profile is a separate configuration.
 
 1. Install Python 3.11+ and Node 20.19+ (20.x) or 22.12+. The current macOS dependency lock uses native Apple Silicon Python. Other architectures need separate validation.
-2. Download the [approved source ZIP from Zenodo](https://zenodo.org/records/23008103/files/SDA_Vision_0.1.0_source.zip?download=1) or use GitHub’s Code menu to download or clone this repository. Extract to a writable folder and open Terminal in the folder containing `setup.sh`.
+2. Download the [approved source ZIP from Zenodo](https://zenodo.org/records/23039037/files/SDA_Vision_0.1.1_source.zip?download=1) or use GitHub’s Code menu to download or clone this repository. Extract to a writable folder and open Terminal in the folder containing `setup.sh`.
 3. Run `./setup.sh`. This installs the pinned Python dependencies, installs frontend dependencies and builds the interface. Set `PYTHON=/path/to/native/python3` when the default Python is a different architecture.
 4. Add approved provider keys to the newly created `.env` when you want live model calls. See `.env.example` and [provider configuration](docs/Provider_Upgrade_2026-09-24.md).
 5. Run `./run.sh`, or double-click `boot-vision.command` on macOS. The launcher prints a localhost address, choosing an available port from 8100. It starts the installed copy without rebuilding it.
@@ -42,11 +44,11 @@ Read [privacy and data flows](PRIVACY.md) and [security contact](SECURITY.md) wh
 
 The project code and documentation use the [MIT licence](LICENSE). [Example credits and permissions](examples/CREDITS.md), [dependency notices](third_party/README.md) and [partner-logo rights](docs/branding/README.md) identify separate terms. Included examples are ten selectable media items plus the opening practice illustration. The withdrawn illustration, credentials, private data, Git history and private facilitator source key are excluded.
 
-Martin, S. (2026) *SDA Vision: Synthetic-media Discourse Analysis* (version 0.1.0) [Computer software]. Manchester Metropolitan University. Available at: https://doi.org/10.5281/zenodo.23008103. Machine-readable citation: [CITATION.cff](CITATION.cff). Public software repository: [Synthetic-Realities/sda-vision-source](https://github.com/Synthetic-Realities/sda-vision-source). Public [demo repository](https://github.com/Synthetic-Realities/sda-vision-demo).
+Martin, S. (2026) *SDA Vision: Synthetic-media Discourse Analysis* (version 0.1.1) [Computer software]. Manchester Metropolitan University. Available at: https://doi.org/10.5281/zenodo.23039037. Machine-readable citation: [CITATION.cff](CITATION.cff). Public software repository: [Synthetic-Realities/sda-vision-source](https://github.com/Synthetic-Realities/sda-vision-source). Public [demo repository](https://github.com/Synthetic-Realities/sda-vision-demo).
 
 ## Verification
 
-`ARCHIVE_MANIFEST.json` lists SHA-256 hashes for each file. The approved source archive was prepared on 28 September 2026, based on source commit d497ca6 with the citation-label-2026-09-28.1 display and export revision; the example picker lists supported media and transcript files. The accompanying acceptance record distinguishes the baseline fresh installation from checks on this copy revision. The source archive was approved by Dr Sam Martin after format and device review. [Software 0.1.0](https://zenodo.org/records/23008103) and [facilitator guide 1.4](https://zenodo.org/records/23008189) are published on Zenodo. See [release origin](RELEASE_ORIGIN.md) for this repository’s archive baseline and publication metadata changes.
+`ARCHIVE_MANIFEST.json` lists SHA-256 hashes for the release files, excluding the manifest itself. [Software 0.1.1 release details](release/RELEASE_0.1.1.md) describe the image-search scope and Reflect review. The accompanying acceptance record identifies the archive checks and fresh-installation evidence. [Release origin](RELEASE_ORIGIN.md) retains the original 0.1.0 baseline.
 
 ## Affiliation and funding
 

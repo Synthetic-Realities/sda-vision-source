@@ -28,5 +28,4 @@ and original media retain their existing versions and contents.
 - Desktop and phone-width screenshots were inspected. Physical phone and television
   checks have not been repeated for this display revision.
 
-The published Zenodo 0.1.0 deposit remains the frozen release. This revision is
-included in the current GitHub source and the separate local maintenance candidate.
+The published Zenodo 0.1.0 deposit remains the frozen release. Software 0.1.1 includes this revision; see the [release record](../release/RELEASE_0.1.1.md).

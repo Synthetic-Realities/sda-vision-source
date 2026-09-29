@@ -115,7 +115,7 @@ export default function Header({ providers, devMode, view, onToggleView }: Heade
         <div>
           <h1>
             <img className="sda-brand-logo" src={brandLogo} alt="SDA Vision" width="2172" height="724" />
-            <span className="brand-meta"><span className="ver">v{providers?.version ?? "0.1.0"}</span>
+            <span className="brand-meta"><span className="ver">v{providers?.version ?? packageInfo.version}</span>
             {devMode && <span className="dev-badge">DEV</span>}</span>
           </h1>
           {devMode && (

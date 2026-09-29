@@ -1,6 +1,7 @@
 // Static "showcase" mode: when built with VITE_SHOWCASE=1 the app serves cached
 // real analyses from /showcase/*.json instead of calling a backend. No keys, no
 // uploads, no live LLM calls. The normal build is completely unaffected.
+import packageInfo from "../package.json";
 import type { ExampleEntry, GraphData, Report } from "./types";
 import type { DiffusionSummary } from "./api";
 
@@ -122,7 +123,7 @@ export function showcaseProviders() {
   const ready = { configured: true, state: "recorded", model: "cached" };
   const na = { configured: false, state: "unconfigured", model: "" };
   return {
-    tool: "SDA Vision", version: "0.1.0", vaccine_lens: false, dev_mode: false,
+    tool: "SDA Vision", version: packageInfo.version, vaccine_lens: false, dev_mode: false,
     corpus_available: false,
     claude: ready, openai: ready, gemini: ready, synthid: na,
     c2pa: { configured: true, state: "recorded", model: "" },

@@ -13,7 +13,7 @@ from pathlib import Path
 
 from dotenv import dotenv_values, load_dotenv
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 TOOL_NAME = "SDA Vision"
 METHOD_VERSION = "pdf-preparation-2026-09-26.1"
 
