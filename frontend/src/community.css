@@ -118,6 +118,8 @@
 .community-mini-models .community-rating-track { height: 12px; }
 .community-mini-confidence { display: block; font-size: 12px; color: #545b6d; margin-top: 6px; }
 .community-compact-summary .community-rating-note { font-size: 13px; margin: 12px 0 4px; }
+.community-review-findings { grid-column: 1 / -1; min-width: 0; }
+.community-review-findings--check { display: contents; }
 .community-evidence-box { grid-column: 1 / -1; border: 1px solid #bac6c7; border-top: 4px solid #147d82; border-radius: 6px; padding: 16px; margin-top: 22px; background: #fff; }
 .community-evidence-box > h3 { font-size: 22px; }
 .community-evidence-box > details + details { border-top: 1px solid #d8dee5; margin-top: 6px; }

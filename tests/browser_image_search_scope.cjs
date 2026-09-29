@@ -75,12 +75,41 @@ const server = http.createServer((req,res) => {
           if (image) await page.locator('.community-source-evidence > summary').click();
           const download = page.getByRole('link',{name:'Download original file',exact:true}).first();
           assert.equal(await download.isVisible(),true,`${profile}/${name}: original download remains available`);
+          const sourceNote = page.locator('.community-source-evidence textarea');
+          if (image) await sourceNote.fill('Keep this source-search note through Reflect.');
+          const opinions = page.locator('.community-second-opinions');
+          if (profile !== 'workshop') {
+            await opinions.locator(':scope > summary').click();
+            await opinions.locator('.community-opinion-reply > summary').first().click();
+            await opinions.locator('.so-paste textarea').first().fill('Keep this second opinion through Reflect.');
+          }
           await page.getByRole('button',{name:'4 Reflect',exact:true}).click();
           assert.equal(await page.locator('a[href="https://images.google.com/"]').count(),image?2:0);
+          const review = page.locator('.community-review-findings');
+          const evidence = review.getByRole('region',{name:'Evidence box'});
+          assert.equal(await review.evaluate(e=>e.open),false,'Reflect starts with its full findings collapsed');
+          assert.equal(await evidence.isVisible(),false,'Evidence box is inside the collapsed review');
+          assert.equal(await page.getByRole('heading',{name:'What the checks suggest',exact:true}).isVisible(),false);
+          assert.equal(await page.getByRole('button',{name:'Download session notes',exact:true}).isVisible(),true);
+          assert.equal(await page.getByRole('button',{name:'New session',exact:true}).isVisible(),true);
+          await review.locator(':scope > summary').focus();
+          await page.keyboard.press('Enter');
+          assert.equal(await evidence.isVisible(),true,'Keyboard activation reveals the evidence with the findings');
+          if (image) assert.equal(await sourceNote.inputValue(),'Keep this source-search note through Reflect.');
+          if (profile !== 'workshop') assert.equal(await opinions.locator('.so-paste textarea').first().inputValue(),'Keep this second opinion through Reflect.');
+          await page.getByRole('button',{name:'3 Check',exact:true}).click();
+          assert.equal(await evidence.isVisible(),true,'Check keeps the findings and evidence visible');
+          await page.getByRole('button',{name:'4 Reflect',exact:true}).click();
+          assert.equal(await review.evaluate(e=>e.open),false,'Returning to Reflect collapses the review again');
+          assert.equal(await evidence.isVisible(),false);
+          if (profile === 'public' && name === 'podcast.m4a') {
+            await review.scrollIntoViewIfNeeded();
+            await page.screenshot({path:path.join(builds,`reflect-${width}px.png`)});
+          }
           await page.getByRole('radio',{name:'Developer',exact:true}).check();
           assert.equal(await page.locator('a[href="https://images.google.com/"]').count(),0,'Developer must not inherit hidden workshop Lens links');
           if (saved) assert.equal(await page.locator('input[type="file"]').count(),0);
-          checks.push({profile,width,name,lens:image?'image only':'absent',download:'available'});
+          checks.push({profile,width,name,lens:image?'image only':'absent',download:'available',reflect:'collapsed with evidence',notes:'preserved',keyboard:'passed'});
         }
         console.log(`${profile} ${width}px: image → PDF → podcast → slides → video → image passed`);
         await context.close();

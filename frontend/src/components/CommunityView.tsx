@@ -40,7 +40,12 @@ const STEPS = [
 ] as const;
 
 export default function CommunityView(p: Props) {
-  const [step, setStep] = useState<WorkshopStep>("notice");
+  const [step, setCurrentStep] = useState<WorkshopStep>("notice");
+  const [reviewFindingsOpen, setReviewFindingsOpen] = useState(false);
+  function setStep(nextStep: WorkshopStep) {
+    setReviewFindingsOpen(false);
+    setCurrentStep(nextStep);
+  }
   useEffect(() => { if (p.active) p.onStepChange(step); }, [step, p.active, p.onStepChange]);
   const stageHeading = useRef<HTMLHeadingElement>(null);
   const previousStep = useRef(step);
@@ -222,10 +227,12 @@ export default function CommunityView(p: Props) {
             document.getElementById(`${id}-summary`)?.scrollIntoView({ block: "start" });
           }}
           onEndSession={endSession} onNewSession={() => { setReadyToClear(false); setNewSessionOpen(true); }} sessionStatus={sessionStatus} />
-        {report && (step === "check" || step === "reflect") && <>
-          {step === "reflect" ? <details className="community-review-findings"><summary>Revisit the recorded findings</summary>
-            <CommunityFindingSummary report={report} status="" focusId={`${id}-summary`} /></details>
-            : <CommunityFindingSummary report={report} status={p.status} focusId={`${id}-summary`} />}
+        {report && (step === "check" || step === "reflect") && <details
+          className={`community-review-findings${step === "check" ? " community-review-findings--check" : ""}`}
+          open={step === "check" || reviewFindingsOpen}
+          onToggle={e => { if (step === "reflect" && e.target === e.currentTarget) setReviewFindingsOpen(e.currentTarget.open); }}>
+          <summary hidden={step === "check"}>Revisit the recorded findings</summary>
+          <CommunityFindingSummary report={report} status={step === "check" ? p.status : ""} focusId={`${id}-summary`} />
             {(hasVisualSearch || originalDownload || !HIDE_SECOND_OPINION) && <section className="community-evidence-box" aria-label="Evidence box">
               <h3>Evidence box</h3>
               {!hasVisualSearch && originalDownload && <a className="cw-text community-original-download" href={originalDownload} download={illustration ? "illustration-1.png" : p.name}><ArrowDownToLine size={18} />Download original file</a>}
@@ -246,7 +253,7 @@ export default function CommunityView(p: Props) {
                 <div>{report.frames.map(frame => <button className="cw-button" key={frame.frame} disabled={p.busy} onClick={() => p.onFrameDownload?.(frame.frame)}><ArrowDownToLine size={18} />Save {frame.frame}</button>)}</div>
               </details>}
             </section>}
-        </>}
+        </details>}
       </div>
 
       {p.trainer && <section className="community-facilitator" aria-label="Facilitator prompts">
