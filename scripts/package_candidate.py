@@ -25,6 +25,7 @@ from scripts.example_bundle import load_bundle
 from scripts.staged_output import reject_symlinks
 
 FILES = {
+    "tests/image_search_scope.mjs", "docs/Image_Search_Scope_2026-09-29.md",
     'frontend/public/guides/workshop-activity-1-notice-v1.4.png',
     'frontend/public/guides/workshop-activity-4-reflect-v1.4.png',
     'frontend/public/guides/SDA_Vision_Facilitator_Guide_v1.4.pdf',

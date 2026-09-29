@@ -74,7 +74,7 @@ export default function CommunityView(p: Props) {
   const kind = illustration ? "image" : mediaKind(p.name, p.report);
   const isAudio = kind === "audio";
   const hasSlideshow = kind === "pptx" && Boolean(p.slidePreview);
-  const hasVisualSearch = ["image", "video", "pdf", "pptx"].includes(kind);
+  const hasVisualSearch = kind === "image";
   const reportId = p.report?.meta.report_id ?? p.report?.meta.generated_at;
   useEffect(() => {
     if (reportId) setStep("check");
@@ -226,7 +226,7 @@ export default function CommunityView(p: Props) {
           {step === "reflect" ? <details className="community-review-findings"><summary>Revisit the recorded findings</summary>
             <CommunityFindingSummary report={report} status="" focusId={`${id}-summary`} /></details>
             : <CommunityFindingSummary report={report} status={p.status} focusId={`${id}-summary`} />}
-            {(hasVisualSearch || !HIDE_SECOND_OPINION) && <section className="community-evidence-box" aria-label="Evidence box">
+            {(hasVisualSearch || originalDownload || !HIDE_SECOND_OPINION) && <section className="community-evidence-box" aria-label="Evidence box">
               <h3>Evidence box</h3>
               {!hasVisualSearch && originalDownload && <a className="cw-text community-original-download" href={originalDownload} download={illustration ? "illustration-1.png" : p.name}><ArrowDownToLine size={18} />Download original file</a>}
               {hasVisualSearch && <details className="community-source-evidence" open={sourceSearchOpen} onToggle={e => setSourceSearchOpen(e.currentTarget.open)}>

@@ -14,7 +14,7 @@ export default function CreationHistory({ report, kind, onSourceSearch }: {
     <p>{history.detail}</p>
     <dl className="workshop-history-answers">{history.answers?.map(({ question, label, answer }) => <div key={question}>
       <dt>{label}</dt><dd>{answer}
-        {onSourceSearch && question === FOLLOW_UP_QUESTIONS[0] && ["image", "video", "pdf", "pptx"].includes(kind) && <button className="cw-text" onClick={onSourceSearch}>Explore image-search evidence<ArrowUp size={16} /></button>}
+        {onSourceSearch && question === FOLLOW_UP_QUESTIONS[0] && kind === "image" && <button className="cw-text" onClick={onSourceSearch}>Explore image-search evidence<ArrowUp size={16} /></button>}
       </dd>
     </div>)}</dl>
   </details>;

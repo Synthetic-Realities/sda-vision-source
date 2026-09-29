@@ -16,6 +16,8 @@ This work was supported by Smart Data Research UK, a UKRI investment; Grant numb
 
 [Explore the live demo](https://sdavision.io/) · [Facilitator guide](docs/Facilitator_Guide.md)
 
+Google Lens is available for image files. PDFs, slides, podcasts and videos retain their original-file downloads, with image-search controls reserved for images. [Image-search scope](docs/Image_Search_Scope_2026-09-29.md).
+
 ## Start here
 
 The [public demo](https://sdavision.io/) opens Community Workshop with saved assessments. This archive installs the local Research app, including local file selection and provider configuration. The approved-example Conference profile is a separate configuration.
