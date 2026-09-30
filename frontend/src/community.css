@@ -282,6 +282,7 @@
   .presentation-shell .sda-wordmark { font-size: 2.125rem; }
   .community-stage-heading h2 { font-size: 30px; }
   .community-session { display: none; }
+  .community-heading { grid-template-columns: minmax(0,1fr); }
   .community-facilitator ol { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 @media (max-width: 900px) {
@@ -381,9 +382,11 @@
 .partner-mmu { width:92px; }
 .partner-sdruk { width:65px; }
 .partner-ukri { width:106px; }
-.community-brand-row { display:flex; align-items:center; gap:26px; min-width:0; }
-.community-brand-row .sda-brand-logo { width:280px; }
-.community-brand-copy { min-width:0; }
+.community-brand-row { display:flex; flex-wrap:wrap; align-items:center; gap:12px 26px; min-width:0; }
+/* Size the flex item with its artwork, so the image cannot overhang the text. */
+.community-brand-row .sda-brand-heading { flex:0 1 280px; max-width:100%; }
+.community-brand-row .sda-brand-logo { width:100%; max-width:100%; }
+.community-brand-copy { flex:1 1 12rem; min-width:0; overflow-wrap:anywhere; }
 .community-brand-copy .community-tagline { margin:0 0 5px; }
 .community-brand-copy .community-framework { margin:0; }
 @media(max-width:1170px) {
@@ -392,8 +395,8 @@
  .partner-logos { grid-column:1; grid-row:2; margin:0 16px 8px; }
 }
 @media(max-width:650px) {
- .community-brand-row { gap:15px; }
- .community-brand-row .sda-brand-logo { width:160px; max-width:none; }
+ .community-brand-row { gap:12px 15px; }
+ .community-brand-row .sda-brand-heading { flex-basis:160px; }
  .community-brand-copy .community-tagline { font-size:16px; }
  .community-brand-copy .community-framework { font-size:12px; line-height:1.4; }
  .partner-logos { gap:10px; padding:2px 5px; }

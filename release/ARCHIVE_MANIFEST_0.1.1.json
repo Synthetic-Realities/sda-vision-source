@@ -1,15 +1,14 @@
 {
   "title": "SDA Vision",
   "version": "0.1.1",
-  "scope": "Current GitHub source snapshot following software 0.1.1; manifest excludes itself",
-  "source_base_commit": "edf5aba1c04cc97df4cd12752fe473db96c96741",
+  "scope": "Versioned source release; manifest excludes itself",
+  "source_base_commit": "2f6726ca1d11afc79a155a48421282b0bc05e435",
   "release_date": "2026-09-29",
   "version_doi": "10.5281/zenodo.23039037",
   "concept_doi": "10.5281/zenodo.23008102",
   "ui_revisions": [
     "image-search-2026-09-29.1",
-    "reflect-review-2026-09-29.1",
-    "community-header-2026-09-30.1"
+    "reflect-review-2026-09-29.1"
   ],
   "files": [
     {
@@ -298,11 +297,6 @@
       "sha256": "0ec2e175587b3ba84815cc9d8bad4b73768cf47524e5944d092affac1ee4eafb"
     },
     {
-      "path": "docs/Community_Header_2026-09-30.md",
-      "bytes": 1926,
-      "sha256": "145c66c6b37505327fef0f9c06b7d2467d284048b0a99b4d66162fdf3672b89c"
-    },
-    {
       "path": "docs/Facilitator_Guide.md",
       "bytes": 3569,
       "sha256": "0e7c424db5a89a1248b2504c8a8ae97418e81568824cbaaacd71a9ad03f8b32a"
@@ -568,9 +562,9 @@
       "sha256": "7b07a9ca175c614e8e7de447198d35b0d161dd50db2c63b5f7fd6ea0e1e876f2"
     },
     {
-      "path": "frontend/dist/assets/index.es-DiPeRcr3.js",
+      "path": "frontend/dist/assets/index.es-QSBx52F_.js",
       "bytes": 158947,
-      "sha256": "fbd34abf9672d50be69e7b53d5c23b4cee60a82fb5531fa13bb179738523d237"
+      "sha256": "8fc463be6fef56681348719a918de7d17e9dad0ab110e6cdbe77ae13b1ece389"
     },
     {
       "path": "frontend/dist/assets/infographic-preview-BnI6beWM.png",
@@ -578,19 +572,19 @@
       "sha256": "d06c42c3dbe400be9d827dd42ad89b4b2d20df29b99ac8b906e611c459c23e5a"
     },
     {
-      "path": "frontend/dist/assets/jspdf.es.min-CQpr54pH.js",
-      "bytes": 386188,
-      "sha256": "c36a2cfbb4e3180b99aadb8eaf4e1baef9a148937c9e1babd47b1149a0974585"
+      "path": "frontend/dist/assets/jspdf.es.min-BzNiioPG.js",
+      "bytes": 386221,
+      "sha256": "ae9bd7075da6238a3bcff256c3406963fc84921fe6bbf0f783d3be9f65e06476"
     },
     {
-      "path": "frontend/dist/assets/main-DI9xitfN.js",
-      "bytes": 378475,
-      "sha256": "2a725a6b894a1f140814f6f140213534662782e56cb393c031d0796af50bdebc"
+      "path": "frontend/dist/assets/main-BGU2JuLX.css",
+      "bytes": 78181,
+      "sha256": "a03bc9f3bd26902a8eb2de5824487c20cb5f8427196d2ac18f8ccefeb3526c81"
     },
     {
-      "path": "frontend/dist/assets/main-cfu4GHJu.css",
-      "bytes": 78376,
-      "sha256": "5bb1bb8dbc1ed53c909b1067edc822f91495e3d7359fe51151c8bcf99dafd49f"
+      "path": "frontend/dist/assets/main-DGB5hECU.js",
+      "bytes": 378830,
+      "sha256": "d79f8b84af7056aefdeba76f18ea07b1bf24ca51f55f2681d7d7db41c3952c1d"
     },
     {
       "path": "frontend/dist/assets/podcast-cover-Dk3QfbkM.png",
@@ -598,9 +592,9 @@
       "sha256": "ec571f0ebb710c9f2fc2f8f79644793f97317b98323cb1d93cce34e608d79bdc"
     },
     {
-      "path": "frontend/dist/assets/pptxgen.es-ftSLYNY0.js",
-      "bytes": 372399,
-      "sha256": "6d945b8e479c7a2bf354ee8cdb8f677285470a3fd8212d8b62c6d3f65de69559"
+      "path": "frontend/dist/assets/pptxgen.es-DWxzSRoE.js",
+      "bytes": 372447,
+      "sha256": "1d2d7a2404b71bb63583f94c19a0571e5534069cb359294c83cfbfe12f802e36"
     },
     {
       "path": "frontend/dist/assets/presentation-preview-D7TtxRTR.png",
@@ -644,8 +638,8 @@
     },
     {
       "path": "frontend/dist/facilitator.html",
-      "bytes": 9339,
-      "sha256": "325b4ad08196a2e118ba752d5fc893c4ff23824b7d599d09552cab16eb352824"
+      "bytes": 9341,
+      "sha256": "2df6498743182ab809200f0579fb004e51e6c264b146f313cfbf02882e1513b0"
     },
     {
       "path": "frontend/dist/guides/SDA_Vision_Facilitator_Guide_v1.4-cover.png",
@@ -704,8 +698,8 @@
     },
     {
       "path": "frontend/dist/index.html",
-      "bytes": 3156,
-      "sha256": "bcd17684c8092f2058d4d5baeb77a00dea89cfcd13cc9c1b3ea086c4a9f76c32"
+      "bytes": 3158,
+      "sha256": "6ceb9f986df20cdc89891388e85ba6fd83bc34e51bf5728f8488eb4d67d8bc18"
     },
     {
       "path": "frontend/dist/sitemap.xml",
@@ -1039,8 +1033,8 @@
     },
     {
       "path": "frontend/src/community.css",
-      "bytes": 36137,
-      "sha256": "1c418c3958058fd568538815d6b489d29078f0ab52d55e8cda9e42f0f9608d3e"
+      "bytes": 35843,
+      "sha256": "a88ddf9a1cdfe5c949d42b8ded8be254256db433123940afefecea2e8ba097ee"
     },
     {
       "path": "frontend/src/community.ts",
@@ -1316,11 +1310,6 @@
       "path": "release/ARCHIVE_MANIFEST_0.1.0.json",
       "bytes": 65322,
       "sha256": "649deccfca8864026a05be54da22cbd110fc71960ad1654e643cf7690bbae807"
-    },
-    {
-      "path": "release/ARCHIVE_MANIFEST_0.1.1.json",
-      "bytes": 66827,
-      "sha256": "6722adb2092110bf00c0fd80b26afe5c8f47701a52bca022db2a9c81b4cab64d"
     },
     {
       "path": "release/PUBLICATION_2026-09-28.md",
@@ -1962,6 +1951,5 @@
       "bytes": 1061,
       "sha256": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40"
     }
-  ],
-  "source_updated": "2026-09-30"
+  ]
 }
