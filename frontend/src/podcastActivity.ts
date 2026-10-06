@@ -13,7 +13,7 @@ export const PODCAST_PROMPTS: Record<WorkshopStep, string> = {
 };
 export const PODCAST_SOURCE_NOTE = "Project source record, supplied by Dr Sam Martin: she created this podcast using Google NotebookLM, drawing on research she co-authored with Samantha Vanderslott in Vaccine. The recorded model findings concern the transcript’s wording and presentation.";
 export const PODCAST_WORKSHOP_VERDICT = "Mix of human and AI";
-export const PODCAST_WORKSHOP_REASON = "This source-informed workshop conclusion brings together human-authored research, the researcher’s choice of source and an AI-generated podcast adaptation. Following the cover citation and comparing the podcast with the paper adds source evidence to human reflection alongside the recorded model findings.";
+export const PODCAST_WORKSHOP_REASON = "This source-informed workshop conclusion brings together human-authored research selected by Dr Sam Martin and its adaptation into a podcast with Google NotebookLM. Following the cover citation and comparing the podcast with the paper adds source evidence to human reflection alongside the recorded model findings.";
 export const PODCAST_COMPARISON = "The saved ratings assess the transcript; the Sound tab separately describes an audio excerpt. The final workshop verdict draws on this wider source context. Comparing individual statements helps us assess how the podcast summarises, simplifies or extends the research.";
 
 // Match the approved file or its hash-matched artwork, not an arbitrary filename.

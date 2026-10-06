@@ -31,3 +31,9 @@ The conclusion-copy revision (.2) passed the focused podcast and image-search te
 Revision `workshop-layout-2026-10-06.1` centres the podcast activity card at the same desktop width as the other activity cards, retaining the full-size preview link and a single-column mobile rule. Reflect places the change-of-view prompt after the next-action choices and before the optional takeaway field.
 
 The existing workshop regression suite passed with the revised ordering assertion, including credential failure states and transcript scope. TypeScript and Research/Public/Conference builds passed. Chrome desktop checks confirmed equal card widths, centred placement, no horizontal overflow and the requested Reflect reading order. The browser viewport override did not apply during the mobile follow-up, so a fresh phone-width check is not claimed for these two layout adjustments.
+
+## Named source attribution
+
+The podcast creation record names Dr Sam Martin as the person who selected the research source. This wording distinguishes the example’s creator from researchers using the software. It is an attribution clarification; recorded findings, prompts, aggregation and workshop responses are unchanged.
+
+The attribution clarification passed the focused podcast suite and TypeScript/Research/Public/Conference builds. The guide PDF already names Dr Sam Martin and retains its approved bytes.
