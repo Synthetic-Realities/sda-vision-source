@@ -18,18 +18,21 @@ try {
   const html=renderToStaticMarkup(React.createElement(WorkshopActivity,{...props,step,podcastExample:true}));
   assert.ok(html.includes(activity.PODCAST_PROMPTS[step]));
   assert.doesNotMatch(html,/Open Google Lens/);
-  if(['notice','discuss'].includes(step)) assert.doesNotMatch(html,/NotebookLM|Read the research paper|www.google.com/);
+  if(['notice','discuss'].includes(step)) assert.doesNotMatch(html,/NotebookLM|Final workshop verdict|Read the research paper|www.google.com/);
   else {
    assert.match(html,/href="https:\/\/www.google.com\/search\?q=[^"]+" target="_blank" rel="noopener noreferrer"/);
    assert.match(html,/href="https:\/\/doi.org\/10.1016\/j.vaccine.2021.10.031" target="_blank"/);
    assert.doesNotMatch(html,/<details[^>]*open/);
+   assert.match(html,/Final workshop verdict: Mix of human and AI/);
   }
   for(const kind of ['audio','image','video','pdf','pptx','text']) {
    const other=renderToStaticMarkup(React.createElement(WorkshopActivity,{...props,step,kind,podcastExample:false}));
    assert.doesNotMatch(other,/Podcast source exploration|NotebookLM|Read the research paper/);
   }
  }
- assert.doesNotMatch(activity.podcastActivitySummary(false),/NotebookLM|Source reveal: Project/);
+ assert.doesNotMatch(activity.podcastActivitySummary(false),/NotebookLM|Final workshop verdict|Source reveal: Project/);
+ assert.match(activity.podcastActivitySummary(true),/Final workshop verdict: Mix of human and AI/);
+ assert.match(activity.podcastActivitySummary(true),/saved ratings assess the transcript; the Sound tab separately describes an audio excerpt/);
  assert.match(activity.podcastActivitySummary(true),/NotebookLM/);
  assert.match(activity.podcastActivitySummary(true),/Read the paper: https:/);
  const old={window:globalThis.window,document:globalThis.document,Image:globalThis.Image};

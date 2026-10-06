@@ -58,6 +58,8 @@ Smart Data Research UK (UKRI) Fellowship, Grant number UKRI4010, hosted at Manch
 
 ## Podcast source exploration
 
+The final, source-informed workshop verdict is **Mix of human and AI**: human-authored research, selected by the researcher and adapted into a podcast with Google NotebookLM. Following the cover citation, finding the publication and comparing a podcast statement with the paper helps the group reach a fuller Human–AI reflection. The recorded transcript ratings and separate audio-excerpt description remain available with their original scope; they inform the discussion alongside the additional source evidence.
+
 The podcast activity invites participants to follow the cover citation, search for the publication and compare a statement with its source. [Activity and source details](docs/Podcast_Source_Activity.md). The [seven-page facilitator guide, version 1.5](docs/guides/SDA_Vision_Facilitator_Guide_v1.5.pdf), includes this exercise. Session PDF and PowerPoint previews use the displayed media artwork where available.
 
 [Software 0.1.2 and facilitator guide 1.5 distribution notes](release/RELEASE_0.1.2.md).

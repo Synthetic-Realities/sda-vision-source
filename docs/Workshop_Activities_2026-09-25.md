@@ -46,6 +46,8 @@ Smart Data Research UK (UKRI) Fellowship, Grant number UKRI4010, hosted at Manch
 
 The NotebookLM podcast draws on research published by Sam Martin and Samantha Vanderslott in *Vaccine*. Its cover contains the publication citation. The activity separates how the podcast was produced, what it draws on, and how faithfully it represents the source.
 
+The final, source-informed workshop verdict is **Mix of human and AI**: human-authored research, selected by the researcher and adapted into a podcast with Google NotebookLM. Following the cover citation, finding the publication and comparing a podcast statement with the paper helps the group reach a fuller Human–AI reflection. The recorded transcript ratings and separate audio-excerpt description remain available with their original scope; they inform the discussion alongside the additional source evidence.
+
 | Step | Invitation |
 | --- | --- |
 | Notice | Listen to a short section. What shapes your first impression of how this podcast was made? |

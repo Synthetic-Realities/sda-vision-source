@@ -1,6 +1,6 @@
 # Acceptance record: SDA Vision 0.1.2 and facilitator guide 1.5
 
-6 October 2026 · UI/resource revision podcast-exploration-2026-10-06.1.
+6 October 2026 · UI/resource revision podcast-exploration-2026-10-06.2.
 
 ## Verified
 
@@ -19,3 +19,9 @@
 Provider prompts, thresholds, aggregation, trust policy, original media and saved reports are unchanged. No paid inference or media upload was made. Local conference live-provider calls were not rerun. This is a frontend and resource revision; prior dependency installation evidence belongs to its original release, not a new full clean installation claim.
 
 New software and guide archives are prepared for a versioned Zenodo deposit. Existing published Zenodo files and identifiers are preserved. Each new published version receives a version DOI within its existing Concept DOI series.
+
+## Workshop conclusion wording
+
+The source reveal identifies the final workshop verdict as **Mix of human and AI**, based on the researcher-supplied creation record and publication connection. This teaching conclusion remains separate from saved model ratings, audio observations and participant responses. It enters session exports after the source reveal is opened.
+
+The conclusion-copy revision (.2) passed the focused podcast and image-search tests, TypeScript and Research/Public/Conference builds. The source reveal and final-verdict text were checked in Chrome at desktop and 390 px; the generated nine-page podcast session PDF includes the conclusion after reveal and was visually checked on pages 8–9. Guide pages 6–7 were re-rendered and inspected. Earlier all-media export checks above belong to the initial .1 revision.

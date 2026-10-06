@@ -12,7 +12,9 @@ export const PODCAST_PROMPTS: Record<WorkshopStep, string> = {
   reflect: "What have you learned about the research and about the podcast’s production? How would you describe both when sharing it?",
 };
 export const PODCAST_SOURCE_NOTE = "Project source record, supplied by Dr Sam Martin: she created this podcast using Google NotebookLM, drawing on research she co-authored with Samantha Vanderslott in Vaccine. The recorded model findings concern the transcript’s wording and presentation.";
-export const PODCAST_COMPARISON = "Finding the publication establishes a source connection. Comparing individual statements helps us assess how the podcast summarises, simplifies or extends that research.";
+export const PODCAST_WORKSHOP_VERDICT = "Mix of human and AI";
+export const PODCAST_WORKSHOP_REASON = "This source-informed workshop conclusion brings together human-authored research, the researcher’s choice of source and an AI-generated podcast adaptation. Following the cover citation and comparing the podcast with the paper adds source evidence to human reflection alongside the recorded model findings.";
+export const PODCAST_COMPARISON = "The saved ratings assess the transcript; the Sound tab separately describes an audio excerpt. The final workshop verdict draws on this wider source context. Comparing individual statements helps us assess how the podcast summarises, simplifies or extends the research.";
 
 // Match the approved file or its hash-matched artwork, not an arbitrary filename.
 export function isPodcastExample(hash?: string, artwork?: string): boolean {
@@ -23,6 +25,6 @@ export function podcastActivitySummary(revealed: boolean): string {
   return "\n## Podcast source exploration\nTeaching prompts; separate from model findings and participant responses.\n"
     + Object.entries(PODCAST_PROMPTS).map(([step, prompt]) => `${step[0].toUpperCase() + step.slice(1)}: ${prompt}`).join("\n")
     + `\nGoogle search: ${PODCAST_SEARCH_URL}\n`
-    + (revealed ? `Source reveal: ${PODCAST_SOURCE_NOTE}\nComparison: ${PODCAST_COMPARISON}\nPublication: ${PODCAST_CITATION}\nRead the paper: ${PODCAST_PAPER_URL}\n`
+    + (revealed ? `Final workshop verdict: ${PODCAST_WORKSHOP_VERDICT}\nWorkshop conclusion: ${PODCAST_WORKSHOP_REASON}\nSource reveal: ${PODCAST_SOURCE_NOTE}\nComparison: ${PODCAST_COMPARISON}\nPublication: ${PODCAST_CITATION}\nRead the paper: ${PODCAST_PAPER_URL}\n`
       : "Source reveal: not opened in this session. Follow the citation on the cover to explore the publication.\n");
 }
