@@ -36,6 +36,10 @@
 .facilitator-guide .activity figure { margin:18px 0 0; }
 .facilitator-guide .activity img { display:block; width:100%; height:auto; border:1px solid #dce5e6; }
 .facilitator-guide .activity figcaption { font-size:.875rem; margin-top:10px; color:#4a6067; }
+.facilitator-guide .podcast-preview { width:calc((100% - 28px)/2); margin:0 auto 30px; border-top:6px solid #ed116f; }
+.facilitator-guide .podcast-preview h2 { font-size:1.5rem; }
+.facilitator-guide .podcast-preview figure { margin-bottom:18px; }
+.facilitator-guide .podcast-preview .cover { box-shadow:none; }
 .facilitator-guide .download { background:#eef7f7; border-left:5px solid #007e83; padding:28px; border-radius:8px; margin:24px 0 40px; }
 .facilitator-guide .download small { display:block; margin-top:14px; color:#425960; }
 .facilitator-guide .guide-credit { border-top:1px solid #d5e2e3; padding-top:24px; font-size:.875rem; color:#425960; }
@@ -48,6 +52,7 @@
  .facilitator-guide .steps { grid-template-columns:repeat(2,1fr); gap:8px; padding-bottom:26px; }
  .facilitator-guide .preview-grid { grid-template-columns:1fr; gap:22px; }
  .facilitator-guide .activity { padding:16px; }
+ .facilitator-guide .podcast-preview { width:100%; }
  .facilitator-guide .download { padding:22px; }
  .facilitator-guide h2 { font-size:1.6rem; }
 }

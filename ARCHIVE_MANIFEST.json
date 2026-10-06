@@ -2,12 +2,13 @@
   "title": "SDA Vision",
   "version": "0.1.2",
   "scope": "GitHub source snapshot; manifest excludes itself",
-  "source_base_commit": "a6e0b10c9f69d5bb5af8c227a99b714c518ceeec",
+  "source_base_commit": "258cb765d4950c3eb01a114eb02c063fbe643769",
   "release_date": "2026-10-06",
   "concept_doi": "10.5281/zenodo.23008102",
   "publication_status": "New-version Zenodo draft prepared for review; unpublished",
   "ui_revisions": [
-    "podcast-exploration-2026-10-06.2"
+    "podcast-exploration-2026-10-06.2",
+    "workshop-layout-2026-10-06.1"
   ],
   "files": [
     {
@@ -611,9 +612,9 @@
       "sha256": "7b07a9ca175c614e8e7de447198d35b0d161dd50db2c63b5f7fd6ea0e1e876f2"
     },
     {
-      "path": "frontend/dist/assets/index.es-BFs-Wx5N.js",
+      "path": "frontend/dist/assets/index.es-D3A3AgGT.js",
       "bytes": 158947,
-      "sha256": "61ac1679664ced65a5a74e40ae6aa52e4b3f51d5a0c6defe9882494fd693de11"
+      "sha256": "771a9b0a892262a147e9a8c7651421f9a4ceae33b827352ab9940f9ae5043980"
     },
     {
       "path": "frontend/dist/assets/infographic-preview-BnI6beWM.png",
@@ -621,19 +622,19 @@
       "sha256": "d06c42c3dbe400be9d827dd42ad89b4b2d20df29b99ac8b906e611c459c23e5a"
     },
     {
-      "path": "frontend/dist/assets/jspdf.es.min--O5hfp-c.js",
+      "path": "frontend/dist/assets/jspdf.es.min-Duc2BDOO.js",
       "bytes": 386188,
-      "sha256": "a286f59e0319f6fe57e66c5d2f9688b4e41be000774113ba093aa9c2dac0f78b"
+      "sha256": "310ca462bb4f03684b29746420766740825f60e6c79a13eddc3e4f3d9da37c34"
     },
     {
-      "path": "frontend/dist/assets/main-CC4OUW6P.js",
-      "bytes": 384920,
-      "sha256": "bced98e949d1b2b1c4c4a0de6d51a41982016f56a16ac5eff696cae01c5c6c06"
+      "path": "frontend/dist/assets/main-drcLYyIh.css",
+      "bytes": 79086,
+      "sha256": "3514603d0d46f4c0a6082bb5bd9f7f0c035bd6060028eeab2ead90e28224c4ae"
     },
     {
-      "path": "frontend/dist/assets/main-DRxDLyf5.css",
-      "bytes": 78750,
-      "sha256": "fdb7d733b6b803b522da37fcc778a058bba3c432d51f862433ef63ad3aa3dce2"
+      "path": "frontend/dist/assets/main-e9mGini3.js",
+      "bytes": 385030,
+      "sha256": "4ad1373513f171bd1dc33b7f9e7f45dd7402a628dbfb4a43ae3ed367dfed9c9d"
     },
     {
       "path": "frontend/dist/assets/podcast-cover-Dk3QfbkM.png",
@@ -641,9 +642,9 @@
       "sha256": "ec571f0ebb710c9f2fc2f8f79644793f97317b98323cb1d93cce34e608d79bdc"
     },
     {
-      "path": "frontend/dist/assets/pptxgen.es-MmASu6Uw.js",
+      "path": "frontend/dist/assets/pptxgen.es-CoHQhwgL.js",
       "bytes": 372399,
-      "sha256": "cb6bd467205ebff6d31922e891630b00bc9ee1db87e53d0e16361f3c92f2ed25"
+      "sha256": "8cde42b26842c614b716535da307c27f2fd4ea0b9b6152d680cd5066a7038a87"
     },
     {
       "path": "frontend/dist/assets/presentation-preview-D7TtxRTR.png",
@@ -687,8 +688,8 @@
     },
     {
       "path": "frontend/dist/facilitator.html",
-      "bytes": 10559,
-      "sha256": "47d4f3a1081af70db5f6cd57b489b37fc17d36395932414e1de0df729f5c8a2b"
+      "bytes": 10689,
+      "sha256": "69fcfaed4c2c58fa1c27582113886042a7b5e177bbdf2b19d983e425af0739a4"
     },
     {
       "path": "frontend/dist/guides/SDA_Vision_Facilitator_Guide_v1.4-cover.png",
@@ -783,7 +784,7 @@
     {
       "path": "frontend/dist/index.html",
       "bytes": 3156,
-      "sha256": "54961007a901bc89f9d6450bf947986375457d58c4667294e2a5018a29e1ba3f"
+      "sha256": "39671f922c4d902d180086d140798fd8a507a66034d68003d2923258908f8dfb"
     },
     {
       "path": "frontend/dist/sitemap.xml",
@@ -1327,8 +1328,8 @@
     },
     {
       "path": "frontend/src/components/WorkshopActivity.tsx",
-      "bytes": 10597,
-      "sha256": "73e7d026b1619306837be4103fae15c760ae21ae156859d542d7a71c451cd3f9"
+      "bytes": 10573,
+      "sha256": "82e0e69f06023f0041c57e0786c802e63b585166e74f77c4dc1708063d477f34"
     },
     {
       "path": "frontend/src/developer.css",
@@ -1347,13 +1348,13 @@
     },
     {
       "path": "frontend/src/facilitator-guide.css",
-      "bytes": 5496,
-      "sha256": "1ea15310994e21ccec57ad409d8a0286fe71c9f8a36695a8b8ed2a3978ab4346"
+      "bytes": 5860,
+      "sha256": "0aca24790bc80339cb41a316543d7fa9ec677d38d726a8b583569858565a51ce"
     },
     {
       "path": "frontend/src/facilitator-guide.html",
-      "bytes": 7789,
-      "sha256": "fb7c8c33acfd3eea5eca1210ec770dec72ec199cd44c95bd99d6a58c9307eda3"
+      "bytes": 7919,
+      "sha256": "0057150c34c69771bf42be1825db0e7f49be53e19ead52ee39e20d17519d633c"
     },
     {
       "path": "frontend/src/lib.ts",
@@ -1437,8 +1438,8 @@
     },
     {
       "path": "release/ACCEPTANCE_0.1.2.md",
-      "bytes": 3228,
-      "sha256": "5807d4c40daf4858c72f858f35658643cd684033346eb66705395fbd289ed12c"
+      "bytes": 4053,
+      "sha256": "fac69a7d76f4d21429cd4aa2bfac5a74de97637ad2d0f864f6e5358421bd3982"
     },
     {
       "path": "release/ARCHIVE_MANIFEST_0.1.0.json",
@@ -1827,8 +1828,8 @@
     },
     {
       "path": "tests/workshop_review.mjs",
-      "bytes": 5125,
-      "sha256": "b1a382e1463b8605369af70f905353c850f8b0c6783e5907fa7e7c3217c9706b"
+      "bytes": 5339,
+      "sha256": "559a6b166be854b0557308301e3443e9ebaa0c399502ab2812b944b0149ced0a"
     },
     {
       "path": "tests/workshop_start.mjs",

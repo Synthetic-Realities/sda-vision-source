@@ -25,3 +25,9 @@ New software and guide archives are prepared for a versioned Zenodo deposit. Exi
 The source reveal identifies the final workshop verdict as **Mix of human and AI**, based on the researcher-supplied creation record and publication connection. This teaching conclusion remains separate from saved model ratings, audio observations and participant responses. It enters session exports after the source reveal is opened.
 
 The conclusion-copy revision (.2) passed the focused podcast and image-search tests, TypeScript and Research/Public/Conference builds. The source reveal and final-verdict text were checked in Chrome at desktop and 390 px; the generated nine-page podcast session PDF includes the conclusion after reveal and was visually checked on pages 8–9. Guide pages 6–7 were re-rendered and inspected. Earlier all-media export checks above belong to the initial .1 revision.
+
+## Workshop layout follow-up
+
+Revision `workshop-layout-2026-10-06.1` centres the podcast activity card at the same desktop width as the other activity cards, retaining the full-size preview link and a single-column mobile rule. Reflect places the change-of-view prompt after the next-action choices and before the optional takeaway field.
+
+The existing workshop regression suite passed with the revised ordering assertion, including credential failure states and transcript scope. TypeScript and Research/Public/Conference builds passed. Chrome desktop checks confirmed equal card widths, centred placement, no horizontal overflow and the requested Reflect reading order. The browser viewport override did not apply during the mobile follow-up, so a fresh phone-width check is not claimed for these two layout adjustments.

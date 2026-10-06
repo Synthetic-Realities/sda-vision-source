@@ -21,7 +21,9 @@ try {
  assert(discuss.indexOf('You picked')>discuss.indexOf("check together"));
  const reflect=render(React.createElement(Activity,{...props,step:'reflect'}));
  assert.match(reflect,/<legend>Your view now<\/legend>/);assert.match(reflect,/Your Discuss note/);assert.match(reflect,/Download session notes/);
- assert(reflect.indexOf('Your view has moved')>reflect.indexOf('New session'));
+ assert(reflect.indexOf('Your view has moved') > reflect.indexOf('What would you do next? Choose any.'));
+ assert(reflect.indexOf('Your view has moved') < reflect.indexOf('What will you take away? (optional)'));
+ assert(reflect.indexOf('Your view has moved') < reflect.indexOf('New session'));
  const before=JSON.stringify(podcast); const banner=render(React.createElement(Banner,{report:podcast}));
  assert.match(banner,/Transcript excerpt assessment/);assert.match(banner,/12,000/);assert.match(banner,/25,985/);assert.match(banner,/46%/);assert.match(banner,/Text synthetic rating: 90/);assert.match(banner,/Median of the available model ratings/);assert.doesNotMatch(banner,/class="gauge"/);
  assert.doesNotMatch(banner,/Combined method confidence|recorded rule assigns/);assert.equal(JSON.stringify(podcast),before);

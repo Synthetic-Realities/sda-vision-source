@@ -102,6 +102,7 @@ export default function WorkshopActivity(p: Props) {
       <OriginChoices visibleLabel label="Your view now" options={options} value={r.laterImpression} disabled={disabled} onChange={laterImpression => p.onChange({ laterImpression })} />
 
       <TickChoices label="What would you do next? Choose any." options={p.kind === "image" ? NEXT_ACTIONS : NEXT_ACTIONS.filter(action => action !== "Find the original source")} selected={r.nextActions} disabled={disabled} sourceSearch={p.kind === "image"} originalUrl={p.originalUrl} originalName={p.originalName} onChange={nextActions => p.onChange({ nextActions })} />
+      {r.laterImpression.length > 0 && <p className="workshop-choice-response" role="status">{!r.impression.length ? `Your view now: ${laterView}.` : sameImpression(r.impression, r.laterImpression) ? "You have kept your first impression. What would you still like to check?" : `Your view has moved from "${firstView}" to "${laterView}". What influenced that change?`}</p>}
     </>}
     {p.step !== "check" && <>
       <label className="community-note" htmlFor={`${id}-note`}>{noteLabel}</label>
@@ -121,7 +122,6 @@ export default function WorkshopActivity(p: Props) {
       {p.step === "notice" && r.impression.length > 0 && <div className="workshop-choice-response" role="status"><strong>Your first impression: {firstView}</strong>
         {r.impressionAfterChecks && <small>Chosen after SDA findings were available.</small>}</div>}
       {p.step === "discuss" && r.clues.length > 0 && <p className="workshop-choice-response" role="status">You picked {p.step === "discuss" && r.clues.length} {p.step === "discuss" && r.clues.length === 1 ? "cue" : "cues"}. What other explanation might fit?</p>}
-      {p.step === "reflect" && r.laterImpression.length > 0 && <p className="workshop-choice-response" role="status">{!r.impression.length ? `Your view now: ${laterView}.` : sameImpression(r.impression, r.laterImpression) ? "You have kept your first impression. What would you still like to check?" : `Your view has moved from "${firstView}" to "${laterView}". What influenced that change?`}</p>}
     </div>
   </section>;
 }
