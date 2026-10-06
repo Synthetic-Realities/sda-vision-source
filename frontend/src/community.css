@@ -422,3 +422,8 @@
 .community-opinion-intro-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1rem; }
 .community-opinion-intro-row .community-opinion-intro { flex: 1 1 22rem; }
 .community-opinion-intro-row .community-original-download { flex: 0 1 auto; margin-bottom: 1rem; }
+.podcast-exploration { margin: 20px 0; padding: 16px 18px; border-left: 4px solid #ed116f; background: var(--surface, #f5f9fa); overflow-wrap: anywhere; }
+.podcast-exploration h3 { margin-top: 0; }
+.podcast-exploration details { margin-top: 16px; }
+.podcast-exploration summary { color: #a90053; font-weight: 700; cursor: pointer; }
+.podcast-exploration .cw-text { display: inline-flex; align-items: center; gap: 8px; }

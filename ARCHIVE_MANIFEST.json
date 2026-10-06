@@ -1,15 +1,13 @@
 {
   "title": "SDA Vision",
-  "version": "0.1.1",
-  "scope": "Current GitHub source snapshot following software 0.1.1; manifest excludes itself",
-  "source_base_commit": "edf5aba1c04cc97df4cd12752fe473db96c96741",
-  "release_date": "2026-09-29",
-  "version_doi": "10.5281/zenodo.23039037",
+  "version": "0.1.2",
+  "scope": "GitHub source snapshot; manifest excludes itself",
+  "source_base_commit": "5ff4182a50f1f1da0d2cc4466befb3583d1b23ab",
+  "release_date": "2026-10-06",
   "concept_doi": "10.5281/zenodo.23008102",
+  "publication_status": "GitHub update; new Zenodo version prepared, not published",
   "ui_revisions": [
-    "image-search-2026-09-29.1",
-    "reflect-review-2026-09-29.1",
-    "community-header-2026-09-30.1"
+    "podcast-exploration-2026-10-06.1"
   ],
   "files": [
     {
@@ -18,14 +16,19 @@
       "sha256": "9d5440b4912a4a9b1bda0dfbbd9ce50a713fcb1c52d382bf6a342b10fbd11617"
     },
     {
+      "path": ".gitattributes",
+      "bytes": 14,
+      "sha256": "298564b523d3f056a5874255a99027314073eeaad77fe64896ee88e8902e0354"
+    },
+    {
       "path": ".gitignore",
       "bytes": 2488,
       "sha256": "82d06c2e4a1612f5a87363e6f182abcebd2dbd871db3318dfa1505f0ede3121b"
     },
     {
       "path": "CITATION.cff",
-      "bytes": 1477,
-      "sha256": "b13aa10595e8e98d7910f5b832c563de574f3ba0568c85ae5c6f967ca40be814"
+      "bytes": 1486,
+      "sha256": "4398f694f0f7492e32c41f4403c515233faa0235278c6d019b28a5f4bd6a0d64"
     },
     {
       "path": "LICENSE",
@@ -39,8 +42,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6488,
-      "sha256": "e6fe6bffd371bbb3a287effd1d38c9b9125f90e2652029bb77eab6de4931b4db"
+      "bytes": 7226,
+      "sha256": "d26e3272353ca1fe8e81b071f04a73f1536c855055c782e1cb10799bad0e514c"
     },
     {
       "path": "RELEASE_ORIGIN.md",
@@ -115,7 +118,7 @@
     {
       "path": "app/config.py",
       "bytes": 4497,
-      "sha256": "207fead2127915f1e01e61ff2cb5b0cad37aa11235b228016560f92f09c3463b"
+      "sha256": "90540a66cb30eec77416c02ada8060f8e4d22d8d0f1a8036d0d150c741a2d67b"
     },
     {
       "path": "app/corpus.py",
@@ -304,8 +307,8 @@
     },
     {
       "path": "docs/Facilitator_Guide.md",
-      "bytes": 3569,
-      "sha256": "0e7c424db5a89a1248b2504c8a8ae97418e81568824cbaaacd71a9ad03f8b32a"
+      "bytes": 5491,
+      "sha256": "687836abc55fb6fce279be792d1d0e5007f65c35af1eb77c93632b97f1a03d4e"
     },
     {
       "path": "docs/Image_Search_Scope_2026-09-29.md",
@@ -331,6 +334,11 @@
       "path": "docs/Platform_Provenance_Scope_2026-09-24.md",
       "bytes": 15613,
       "sha256": "73a4f5052b66779cd50e95fa03704ca4e39cc18b9b18d808925525ec80cf2a22"
+    },
+    {
+      "path": "docs/Podcast_Source_Activity.md",
+      "bytes": 2285,
+      "sha256": "55cc7ce44c781b27ea09ee3685eb59046f93477dda8b53f7eeb0b8acd1cd7990"
     },
     {
       "path": "docs/PowerPoint_Preview_Setup.md",
@@ -364,8 +372,8 @@
     },
     {
       "path": "docs/Workshop_Activities_2026-09-25.md",
-      "bytes": 3460,
-      "sha256": "20408584677a9e0e52818316c7db50d77ee03cdf028ef6945b9a6135a130ae3b"
+      "bytes": 5718,
+      "sha256": "6d7c9cb5e3a9ef53ad8512b4b9916d15765df6525423d631f56cb1c056064a25"
     },
     {
       "path": "docs/branding/README.md",
@@ -403,9 +411,19 @@
       "sha256": "19e83ee1785ed8578c0de0c10e426f8a36ef5e0f2d9d26442c548b2064c42455"
     },
     {
+      "path": "docs/guides/SDA_Vision_Facilitator_Guide_v1.5.pdf",
+      "bytes": 7076713,
+      "sha256": "99746fd0602567e5c6e9c1d786cdeb2c3696deb602b632ee99cd0abd574fd644"
+    },
+    {
       "path": "docs/images/SDA_Vision_Facilitator_Guide_v1.4-cover.png",
       "bytes": 1252209,
       "sha256": "946b0865f4944fcfd708d9ecc324f6a041aca9ce9eaf236f4677d78beed49752"
+    },
+    {
+      "path": "docs/images/SDA_Vision_Facilitator_Guide_v1.5-cover.png",
+      "bytes": 853522,
+      "sha256": "aeca0218fd2bccf7e76aca91f550286a352664c23ead2dc42ad79271f5c07b71"
     },
     {
       "path": "docs/images/community-workshop.png",
@@ -433,6 +451,11 @@
       "sha256": "3c08a47ed6772afe5cec90b6d3d2a26d30407316d38d0fd01fb36c2b35f29e9c"
     },
     {
+      "path": "docs/images/workshop-activity-1-notice-v1.5.png",
+      "bytes": 627368,
+      "sha256": "d1e8af5c8ce8b40eb632e661519a4a5af34396ca6d186080be1d8d8359d7d6f6"
+    },
+    {
       "path": "docs/images/workshop-activity-1-notice.png",
       "bytes": 627718,
       "sha256": "de35e04415c11ca774a671f0e28d7a24ba21ce698fb4ba2994d1c03e58522529"
@@ -441,6 +464,11 @@
       "path": "docs/images/workshop-activity-2-discuss-v1.4.png",
       "bytes": 804903,
       "sha256": "b473db80b2427ba94006ae7158afd5e957688d8b87bdd7c3bcfacd32b3c987a5"
+    },
+    {
+      "path": "docs/images/workshop-activity-2-discuss-v1.5.png",
+      "bytes": 562263,
+      "sha256": "8c0cc23c7d3d582dedf67b63214eba61eade971a809f589debe3ab99aa5a0c79"
     },
     {
       "path": "docs/images/workshop-activity-2-discuss.png",
@@ -453,9 +481,24 @@
       "sha256": "46b8063e29d1c9d131427b70055b5581893bbe0f5b363288c3a6072062c272b7"
     },
     {
+      "path": "docs/images/workshop-activity-3-check-v1.5.png",
+      "bytes": 256267,
+      "sha256": "9b8a173440d3cd218f5db4b79203a86b94fa505b2f71012c5ccc0b21a2092882"
+    },
+    {
       "path": "docs/images/workshop-activity-4-reflect-v1.4.png",
       "bytes": 507622,
       "sha256": "e1d2cfadc607e16f2f1500a0c1822ef8f37d2a48db388f095c5c74ed2a227903"
+    },
+    {
+      "path": "docs/images/workshop-activity-4-reflect-v1.5.png",
+      "bytes": 365457,
+      "sha256": "64c16494f53faa3717517c58664dff4d7f327587ecbde94b5aa75f3a496f116e"
+    },
+    {
+      "path": "docs/images/workshop-podcast-source-v1.5.png",
+      "bytes": 1017585,
+      "sha256": "b442adfa224c7e235bbc1033c7e1867a6da7e4d2efabdcdd787dd8617924af15"
     },
     {
       "path": "evaluate_corpus.py",
@@ -539,8 +582,8 @@
     },
     {
       "path": "frontend/dist/about.html",
-      "bytes": 9415,
-      "sha256": "dd0186ed08824a5a81c0f443a66cd6d0625dab888e1afd1f8941da61a4bba4f9"
+      "bytes": 9681,
+      "sha256": "c47e83d8948fff41ca80670588a17fc528d4cd919bfbbd21b0138d07007b4294"
     },
     {
       "path": "frontend/dist/assets/NotoSans-Regular-Dpf_lrdO.ttf",
@@ -568,9 +611,9 @@
       "sha256": "7b07a9ca175c614e8e7de447198d35b0d161dd50db2c63b5f7fd6ea0e1e876f2"
     },
     {
-      "path": "frontend/dist/assets/index.es-DiPeRcr3.js",
+      "path": "frontend/dist/assets/index.es-D5czH_W6.js",
       "bytes": 158947,
-      "sha256": "fbd34abf9672d50be69e7b53d5c23b4cee60a82fb5531fa13bb179738523d237"
+      "sha256": "ec71695524803d8131eedf1f5983821ea21a2f2a5f5152ba119104d4fad5efd7"
     },
     {
       "path": "frontend/dist/assets/infographic-preview-BnI6beWM.png",
@@ -578,19 +621,19 @@
       "sha256": "d06c42c3dbe400be9d827dd42ad89b4b2d20df29b99ac8b906e611c459c23e5a"
     },
     {
-      "path": "frontend/dist/assets/jspdf.es.min-CQpr54pH.js",
-      "bytes": 386188,
-      "sha256": "c36a2cfbb4e3180b99aadb8eaf4e1baef9a148937c9e1babd47b1149a0974585"
+      "path": "frontend/dist/assets/jspdf.es.min-C5HLoVgE.js",
+      "bytes": 386221,
+      "sha256": "09cfa637f08b96a22bdc9c7550fc532cfef54cdbe3d18eada2c8af3a20418d36"
     },
     {
-      "path": "frontend/dist/assets/main-DI9xitfN.js",
-      "bytes": 378475,
-      "sha256": "2a725a6b894a1f140814f6f140213534662782e56cb393c031d0796af50bdebc"
+      "path": "frontend/dist/assets/main-DRxDLyf5.css",
+      "bytes": 78750,
+      "sha256": "fdb7d733b6b803b522da37fcc778a058bba3c432d51f862433ef63ad3aa3dce2"
     },
     {
-      "path": "frontend/dist/assets/main-cfu4GHJu.css",
-      "bytes": 78376,
-      "sha256": "5bb1bb8dbc1ed53c909b1067edc822f91495e3d7359fe51151c8bcf99dafd49f"
+      "path": "frontend/dist/assets/main-zVMX6cAe.js",
+      "bytes": 384465,
+      "sha256": "dc349fa2292f96e603474a8fc3b3ba21a7edc44e8cc596e3c432be81be2748fe"
     },
     {
       "path": "frontend/dist/assets/podcast-cover-Dk3QfbkM.png",
@@ -598,9 +641,9 @@
       "sha256": "ec571f0ebb710c9f2fc2f8f79644793f97317b98323cb1d93cce34e608d79bdc"
     },
     {
-      "path": "frontend/dist/assets/pptxgen.es-ftSLYNY0.js",
-      "bytes": 372399,
-      "sha256": "6d945b8e479c7a2bf354ee8cdb8f677285470a3fd8212d8b62c6d3f65de69559"
+      "path": "frontend/dist/assets/pptxgen.es-BXVoKQZT.js",
+      "bytes": 372447,
+      "sha256": "b17820a0ec40fbc2c1d7ab6d64f39a6185b059adccb42da74aa3e69822eea411"
     },
     {
       "path": "frontend/dist/assets/presentation-preview-D7TtxRTR.png",
@@ -644,8 +687,8 @@
     },
     {
       "path": "frontend/dist/facilitator.html",
-      "bytes": 9339,
-      "sha256": "325b4ad08196a2e118ba752d5fc893c4ff23824b7d599d09552cab16eb352824"
+      "bytes": 10265,
+      "sha256": "db5f0bdb2591ce193bcd6337fb6205b8944aa496e2d187786359a4572feae83f"
     },
     {
       "path": "frontend/dist/guides/SDA_Vision_Facilitator_Guide_v1.4-cover.png",
@@ -658,6 +701,16 @@
       "sha256": "19e83ee1785ed8578c0de0c10e426f8a36ef5e0f2d9d26442c548b2064c42455"
     },
     {
+      "path": "frontend/dist/guides/SDA_Vision_Facilitator_Guide_v1.5-cover.png",
+      "bytes": 853522,
+      "sha256": "aeca0218fd2bccf7e76aca91f550286a352664c23ead2dc42ad79271f5c07b71"
+    },
+    {
+      "path": "frontend/dist/guides/SDA_Vision_Facilitator_Guide_v1.5.pdf",
+      "bytes": 7076713,
+      "sha256": "99746fd0602567e5c6e9c1d786cdeb2c3696deb602b632ee99cd0abd574fd644"
+    },
+    {
       "path": "frontend/dist/guides/social-preview.png",
       "bytes": 207061,
       "sha256": "86fc10ac4f8e59233896d66b1319fc14bc100d37f1939026b549f6c79dee1580"
@@ -666,6 +719,11 @@
       "path": "frontend/dist/guides/workshop-activity-1-notice-v1.4.png",
       "bytes": 898813,
       "sha256": "3c08a47ed6772afe5cec90b6d3d2a26d30407316d38d0fd01fb36c2b35f29e9c"
+    },
+    {
+      "path": "frontend/dist/guides/workshop-activity-1-notice-v1.5.png",
+      "bytes": 627368,
+      "sha256": "d1e8af5c8ce8b40eb632e661519a4a5af34396ca6d186080be1d8d8359d7d6f6"
     },
     {
       "path": "frontend/dist/guides/workshop-activity-1-notice.png",
@@ -678,6 +736,11 @@
       "sha256": "b473db80b2427ba94006ae7158afd5e957688d8b87bdd7c3bcfacd32b3c987a5"
     },
     {
+      "path": "frontend/dist/guides/workshop-activity-2-discuss-v1.5.png",
+      "bytes": 562263,
+      "sha256": "8c0cc23c7d3d582dedf67b63214eba61eade971a809f589debe3ab99aa5a0c79"
+    },
+    {
       "path": "frontend/dist/guides/workshop-activity-2-discuss.png",
       "bytes": 504098,
       "sha256": "bc9c549c9d49b8de9b425b10ebe928575c875154fb2b9006246351c3b13620e2"
@@ -686,6 +749,11 @@
       "path": "frontend/dist/guides/workshop-activity-3-check-v1.4.png",
       "bytes": 359023,
       "sha256": "46b8063e29d1c9d131427b70055b5581893bbe0f5b363288c3a6072062c272b7"
+    },
+    {
+      "path": "frontend/dist/guides/workshop-activity-3-check-v1.5.png",
+      "bytes": 256267,
+      "sha256": "9b8a173440d3cd218f5db4b79203a86b94fa505b2f71012c5ccc0b21a2092882"
     },
     {
       "path": "frontend/dist/guides/workshop-activity-3-check.png",
@@ -698,14 +766,24 @@
       "sha256": "e1d2cfadc607e16f2f1500a0c1822ef8f37d2a48db388f095c5c74ed2a227903"
     },
     {
+      "path": "frontend/dist/guides/workshop-activity-4-reflect-v1.5.png",
+      "bytes": 365457,
+      "sha256": "64c16494f53faa3717517c58664dff4d7f327587ecbde94b5aa75f3a496f116e"
+    },
+    {
       "path": "frontend/dist/guides/workshop-activity-4-reflect.png",
       "bytes": 306953,
       "sha256": "bcd096351d47c2be126a5036faaec5e4c0e04c5454fa5f1a909a3853438628c0"
     },
     {
+      "path": "frontend/dist/guides/workshop-podcast-source-v1.5.png",
+      "bytes": 1017585,
+      "sha256": "b442adfa224c7e235bbc1033c7e1867a6da7e4d2efabdcdd787dd8617924af15"
+    },
+    {
       "path": "frontend/dist/index.html",
-      "bytes": 3156,
-      "sha256": "bcd17684c8092f2058d4d5baeb77a00dea89cfcd13cc9c1b3ea086c4a9f76c32"
+      "bytes": 3158,
+      "sha256": "7a5c42fe10cd83c06f1ab26e1826a284627fa0a297eb9aed12d52b2c70b0f62a"
     },
     {
       "path": "frontend/dist/sitemap.xml",
@@ -800,12 +878,12 @@
     {
       "path": "frontend/package-lock.json",
       "bytes": 77809,
-      "sha256": "741555c71a0af3cf542d1592423984054a0e46a106c8015bcfd212be3f435257"
+      "sha256": "04d67fc0c3e5e465530e44e773c5561fa17451ca483f1e458ad9c3eababc9ea4"
     },
     {
       "path": "frontend/package.json",
       "bytes": 692,
-      "sha256": "382f607d2f1c40244fb799b7f0c5d2027ec37f0235657f3ca8b09c20f03438e0"
+      "sha256": "60597e130d29ed37098c719c5d514c74a4480d1edebf6db68d80e8df9e7b53cb"
     },
     {
       "path": "frontend/public/LICENSE.txt",
@@ -814,8 +892,8 @@
     },
     {
       "path": "frontend/public/about.html",
-      "bytes": 9415,
-      "sha256": "dd0186ed08824a5a81c0f443a66cd6d0625dab888e1afd1f8941da61a4bba4f9"
+      "bytes": 9681,
+      "sha256": "c47e83d8948fff41ca80670588a17fc528d4cd919bfbbd21b0138d07007b4294"
     },
     {
       "path": "frontend/public/branding/mmu-logo.png",
@@ -853,6 +931,16 @@
       "sha256": "19e83ee1785ed8578c0de0c10e426f8a36ef5e0f2d9d26442c548b2064c42455"
     },
     {
+      "path": "frontend/public/guides/SDA_Vision_Facilitator_Guide_v1.5-cover.png",
+      "bytes": 853522,
+      "sha256": "aeca0218fd2bccf7e76aca91f550286a352664c23ead2dc42ad79271f5c07b71"
+    },
+    {
+      "path": "frontend/public/guides/SDA_Vision_Facilitator_Guide_v1.5.pdf",
+      "bytes": 7076713,
+      "sha256": "99746fd0602567e5c6e9c1d786cdeb2c3696deb602b632ee99cd0abd574fd644"
+    },
+    {
       "path": "frontend/public/guides/social-preview.png",
       "bytes": 207061,
       "sha256": "86fc10ac4f8e59233896d66b1319fc14bc100d37f1939026b549f6c79dee1580"
@@ -861,6 +949,11 @@
       "path": "frontend/public/guides/workshop-activity-1-notice-v1.4.png",
       "bytes": 898813,
       "sha256": "3c08a47ed6772afe5cec90b6d3d2a26d30407316d38d0fd01fb36c2b35f29e9c"
+    },
+    {
+      "path": "frontend/public/guides/workshop-activity-1-notice-v1.5.png",
+      "bytes": 627368,
+      "sha256": "d1e8af5c8ce8b40eb632e661519a4a5af34396ca6d186080be1d8d8359d7d6f6"
     },
     {
       "path": "frontend/public/guides/workshop-activity-1-notice.png",
@@ -873,6 +966,11 @@
       "sha256": "b473db80b2427ba94006ae7158afd5e957688d8b87bdd7c3bcfacd32b3c987a5"
     },
     {
+      "path": "frontend/public/guides/workshop-activity-2-discuss-v1.5.png",
+      "bytes": 562263,
+      "sha256": "8c0cc23c7d3d582dedf67b63214eba61eade971a809f589debe3ab99aa5a0c79"
+    },
+    {
       "path": "frontend/public/guides/workshop-activity-2-discuss.png",
       "bytes": 504098,
       "sha256": "bc9c549c9d49b8de9b425b10ebe928575c875154fb2b9006246351c3b13620e2"
@@ -883,9 +981,24 @@
       "sha256": "46b8063e29d1c9d131427b70055b5581893bbe0f5b363288c3a6072062c272b7"
     },
     {
+      "path": "frontend/public/guides/workshop-activity-3-check-v1.5.png",
+      "bytes": 256267,
+      "sha256": "9b8a173440d3cd218f5db4b79203a86b94fa505b2f71012c5ccc0b21a2092882"
+    },
+    {
       "path": "frontend/public/guides/workshop-activity-4-reflect-v1.4.png",
       "bytes": 507622,
       "sha256": "e1d2cfadc607e16f2f1500a0c1822ef8f37d2a48db388f095c5c74ed2a227903"
+    },
+    {
+      "path": "frontend/public/guides/workshop-activity-4-reflect-v1.5.png",
+      "bytes": 365457,
+      "sha256": "64c16494f53faa3717517c58664dff4d7f327587ecbde94b5aa75f3a496f116e"
+    },
+    {
+      "path": "frontend/public/guides/workshop-podcast-source-v1.5.png",
+      "bytes": 1017585,
+      "sha256": "b442adfa224c7e235bbc1033c7e1867a6da7e4d2efabdcdd787dd8617924af15"
     },
     {
       "path": "frontend/public/sitemap.xml",
@@ -1039,8 +1152,8 @@
     },
     {
       "path": "frontend/src/community.css",
-      "bytes": 36137,
-      "sha256": "1c418c3958058fd568538815d6b489d29078f0ab52d55e8cda9e42f0f9608d3e"
+      "bytes": 36557,
+      "sha256": "8993189285fd4258d28678dbec5199b344499ae0513e57564cf322a3be65a1b0"
     },
     {
       "path": "frontend/src/community.ts",
@@ -1094,8 +1207,8 @@
     },
     {
       "path": "frontend/src/components/CommunityView.tsx",
-      "bytes": 24040,
-      "sha256": "8bda0e2a21fde13e12fd20b26e239ed1c05bf7f6382a6fc0ee69543cd92db383"
+      "bytes": 25440,
+      "sha256": "32287ced96b5726d4df6cc08acf38318bb063ab1906e0240da49290a8d2bd656"
     },
     {
       "path": "frontend/src/components/ConsensusBanner.tsx",
@@ -1158,6 +1271,11 @@
       "sha256": "a372ecfe4dfdc29843c528e29d4738fff84351d0fe4aa6609e47bccb315e73a3"
     },
     {
+      "path": "frontend/src/components/PodcastExploration.tsx",
+      "bytes": 1644,
+      "sha256": "4707033ae80632e2d616c6b4836f488a8400950e4b7c86a43c8cbbea9128ae70"
+    },
+    {
       "path": "frontend/src/components/PreparedSlideshow.tsx",
       "bytes": 4157,
       "sha256": "43ad99f6263d71940d415bbf9382a51d51510bf19866a59d3e27a1fdb10c017a"
@@ -1209,8 +1327,8 @@
     },
     {
       "path": "frontend/src/components/WorkshopActivity.tsx",
-      "bytes": 9982,
-      "sha256": "1531c5bbe0ba6b2a723632b9bcf9dd40d695aa2a17c6889db50f4381eabbfe9f"
+      "bytes": 10597,
+      "sha256": "73e7d026b1619306837be4103fae15c760ae21ae156859d542d7a71c451cd3f9"
     },
     {
       "path": "frontend/src/developer.css",
@@ -1224,8 +1342,8 @@
     },
     {
       "path": "frontend/src/exportPreview.ts",
-      "bytes": 2971,
-      "sha256": "28c436d86ef98a52cbae595254381d72ea0966690eeb5909972590e081787156"
+      "bytes": 3164,
+      "sha256": "fde185a748ed2b20478192f4aa2fc21c650104310c47a874c796ddc7a7885c7b"
     },
     {
       "path": "frontend/src/facilitator-guide.css",
@@ -1234,8 +1352,8 @@
     },
     {
       "path": "frontend/src/facilitator-guide.html",
-      "bytes": 6569,
-      "sha256": "46950aa115d83d64180e6fa9ad578cfcda54acd04b9000a3f4dff8f3cde55788"
+      "bytes": 7493,
+      "sha256": "ca4953d6721e52fca48b41e1197de10d1216a9808760966ae34f4c34c1b5ab6d"
     },
     {
       "path": "frontend/src/lib.ts",
@@ -1246,6 +1364,11 @@
       "path": "frontend/src/main.tsx",
       "bytes": 290,
       "sha256": "4efcf2e8497f4e1a83bcfb87f7c4b6b8e37842af53bd009ab0f654fb6dbcadb2"
+    },
+    {
+      "path": "frontend/src/podcastActivity.ts",
+      "bytes": 2713,
+      "sha256": "f108ee08d7bf62d360b31962c5b9ccbd5205830b0df95a606111665d15df9bb6"
     },
     {
       "path": "frontend/src/sessionExport.ts",
@@ -1294,8 +1417,8 @@
     },
     {
       "path": "frontend/src/workshopExport.ts",
-      "bytes": 12005,
-      "sha256": "44d8b4ff016cee0b4818978ee69211c91ff9841d783dd68bde3f0878879574aa"
+      "bytes": 12311,
+      "sha256": "b2164e7402838a3631fedaab42261fd3d41e3b8c890b6745f74ea4ac7d2c5ab1"
     },
     {
       "path": "frontend/tsconfig.json",
@@ -1311,6 +1434,11 @@
       "path": "frontend/vite.config.ts",
       "bytes": 1095,
       "sha256": "ff7063c72a61bd946b5ec04c9852113af9b892b2c5dddccb9c913b5faaaaded2"
+    },
+    {
+      "path": "release/ACCEPTANCE_0.1.2.md",
+      "bytes": 2391,
+      "sha256": "feeead2bcf72fa4e20e3aa99928a24dc1e0fec43d6138d70b923e8b17630a9ca"
     },
     {
       "path": "release/ARCHIVE_MANIFEST_0.1.0.json",
@@ -1333,9 +1461,24 @@
       "sha256": "3d7cba8883f6b43ad2dd78d746dc8f5e0361b27ce949524a27bd73fc11ca6b52"
     },
     {
+      "path": "release/RELEASE_0.1.2.md",
+      "bytes": 2086,
+      "sha256": "99d014c8b00d1d02fb27f681e6bdab238884bbca8f36e950f4086b3cc192c56a"
+    },
+    {
       "path": "release/RELEASE_METADATA.md",
       "bytes": 5133,
       "sha256": "6037b832f70180d45efd406f473b9d927aaffa7b3ebd654e6cca6f1a1b85a44b"
+    },
+    {
+      "path": "release/zenodo/guide-1.5/README.md",
+      "bytes": 537,
+      "sha256": "633fd1eae163fdc868c7d86d0930d2003984e07a07ba71d355b6033b554da3d8"
+    },
+    {
+      "path": "release/zenodo/guide-1.5/metadata.json",
+      "bytes": 795,
+      "sha256": "921a384ec9f21ac8e1077f6564acdef2a8a2d3bf687febe0400242d79e5763ef"
     },
     {
       "path": "requirements-dev.txt",
@@ -1404,8 +1547,8 @@
     },
     {
       "path": "scripts/package_candidate.py",
-      "bytes": 14370,
-      "sha256": "6cbe518f4bda18f24dc4db53a112197939c9e697d310d55f0940b0feca7fe476"
+      "bytes": 14620,
+      "sha256": "42818c9effbf3c23c6402bae3bda28dc16672dfd21236dd6bc6a7f85c111aa0c"
     },
     {
       "path": "scripts/prepare_c2pa_trust_review.py",
@@ -1546,6 +1689,11 @@
       "path": "tests/notice_review.mjs",
       "bytes": 4002,
       "sha256": "1ef37875b6f79bb9e5dc109a2f74505eda833013bc7ffe1465f0672aaeaafb5f"
+    },
+    {
+      "path": "tests/podcast_exploration.mjs",
+      "bytes": 4911,
+      "sha256": "22e61549767c30031534ecdc346af2c905a10ac9a17acd92d9b302d2fa196971"
     },
     {
       "path": "tests/responsive_results.mjs",
@@ -1962,6 +2110,5 @@
       "bytes": 1061,
       "sha256": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40"
     }
-  ],
-  "source_updated": "2026-09-30"
+  ]
 }

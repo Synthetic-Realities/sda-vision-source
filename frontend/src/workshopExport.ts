@@ -189,6 +189,11 @@ export async function buildSummaryFile(summary: string, format: SummaryFormat, m
           doc.setFontSize(10); doc.setTextColor("#21243A");
           const lines = cells[i].slice(start, start + take);
           if (lines.length || i === 0) doc.text(lines.length ? lines : ["Continued"], x + 9, y + 18, { lineHeightFactor: 1.5 });
+          // Preserve actionable source links in offline workshop summaries.
+          // Only complete HTTPS URL cells become links; no content is fetched.
+          if (/^https:\/\/\S+$/.test(row[i]) && lines.length) {
+            doc.link(x + 9, y + 4, col[i] - 18, h - 8, { url: row[i] });
+          }
           x += col[i];
         }
         start += take; y += h;

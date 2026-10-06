@@ -18,6 +18,7 @@ import ImageSourceSearch from "./ImageSourceSearch";
 import { emptyWorkshopResponses, FACILITATOR_QUESTIONS, workshopHeading } from "../workshop";
 import { STARTER_LABEL, STARTER_SOURCE, workshopExampleLabel } from "../workshopExamples";
 import communityIllustration from "../assets/community-illustration.png";
+import { isPodcastExample, podcastActivitySummary, PODCAST_SOURCE_NOTE } from "../podcastActivity";
 
 interface Props {
   active: boolean; trainer: boolean; report: Report | null; providers: ProvidersInfo | null;
@@ -66,6 +67,8 @@ export default function CommunityView(p: Props) {
   const [newSessionOpen, setNewSessionOpen] = useState(false);
   const [readyToClear, setReadyToClear] = useState(false);
   const [zoom, setZoom] = useState(false);
+  const [sourceRevealed, setSourceRevealed] = useState(false);
+  useEffect(() => { setSourceRevealed(false); }, [p.sourceFile, p.name, p.url]);
   const input = useRef<HTMLInputElement>(null);
   const dialog = useRef<HTMLDialogElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -105,14 +108,16 @@ export default function CommunityView(p: Props) {
   const consent = consentedRequest === consentKey && !p.busy;
   function setConsent(value: boolean) { setConsentedRequest(value ? consentKey : null); }
   const report = p.report;
+  const podcastExample = kind === "audio" && isPodcastExample(report?.meta.input_sha256, p.thumbnail);
   const sourceNote = illustration ? STARTER_SOURCE : report?.meta.input_sha256 === "af5b2c84950d66ce32b4d7f603314a7fc70a9353d397ca71aa78d35e2327ce23"
     ? "Project source record: this video was supplied by Dr Sam Martin, who confirmed rights to include it and offer the original download." : undefined;
-  const summaryBase = report ? communitySummary(report, "", "", SHOWCASE, includeNotes ? responses : undefined, sourceNote)
+  const summaryBase = report ? communitySummary(report, "", "", SHOWCASE, includeNotes ? responses : undefined,
+    sourceNote ?? (podcastExample ? sourceRevealed ? PODCAST_SOURCE_NOTE : "Podcast source exploration is included below; the source reveal has not been opened in this session." : undefined))
     : workshopSessionSummary(itemName, includeNotes ? responses : undefined, p.status);
   const browserNotes = SHOWCASE ? sessionNotes(report) : { gemini: "", openai: "" };
   const quoteNote = (text: string) => text.replace(/([\\`*_{}\[\]()#+.!<>|~-])/g, "\\$1");
   const noteSession = (fresh?: boolean) => fresh === true ? "Fresh chat/check (participant stated)" : fresh === false ? "Existing chat (participant stated)" : "Not stated";
-  const summary = summaryBase + (SHOWCASE && (browserNotes.gemini || browserNotes.openai)
+  const summary = summaryBase + (podcastExample ? podcastActivitySummary(sourceRevealed) : "") + (SHOWCASE && (browserNotes.gemini || browserNotes.openai)
     ? "\n## Second Opinion notes\nSession entries; separate from the recorded findings and combined score.\n"
       + (browserNotes.gemini ? `\nGemini reply: ${quoteNote(browserNotes.gemini)}\nGemini session: ${noteSession(browserNotes.geminiFresh)}\n` : "")
       + (browserNotes.openai ? `\nOpenAI reply: ${quoteNote(browserNotes.openai)}\nOpenAI session: ${noteSession(browserNotes.openaiFresh)}\n` : "") : "");
@@ -131,7 +136,15 @@ export default function CommunityView(p: Props) {
     setSessionStatus(`Preparing your ${summaryFormat.toUpperCase()} summary...`);
     try {
       const media = summaryFormat === "csv" ? undefined : await prepareExportPreview({
-        kind, imageUrl: illustration ? communityIllustration : p.url, thumbnail: report?.meta.thumbnail ?? p.thumbnail,
+        kind, imageUrl: illustration ? communityIllustration : p.url, thumbnail: report?.meta.thumbnail,
+        displayedPreview: (p.slidePreview?.slides?.[0]?.src ?? p.thumbnail) ? {
+          url: p.slidePreview?.slides?.[0]?.src ?? p.thumbnail!,
+          caption: kind === "pptx" ? "Presentation preview: first slide; separate from the sampled analysis frames."
+            : kind === "pdf" ? "Document preview: cover or first page shown in the workshop; separate from the sampled analysis frames."
+            : kind === "audio" ? podcastExample ? "Podcast cover artwork, including the source publication citation. The recorded model assessment concerns the transcript."
+              : "Audio preview shown in the workshop: cover artwork or waveform."
+            : "Video preview: still image shown in the workshop.",
+        } : undefined,
         analysed: kind === "image" ? Boolean(report) : Boolean(report?.meta.thumbnail),
         frameLabel: report?.meta.thumbnail ? report.frames[0]?.frame : undefined,
       });
@@ -218,7 +231,7 @@ export default function CommunityView(p: Props) {
 
         </section>
 
-        <WorkshopActivity sourceNote={sourceNote} step={step} kind={kind} report={report} busy={p.busy || exporting} responses={responses}
+        <WorkshopActivity sourceNote={sourceNote} podcastExample={podcastExample} onSourceReveal={() => setSourceRevealed(true)} step={step} kind={kind} report={report} busy={p.busy || exporting} responses={responses}
           originalUrl={originalDownload} originalName={illustration ? "illustration-1.png" : p.name}
           onChange={changes => setResponses(current => ({ ...current, ...changes }))}
           onNext={advance} onPrevious={previous} onReviewChecks={() => { findings.current?.scrollIntoView({ block: "start" }); findings.current?.focus(); }}

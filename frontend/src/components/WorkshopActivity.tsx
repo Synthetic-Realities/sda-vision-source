@@ -1,6 +1,7 @@
 import { useId } from "react";
 import { ArrowDown, ArrowDownToLine, ArrowLeft, ArrowRight, ExternalLink, Info, Plus } from "lucide-react";
 import { SHOWCASE } from "../showcase";
+import PodcastExploration from "./PodcastExploration";
 import type { Report } from "../types";
 import { assessmentTitle, workshopOverview, type WorkshopStep } from "../community";
 import { discussionClues, discussionPrompt, impressionOptions, NEXT_ACTIONS, sameImpression, toggleImpression, type WorkshopResponses } from "../workshop";
@@ -13,6 +14,8 @@ interface Props {
   onViewEvidence: () => void;
   originalUrl?: string | null; originalName?: string;
   sourceNote?: string;
+  podcastExample?: boolean;
+  onSourceReveal?: () => void;
 }
 
 function TickChoices({ label, options, selected, onChange, disabled, labels, sourceSearch = false, originalUrl, originalName }: {
@@ -64,6 +67,7 @@ export default function WorkshopActivity(p: Props) {
   return <section className="community-discussion" aria-labelledby={`${id}-heading`}>
     {p.step === "notice" && <>
       <h2 id={`${id}-heading`} tabIndex={-1}>How do you think it was made?</h2>
+      {p.podcastExample && <PodcastExploration step="notice" onReveal={() => {}} />}
       <OriginChoices label="First impression" options={options} value={r.impression} disabled={disabled}
         onChange={impression => p.onChange({ impression, impressionAfterChecks: Boolean(p.report) })} />
 
@@ -72,13 +76,14 @@ export default function WorkshopActivity(p: Props) {
       <h2 id={`${id}-heading`} tabIndex={-1}>{discussionPrompt(r.impression)}</h2>
       <p className="workshop-carried-choice">Your first impression: <strong>{firstView}</strong></p>
       <ParticipantNotes responses={r} />
+      {p.podcastExample && <PodcastExploration step="discuss" onReveal={() => {}} />}
       <TickChoices label="What shaped your view? Choose any." options={discussionClues(p.kind)} selected={r.clues} disabled={disabled} onChange={clues => p.onChange({ clues })} />
 
     </>}
     {p.step === "check" && <>
       <h2 id={`${id}-heading`} tabIndex={-1}>What we know so far</h2>
       <div className="workshop-choice-response"><Info size={22} aria-hidden="true" /><div><strong>Your first impression: {firstView}</strong>
-        <p>{p.sourceNote ?? "This view has no linked workshop source note. The recorded checks below describe the available evidence."}</p></div></div>
+        <p>{p.sourceNote ?? (p.podcastExample ? "Use Follow the source below to explore the cover citation alongside these recorded checks." : "This view has no linked workshop source note. The recorded checks below describe the available evidence.")}</p></div></div>
       <h3>SDA's checks</h3>
       <table className="workshop-overview" aria-label="SDA checks at a glance"><tbody>{workshopOverview(p.report, p.kind).filter(row => row.label !== "Image history" && row.label !== "File history" && !(p.sourceNote && row.label === "Shared claim")).map(row => <tr key={row.label}>
         <th scope="row"><span>{row.label}</span>{row.question && <small className="workshop-check-question">{row.question}</small>}</th><td><details open={Boolean(p.report && (row.answers || row.label === "Shared claim"))}><summary>{row.finding}</summary><p>{row.label === "Visual clues" && p.report ? "Check for the results below" : row.detail}</p>
@@ -86,12 +91,14 @@ export default function WorkshopActivity(p: Props) {
         </details></td>
       </tr>)}</tbody></table>
       {p.report && <button className="cw-text workshop-evidence-link" onClick={p.onViewEvidence}>View the supporting details below<ArrowDown size={18} /></button>}
+      {p.podcastExample && <PodcastExploration step="check" onReveal={p.onSourceReveal ?? (() => {})} />}
     </>}
     {p.step === "reflect" && <>
       <h2 id={`${id}-heading`} tabIndex={-1}>How do you see it now?</h2>
       <dl className="workshop-comparison"><div><dt>Your first impression</dt><dd>{firstView}</dd></div>
         <div><dt>SDA's assessment</dt><dd>{p.report ? assessmentTitle(p.report) : "No SDA findings recorded yet"}</dd></div></dl>
       <ParticipantNotes responses={r} includeDiscussion />
+      {p.podcastExample && <PodcastExploration step="reflect" onReveal={p.onSourceReveal ?? (() => {})} />}
       <OriginChoices visibleLabel label="Your view now" options={options} value={r.laterImpression} disabled={disabled} onChange={laterImpression => p.onChange({ laterImpression })} />
 
       <TickChoices label="What would you do next? Choose any." options={p.kind === "image" ? NEXT_ACTIONS : NEXT_ACTIONS.filter(action => action !== "Find the original source")} selected={r.nextActions} disabled={disabled} sourceSearch={p.kind === "image"} originalUrl={p.originalUrl} originalName={p.originalName} onChange={nextActions => p.onChange({ nextActions })} />

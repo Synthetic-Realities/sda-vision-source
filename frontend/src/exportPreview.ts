@@ -9,6 +9,7 @@ export interface PreviewInput {
   thumbnail?: string | null;
   analysed: boolean;
   frameLabel?: string;
+  displayedPreview?: { url: string; caption: string };
 }
 
 export function previewCaption(input: PreviewInput): string {
@@ -58,11 +59,14 @@ async function rasterPreview(source: string): Promise<ExportPreview["image"]> {
 }
 
 export async function prepareExportPreview(input: PreviewInput): Promise<ExportPreview> {
-  const sources = input.kind === "text" ? [] : input.kind === "image" ? [input.imageUrl, input.thumbnail] : [input.thumbnail];
+  const fallback = { url: input.thumbnail, caption: previewCaption(input) };
+  const sources = input.kind === "text" ? [] : input.kind === "image"
+    ? [{ url: input.imageUrl, caption: previewCaption(input) }, fallback]
+    : [input.displayedPreview, fallback];
   for (const source of sources) {
-    if (!source) continue;
-    const image = await rasterPreview(source);
-    if (image) return { caption: previewCaption(input), image };
+    if (!source?.url) continue;
+    const image = await rasterPreview(source.url);
+    if (image) return { caption: source.caption, image };
   }
   return { caption: input.kind === "text" ? "Text-only item: the content is recorded in the findings."
     : "A visual preview is not available for this file in the current session." };
