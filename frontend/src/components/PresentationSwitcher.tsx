@@ -1,9 +1,10 @@
-import { CodeXml, BookOpen, UsersRound } from "lucide-react";
+import { CodeXml, BookOpen, UsersRound, Gamepad2 } from "lucide-react";
 import type { Presentation } from "../community";
 
 const choices = [
   { value: "community", label: "Community Workshop", Icon: UsersRound },
   { value: "facilitator", label: "Facilitator guide", Icon: BookOpen },
+  { value: "game", label: "Game", Icon: Gamepad2 },
   { value: "developer", label: "Developer", Icon: CodeXml },
 ] as const;
 

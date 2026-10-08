@@ -4,7 +4,7 @@ import type { ProviderResult, Report, Verdict } from "./types";
 import { AUD_EXT, extOf, IMG_EXT, VID_EXT } from "./lib";
 import type { WorkshopResponses } from "./workshop";
 
-export type Presentation = "developer" | "community" | "trainer" | "facilitator";
+export type Presentation = "developer" | "community" | "trainer" | "facilitator" | "game";
 export type WorkshopStep = "notice" | "discuss" | "check" | "reflect";
 
 export const COMMUNITY_READS: Record<Verdict, string> = {

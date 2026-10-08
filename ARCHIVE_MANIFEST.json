@@ -9,7 +9,8 @@
   "ui_revisions": [
     "podcast-exploration-2026-10-06.2",
     "workshop-layout-2026-10-06.1",
-    "podcast-attribution-2026-10-06.1"
+    "podcast-attribution-2026-10-06.1",
+    "game-tab-2026-10-08.1"
   ],
   "files": [
     {
@@ -44,8 +45,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7742,
-      "sha256": "d7a8fc618b24b269e99fece0cc02b4602ad853a62d941f580efa9c1df9435646"
+      "bytes": 8124,
+      "sha256": "5bd0548f2c514c57d4f8b4e919f53ebae74c8cfc2bf36e02591876e523966fd1"
     },
     {
       "path": "RELEASE_ORIGIN.md",
@@ -311,6 +312,11 @@
       "path": "docs/Facilitator_Guide.md",
       "bytes": 6007,
       "sha256": "edc259b3c62a298e5f3d76bb43a4c6d2b23b4fda861844c58b764ab9e031fc07"
+    },
+    {
+      "path": "docs/Game_Integration_2026-10-08.md",
+      "bytes": 3552,
+      "sha256": "1fcda4f1dc63c112f4521a207612a0d94b1cfa74c9554f72594b8ed79e5389de"
     },
     {
       "path": "docs/Image_Search_Scope_2026-09-29.md",
@@ -583,9 +589,14 @@
       "sha256": "7c52c27f79367566500db1953bff7359747230dc5c09d121cf5ea7df12a8bfe6"
     },
     {
+      "path": "frontend/dist/about-local.html",
+      "bytes": 6565,
+      "sha256": "7d52624094964d3a8a9170d24e1d21bd9dba65f834f12c8b204fac519a94168c"
+    },
+    {
       "path": "frontend/dist/about.html",
-      "bytes": 9976,
-      "sha256": "985d58ba86b338404121127a49ca440c12638053681a43d72263a34a8ab21034"
+      "bytes": 10916,
+      "sha256": "00d6ee2c6a70e10bf90122aed9290373906ce6f6176dae2ea2d9c9e38fcf164b"
     },
     {
       "path": "frontend/dist/assets/NotoSans-Regular-Dpf_lrdO.ttf",
@@ -613,9 +624,9 @@
       "sha256": "7b07a9ca175c614e8e7de447198d35b0d161dd50db2c63b5f7fd6ea0e1e876f2"
     },
     {
-      "path": "frontend/dist/assets/index.es-CC4eC1Gi.js",
+      "path": "frontend/dist/assets/index.es-CaXk_gc5.js",
       "bytes": 158947,
-      "sha256": "99b5969d160077da1c34d7e5af9dd4b5bd16fce794fd3c7cfee12fd6ce01ea56"
+      "sha256": "564c229c26c21865c190765e15b73fdebfcd3a6b655f73ab7526a161505449a5"
     },
     {
       "path": "frontend/dist/assets/infographic-preview-BnI6beWM.png",
@@ -623,19 +634,19 @@
       "sha256": "d06c42c3dbe400be9d827dd42ad89b4b2d20df29b99ac8b906e611c459c23e5a"
     },
     {
-      "path": "frontend/dist/assets/jspdf.es.min-C9TjWrBA.js",
+      "path": "frontend/dist/assets/jspdf.es.min-Cmw-qmOn.js",
       "bytes": 386188,
-      "sha256": "f8d3bfd4730f84d7cf5100a407041804f63552e066ec9ff92f06376aacd8b455"
+      "sha256": "74634261a83e74c61043ad807c975d68767867f3e5fbeca4213383f474e41511"
     },
     {
-      "path": "frontend/dist/assets/main-BnmVoZyQ.js",
-      "bytes": 385064,
-      "sha256": "183e71380dc302e450ed75e12bf3f043c984429df2fbb67377068d80e90bd98c"
+      "path": "frontend/dist/assets/main-BRscV9H0.js",
+      "bytes": 398261,
+      "sha256": "b3a72422efc2fe846966fad42609ae67feecc9dddcdaae095f130103c7eafca7"
     },
     {
-      "path": "frontend/dist/assets/main-drcLYyIh.css",
-      "bytes": 79086,
-      "sha256": "3514603d0d46f4c0a6082bb5bd9f7f0c035bd6060028eeab2ead90e28224c4ae"
+      "path": "frontend/dist/assets/main-DBrw35KC.css",
+      "bytes": 84477,
+      "sha256": "d22c504b7a3dec1c05aee58f1966df96b9507d08f3245e309852a88bbb2472b9"
     },
     {
       "path": "frontend/dist/assets/podcast-cover-Dk3QfbkM.png",
@@ -643,9 +654,9 @@
       "sha256": "ec571f0ebb710c9f2fc2f8f79644793f97317b98323cb1d93cce34e608d79bdc"
     },
     {
-      "path": "frontend/dist/assets/pptxgen.es-BPeuDaNE.js",
+      "path": "frontend/dist/assets/pptxgen.es-madbp2Vw.js",
       "bytes": 372399,
-      "sha256": "74bbe28a83f20ae06991170d938aea479acfd5d516ac7f9fcea06f3f100b855b"
+      "sha256": "8084689ad07f11038fd21399272f2a8c49913e8875c0414a25eb03ca4064e44e"
     },
     {
       "path": "frontend/dist/assets/presentation-preview-D7TtxRTR.png",
@@ -689,8 +700,38 @@
     },
     {
       "path": "frontend/dist/facilitator.html",
-      "bytes": 10716,
-      "sha256": "ea12f738c7ccf45c86d69308cac7640aff1bff5d97c9ed2bb7818670d8e7f72a"
+      "bytes": 10746,
+      "sha256": "eaab6d2633254debd4d3a1b785128c6808175160bc20f2b6c442ed3067837b0a"
+    },
+    {
+      "path": "frontend/dist/game/LICENSE.txt",
+      "bytes": 3144,
+      "sha256": "1154804c6fbcf75d6fb15feb051c6caa87949ffd3e3af1ae77e37aeafaf09cbe"
+    },
+    {
+      "path": "frontend/dist/game/island.png",
+      "bytes": 472664,
+      "sha256": "bc496ad20bc0cf7f42e8acc42130cc60aeeeaa0cb8b7b19fd7411da7be96424a"
+    },
+    {
+      "path": "frontend/dist/game/notice.png",
+      "bytes": 662598,
+      "sha256": "3c69bb58b859709fbc6953edbd0b55f1e6f2e6d2c54bcdc70eb776ab41c3e34f"
+    },
+    {
+      "path": "frontend/dist/game/reveal.png",
+      "bytes": 678926,
+      "sha256": "976bc425f925d8f1147fd4e9a66659355f333a4060b8993ab053c96eeaa41014"
+    },
+    {
+      "path": "frontend/dist/game/studio-add.png",
+      "bytes": 419812,
+      "sha256": "e0d377ca74196fab2d133f5f1b53c750df46c97469416934fbd7f2aedf38b219"
+    },
+    {
+      "path": "frontend/dist/game/studio-pictures.png",
+      "bytes": 390510,
+      "sha256": "21946d3b9accedac542ca69daec477cf30971b42f26b46a39cc2cd3860a1081b"
     },
     {
       "path": "frontend/dist/guides/SDA_Vision_Facilitator_Guide_v1.4-cover.png",
@@ -785,7 +826,7 @@
     {
       "path": "frontend/dist/index.html",
       "bytes": 3156,
-      "sha256": "bc0ed3ad66678a67e1328e3e1c01a94b70ba4902aec90534ed1ba43307392f08"
+      "sha256": "ea521efd02ab35c4cc45963be7cb521bb30fea8e20b07ab1fa40d9bb6404cd84"
     },
     {
       "path": "frontend/dist/sitemap.xml",
@@ -893,9 +934,14 @@
       "sha256": "7c52c27f79367566500db1953bff7359747230dc5c09d121cf5ea7df12a8bfe6"
     },
     {
+      "path": "frontend/public/about-local.html",
+      "bytes": 6565,
+      "sha256": "7d52624094964d3a8a9170d24e1d21bd9dba65f834f12c8b204fac519a94168c"
+    },
+    {
       "path": "frontend/public/about.html",
-      "bytes": 9976,
-      "sha256": "985d58ba86b338404121127a49ca440c12638053681a43d72263a34a8ab21034"
+      "bytes": 10916,
+      "sha256": "00d6ee2c6a70e10bf90122aed9290373906ce6f6176dae2ea2d9c9e38fcf164b"
     },
     {
       "path": "frontend/public/branding/mmu-logo.png",
@@ -921,6 +967,36 @@
       "path": "frontend/public/branding/ukri-logo.png",
       "bytes": 77516,
       "sha256": "98a2c182f09d1acb3d318907b3866f7e2272e37b8e0b58c984cb01d0431bd8ea"
+    },
+    {
+      "path": "frontend/public/game/LICENSE.txt",
+      "bytes": 3144,
+      "sha256": "1154804c6fbcf75d6fb15feb051c6caa87949ffd3e3af1ae77e37aeafaf09cbe"
+    },
+    {
+      "path": "frontend/public/game/island.png",
+      "bytes": 472664,
+      "sha256": "bc496ad20bc0cf7f42e8acc42130cc60aeeeaa0cb8b7b19fd7411da7be96424a"
+    },
+    {
+      "path": "frontend/public/game/notice.png",
+      "bytes": 662598,
+      "sha256": "3c69bb58b859709fbc6953edbd0b55f1e6f2e6d2c54bcdc70eb776ab41c3e34f"
+    },
+    {
+      "path": "frontend/public/game/reveal.png",
+      "bytes": 678926,
+      "sha256": "976bc425f925d8f1147fd4e9a66659355f333a4060b8993ab053c96eeaa41014"
+    },
+    {
+      "path": "frontend/public/game/studio-add.png",
+      "bytes": 419812,
+      "sha256": "e0d377ca74196fab2d133f5f1b53c750df46c97469416934fbd7f2aedf38b219"
+    },
+    {
+      "path": "frontend/public/game/studio-pictures.png",
+      "bytes": 390510,
+      "sha256": "21946d3b9accedac542ca69daec477cf30971b42f26b46a39cc2cd3860a1081b"
     },
     {
       "path": "frontend/public/guides/SDA_Vision_Facilitator_Guide_v1.4-cover.png",
@@ -1084,8 +1160,8 @@
     },
     {
       "path": "frontend/src/App.tsx",
-      "bytes": 25871,
-      "sha256": "706192abf2985b3e7049a4456b262d19f3afbc6f06fc2436bf82640a50fbc7fb"
+      "bytes": 26605,
+      "sha256": "171c0bea0b9632c0ee66dd1b9c39bc1e4a1259885563c4beb394fff58b5f454d"
     },
     {
       "path": "frontend/src/api.ts",
@@ -1154,13 +1230,13 @@
     },
     {
       "path": "frontend/src/community.css",
-      "bytes": 36557,
-      "sha256": "8993189285fd4258d28678dbec5199b344499ae0513e57564cf322a3be65a1b0"
+      "bytes": 36685,
+      "sha256": "617eb6c25da4cecf4734e66fba17b5c9d6cb63a282f43dfc0091b8dcdd6987f7"
     },
     {
       "path": "frontend/src/community.ts",
-      "bytes": 24380,
-      "sha256": "d299243dbdea49db2a9a961ad3b62ac243dd85977ff406326b4fa76b95390ce4"
+      "bytes": 24389,
+      "sha256": "5717e0288e3afbf803b6113e1d7cf154b4ec8678575fa5932ceee6219f15911e"
     },
     {
       "path": "frontend/src/components/AnnotationLane.tsx",
@@ -1249,8 +1325,13 @@
     },
     {
       "path": "frontend/src/components/Footer.tsx",
-      "bytes": 3831,
-      "sha256": "063f55d5e6b81ad9118fdaf772ba53dd85c8534718fd7a238cb1a22af76b5a0a"
+      "bytes": 4321,
+      "sha256": "c2a0197d4501935783826fcda2e91736f6e24e8666b5cdd2cdb3093caf9c593e"
+    },
+    {
+      "path": "frontend/src/components/GameView.tsx",
+      "bytes": 10734,
+      "sha256": "7bd3b9e7ec226579384c8df9b29bde9a35fd1e912b7c98fc5465f33000544b48"
     },
     {
       "path": "frontend/src/components/GraphView.tsx",
@@ -1289,8 +1370,8 @@
     },
     {
       "path": "frontend/src/components/PresentationSwitcher.tsx",
-      "bytes": 1498,
-      "sha256": "6875a2a6e544fc120aa5aef3b4dd35b998bc93e6bee56ed2993a1b2d5d6cda32"
+      "bytes": 1560,
+      "sha256": "c6f2bcfdb92f3d8d8ebe7b4e466fbf0c49271ceea57fd1bfcd8bfc8a782a6f35"
     },
     {
       "path": "frontend/src/components/ProviderEvidence.tsx",
@@ -1356,6 +1437,11 @@
       "path": "frontend/src/facilitator-guide.html",
       "bytes": 7946,
       "sha256": "42b72645e8763a9d6168330c0bdbd8590f247d0d2426dd53f6832b46beeeb813"
+    },
+    {
+      "path": "frontend/src/game.css",
+      "bytes": 5802,
+      "sha256": "18c579f5bbab287d56520a1a9c62fdb8fb2e80775c128cd8a654a658cca62c2f"
     },
     {
       "path": "frontend/src/lib.ts",
@@ -1434,8 +1520,8 @@
     },
     {
       "path": "frontend/vite.config.ts",
-      "bytes": 1095,
-      "sha256": "ff7063c72a61bd946b5ec04c9852113af9b892b2c5dddccb9c913b5faaaaded2"
+      "bytes": 1125,
+      "sha256": "0cf3a1da3b1f92768d026b53100707e780623d4de39a0ef8c0e0bdfc36e7f5e4"
     },
     {
       "path": "release/ACCEPTANCE_0.1.2.md",
@@ -1683,6 +1769,11 @@
       "sha256": "4eb8d2db63a297c30c3d267c670b26d000fa194acf142c79104101f4658dda87"
     },
     {
+      "path": "tests/game_view.mjs",
+      "bytes": 2366,
+      "sha256": "270859939092c4369a255b122ee21d6cdc533ac97ca35324ce8699144473bbb5"
+    },
+    {
       "path": "tests/image_search_scope.mjs",
       "bytes": 3535,
       "sha256": "a813e3b830cfef843e5819f15222e5a10bf46f3b6fb697f9c2351e7265d1f4d4"
@@ -1835,7 +1926,7 @@
     {
       "path": "tests/workshop_start.mjs",
       "bytes": 11591,
-      "sha256": "8e12c2f7e9c63844a80fc9a0e0e618a1d7414f382891e5577c9951dc10eb801d"
+      "sha256": "76b8977910e66afb5cc3048c77cf65ccbbfa782c8e7ef3434664dc4b6dbbb50b"
     },
     {
       "path": "third_party/Adobe-example-assets-LICENSE.txt",
@@ -2112,5 +2203,20 @@
       "bytes": 1061,
       "sha256": "8b00952cd8d0f5cbbefb13576778e1185dc963943151353d90c4e14a5a4caf40"
     }
-  ]
+  ],
+  "game_integration": {
+    "revision": "game-tab-2026-10-08.1",
+    "source_repository": "https://github.com/Synthetic-Realities/hearsay-harbour",
+    "inspected_commit": "bfe0cd2d039fe09e6d7952a5911e159671a3f882",
+    "inspected_version": "1.2.0",
+    "live_url": "https://synthetic-realities.github.io/hearsay-harbour/",
+    "concept_doi": "10.5281/zenodo.23237554",
+    "entry_points": [
+      "https://sdavision.io/#game",
+      "https://sdavision.io/#game-dev"
+    ],
+    "loading": "External game frame is loaded after Play here; removed when leaving Game or Demo. Dev Studio is local.",
+    "source_of_findings": "Scripted teaching activities in the game; separate from SDA Vision analysis records.",
+    "verification": "docs/Game_Integration_2026-10-08.md"
+  }
 }

@@ -15,7 +15,7 @@ try {
   const noop = () => {};
   const { default: PresentationSwitcher } = await server.ssrLoadModule("/src/components/PresentationSwitcher.tsx");
   const switcher = renderToStaticMarkup(React.createElement(PresentationSwitcher, { value: "community", onChange: noop, disabled: false }));
-  assert.equal((switcher.match(/type="radio"/g) ?? []).length, 3);
+  assert.equal((switcher.match(/type="radio"/g) ?? []).length, 4);
   assert.doesNotMatch(switcher, /value="trainer"|Train the trainer/);
   assert.match(switcher, /value="facilitator"/);
   assert.match(switcher, /Facilitator guide/);

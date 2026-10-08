@@ -6,6 +6,7 @@ import { SHOWCASE, CONFERENCE, EXAMPLES_ONLY, showcaseBakedAt, showcaseReport, W
 import type { CorpusInfo, ExampleEntry, ProvidersInfo, Report } from "./types";
 import Header from "./components/Header";
 import FacilitatorGuide from "./components/FacilitatorGuide";
+import GameView, { type GameMode } from "./components/GameView";
 import InputPanel from "./components/InputPanel";
 import Results from "./components/Results";
 import BatchQueue, { type QueueItem } from "./components/BatchQueue";
@@ -22,6 +23,7 @@ const MAX_SELECT = 5;
 export default function App() {
   const [presentation, setPresentation] = useState<Presentation>(() => {
     const linked = window.location.hash.slice(1);
+    if (linked === "game" || linked === "game-dev") return "game";
     return linked === "developer" || linked === "community" || linked === "facilitator" ? linked
       : window.location.pathname.endsWith("/facilitator.html") ? "facilitator" : "community";
   });
@@ -30,17 +32,25 @@ export default function App() {
   const [communityOpinionTarget, setCommunityOpinionTarget] = useState<HTMLDivElement | null>(null);
   const developer = presentation === "developer";
   const guide = presentation === "facilitator";
+  const game = presentation === "game";
+  const [gameMode, setGameMode] = useState<GameMode>(() => window.location.hash === "#game-dev" ? "dev" : "demo");
   useEffect(() => {
     function followTabLink() {
       const linked = window.location.hash.slice(1);
-      if (linked === "developer" || linked === "community" || linked === "facilitator") setPresentation(linked);
+      if (linked === "game" || linked === "game-dev") { setPresentation("game"); setGameMode(linked === "game-dev" ? "dev" : "demo"); }
+      else if (linked === "developer" || linked === "community" || linked === "facilitator") setPresentation(linked);
     }
     window.addEventListener("hashchange", followTabLink);
     return () => window.removeEventListener("hashchange", followTabLink);
   }, []);
   function changePresentation(next: Presentation) {
     setPresentation(next);
+    if (next === "game") setGameMode("demo");
     window.history.replaceState(null, "", `#${next}`);
+  }
+  function changeGameMode(next: GameMode) {
+    setGameMode(next);
+    window.history.replaceState(null, "", next === "dev" ? "#game-dev" : "#game");
   }
   useEffect(() => {
     document.documentElement.dataset.presentation = presentation;
@@ -404,6 +414,7 @@ export default function App() {
       {busyKind === "batch" && <div className="example-loading batch-loading" role="status" aria-live="polite"><span className="loading-spinner" aria-hidden="true" /><strong>{status || "Preparing batch results…"}</strong></div>}
       {exampleLoadError && <p className="example-load-error" role="alert">{exampleLoadError}</p>}
       {guide && <FacilitatorGuide />}
+      {game && <GameView mode={gameMode} onMode={changeGameMode} />}
       <div hidden={!developer}>
       <Header
         providers={providers}
@@ -412,7 +423,7 @@ export default function App() {
         onToggleView={() => { if (!busy && !deepBusy) setView((v) => (v === "research" ? "public" : "research")); }}
       />
       </div>
-      <main className={developer ? "layout" : "community-layout"} hidden={guide}>
+      <main className={developer ? "layout" : "community-layout"} hidden={guide || game}>
         <div className="left-col" hidden={!developer}>
           <details className="single-item-choice" open={batchResults === null}>
           <summary hidden={batchResults === null}>Choose a single item</summary>
@@ -460,7 +471,7 @@ export default function App() {
         </div>
         <div className="community-host" hidden={developer}>
           <CommunityView key={previewUrl ?? corpusPath ?? "no-selection"}
-            active={!developer && !guide} trainer={presentation === "trainer"} report={report} providers={providers} examples={examples}
+            active={!developer && !guide && !game} trainer={presentation === "trainer"} report={report} providers={providers} examples={examples}
             slidePreview={slidePreview}
             name={previewName} url={previewUrl} thumbnail={previewThumb ?? undefined}
             hasInput={Boolean(file || corpusPath)} busy={busy || deepBusy || exampleLoading}
@@ -501,7 +512,7 @@ export default function App() {
         </div>
         </div>
       </main>
-      <details className="shared-graph" hidden={guide || (!developer && communityStep !== "check" && communityStep !== "reflect")} open={developer || graphOpen}
+      <details className="shared-graph" hidden={guide || game || (!developer && communityStep !== "check" && communityStep !== "reflect")} open={developer || graphOpen}
         onToggle={e => { if (!developer) setGraphOpen(e.currentTarget.open); }}>
         <summary hidden={developer}>How the findings connect</summary>
         <div className="diffusion-wrap">
@@ -514,7 +525,7 @@ export default function App() {
         />
       </div>
       </details>
-      <Footer devMode={providers?.dev_mode} />
+      <Footer devMode={providers?.dev_mode} game={game} />
     </div>
   );
 }

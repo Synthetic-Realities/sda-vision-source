@@ -10,7 +10,7 @@ export default defineConfig({
     name: "facilitator-static-fallback",
     transformIndexHtml(html) {
       return html.replace("<!-- FACILITATOR_FALLBACK -->", () =>
-        '<nav aria-label="App view"><a href="./#community">Community Workshop</a> · <a href="./facilitator.html">Facilitator guide</a> · <a href="./#developer">Developer</a></nav><main class="facilitator-guide">' +
+        '<nav aria-label="App view"><a href="./#community">Community Workshop</a> · <a href="./facilitator.html">Facilitator guide</a> · <a href="./#game">Game</a> · <a href="./#developer">Developer</a></nav><main class="facilitator-guide">' +
         readFileSync(resolve(__dirname, "src/facilitator-guide.html"), "utf8") + '</main>');
     },
   }],
