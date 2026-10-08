@@ -4,7 +4,7 @@ import "../game.css";
 
 export const HARBOUR_URL = "https://synthetic-realities.github.io/hearsay-harbour/";
 export const HARBOUR_REPOSITORY = "https://github.com/Synthetic-Realities/hearsay-harbour";
-export const HARBOUR_DOI = "https://doi.org/10.5281/zenodo.23237554";
+export const HARBOUR_DOI = "https://doi.org/10.5281/zenodo.23243671";
 export type GameMode = "demo" | "dev";
 
 function GamePlayer() {
@@ -52,7 +52,7 @@ export default function GameView({ mode, onMode }: { mode: GameMode; onMode: (mo
           <p>Play on your own, explore together with younger learners, or bring a group into Workshop mode. Each picture connects first impressions with source information and a final reflection.</p>
           {!launched && <div className="harbour-actions"><button className="harbour-button" type="button" onClick={launch}><Play size={19} aria-hidden="true" />Play here</button><a href={HARBOUR_URL} target="_blank" rel="noopener noreferrer">Open game in a new tab<ExternalLink size={16} aria-hidden="true" /></a></div>}
         </div>
-        {!launched && <img className="harbour-island" src="./game/island.png" alt="Hearsay Harbour’s island, with a village noticeboard, villagers and three places to check a picture." width="1440" height="900" />}
+        {!launched && <img className="harbour-island" src="./game/island-v1.3.png" alt="Hearsay Harbour’s island, with a village noticeboard, villagers and three places to check a picture." width="1440" height="1000" />}
       </div>
       <div ref={playerSection} className="harbour-play-area">{launched && <GamePlayer />}</div>
       <ol className="harbour-steps" aria-label="Four ways to explore a picture">
@@ -63,7 +63,7 @@ export default function GameView({ mode, onMode }: { mode: GameMode; onMode: (mo
       </ol>
       <div className="harbour-context"><h2>Bring the island into your session</h2><p>Workshop mode adds facilitator prompts and before-and-after group votes. At the end, use the recap, keepsakes and certificate to discuss what changed people’s minds. Findings can be saved as an image or PDF, with group voting data available as CSV.</p><p><strong>About the checks:</strong> the game uses prepared picture packs and scripted findings for teaching. Use the reveal and source notes to explore how each example was made. Facilitators can preview the pack and choose examples for their group.</p></div>
       <div className="harbour-gallery">
-        <Preview file="notice.png" alt="A picture in the Notice activity, with hunch pebbles and first-impression choices." caption="Start with what catches your eye" />
+        <Preview file="notice-v1.3.png" alt="A picture in the Notice activity, with hunch pebbles and first-impression choices." caption="Start with what catches your eye" />
         <Preview file="reveal.png" alt="The game’s reveal places source information alongside the player’s observations." caption="Compare your ideas with the source record" />
       </div>
     </section> : <section aria-label="Game developer resources">
@@ -79,7 +79,7 @@ export default function GameView({ mode, onMode }: { mode: GameMode; onMode: (mo
       </div><p className="harbour-small">Dev Studio screenshots come from the game repository; their AI suggestions are illustrative examples.</p>
     </section>}
     <section className="harbour-resources" aria-labelledby="harbour-resources-title"><h2 id="harbour-resources-title">Take Hearsay Harbour further</h2><div className="harbour-actions"><a href={HARBOUR_REPOSITORY} target="_blank" rel="noopener noreferrer">Explore the game on GitHub<ExternalLink size={16} aria-hidden="true" /></a><a href={HARBOUR_DOI} target="_blank" rel="noopener noreferrer">Game downloads and DOI on Zenodo<ExternalLink size={16} aria-hidden="true" /></a></div>
-      <details><summary>Cite the game and view credits</summary><p>Martin, S. (2026) <em>Hearsay Harbour: a cozy game for spotting AI-generated misinformation images</em> [Computer software]. Zenodo. <a href={HARBOUR_DOI} target="_blank" rel="noopener noreferrer">doi:10.5281/zenodo.23237554</a>. This Concept DOI links to the latest published version; the record supplies version-specific citations.</p><p>An academic research project of <strong>Synthetic Realities</strong>, led by <strong>Dr Sam Martin</strong>, Smart Data Research UK (UKRI) Fellow (Grant number UKRI4010), Manchester Metropolitan University (MMU). <a href="https://orcid.org/0000-0002-4466-8374" target="_blank" rel="noopener noreferrer">ORCID: 0000-0002-4466-8374</a>.</p><p>The game’s visual style and selected helpers are adapted from <a href="https://github.com/zernonia/hivebound" target="_blank" rel="noopener noreferrer">Hivebound by zernonia</a>. Code is MIT licensed; example pictures retain their listed credits. <a href={`${HARBOUR_REPOSITORY}#credits`} target="_blank" rel="noopener noreferrer">Full game credits</a> · <a href="./game/LICENSE.txt" target="_blank" rel="noopener noreferrer">Bundled screenshot acknowledgements and licence</a>.</p></details>
+      <details><summary>Cite the game and view credits</summary><p>Martin, S. (2026) <em>Hearsay Harbour: a cosy game for spotting AI-generated misinformation images</em> [Computer software]. Zenodo. <a href={HARBOUR_DOI} target="_blank" rel="noopener noreferrer">doi:10.5281/zenodo.23243671</a>. This Concept DOI links to the latest published version; the record supplies version-specific citations.</p><p>An academic research project of <strong>Synthetic Realities</strong>, led by <strong>Dr Sam Martin</strong>, Smart Data Research UK (UKRI) Fellow (Grant number UKRI4010), Manchester Metropolitan University (MMU). <a href="https://orcid.org/0000-0002-4466-8374" target="_blank" rel="noopener noreferrer">ORCID: 0000-0002-4466-8374</a>.</p><p>The game’s visual style and selected helpers are adapted from <a href="https://github.com/zernonia/hivebound" target="_blank" rel="noopener noreferrer">Hivebound by zernonia</a>. Code is MIT licensed; example pictures retain their listed credits. <a href={`${HARBOUR_REPOSITORY}#credits`} target="_blank" rel="noopener noreferrer">Full game credits</a> · <a href="./game/LICENSE.txt" target="_blank" rel="noopener noreferrer">Bundled screenshot acknowledgements and licence</a>.</p></details>
     </section>
   </main>;
 }

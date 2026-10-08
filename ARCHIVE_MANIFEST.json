@@ -10,7 +10,8 @@
     "podcast-exploration-2026-10-06.2",
     "workshop-layout-2026-10-06.1",
     "podcast-attribution-2026-10-06.1",
-    "game-tab-2026-10-08.1"
+    "game-tab-2026-10-08.1",
+    "game-tab-2026-10-08.2"
   ],
   "files": [
     {
@@ -46,7 +47,7 @@
     {
       "path": "README.md",
       "bytes": 8124,
-      "sha256": "5bd0548f2c514c57d4f8b4e919f53ebae74c8cfc2bf36e02591876e523966fd1"
+      "sha256": "e803b01240b077f43e6bb01435887f58bac801bdcbbcaf05a04a48806d3c6bee"
     },
     {
       "path": "RELEASE_ORIGIN.md",
@@ -315,8 +316,8 @@
     },
     {
       "path": "docs/Game_Integration_2026-10-08.md",
-      "bytes": 3552,
-      "sha256": "1fcda4f1dc63c112f4521a207612a0d94b1cfa74c9554f72594b8ed79e5389de"
+      "bytes": 4124,
+      "sha256": "4a0779e8b3f8313e4ea75c26affdcfcd7d827a9621696f63078046fcbfb2c081"
     },
     {
       "path": "docs/Image_Search_Scope_2026-09-29.md",
@@ -591,12 +592,12 @@
     {
       "path": "frontend/dist/about-local.html",
       "bytes": 6565,
-      "sha256": "7d52624094964d3a8a9170d24e1d21bd9dba65f834f12c8b204fac519a94168c"
+      "sha256": "4803dda7cf219577c110f53c21519baf733ac2dc8fec6928c66d701e61d3bd9f"
     },
     {
       "path": "frontend/dist/about.html",
       "bytes": 10916,
-      "sha256": "00d6ee2c6a70e10bf90122aed9290373906ce6f6176dae2ea2d9c9e38fcf164b"
+      "sha256": "bbfd374211729c0ab80b34ec2d662998f57af2efffa676ff1d58a5e12cd8c632"
     },
     {
       "path": "frontend/dist/assets/NotoSans-Regular-Dpf_lrdO.ttf",
@@ -624,9 +625,9 @@
       "sha256": "7b07a9ca175c614e8e7de447198d35b0d161dd50db2c63b5f7fd6ea0e1e876f2"
     },
     {
-      "path": "frontend/dist/assets/index.es-CaXk_gc5.js",
+      "path": "frontend/dist/assets/index.es-Dt_Ys5sb.js",
       "bytes": 158947,
-      "sha256": "564c229c26c21865c190765e15b73fdebfcd3a6b655f73ab7526a161505449a5"
+      "sha256": "1602132553cf97ab0f2c26cdf1dc0626c3d469ec3664b721bfc89e9d78f4715e"
     },
     {
       "path": "frontend/dist/assets/infographic-preview-BnI6beWM.png",
@@ -634,19 +635,19 @@
       "sha256": "d06c42c3dbe400be9d827dd42ad89b4b2d20df29b99ac8b906e611c459c23e5a"
     },
     {
-      "path": "frontend/dist/assets/jspdf.es.min-Cmw-qmOn.js",
+      "path": "frontend/dist/assets/jspdf.es.min-BAX1I8KS.js",
       "bytes": 386188,
-      "sha256": "74634261a83e74c61043ad807c975d68767867f3e5fbeca4213383f474e41511"
+      "sha256": "66dc089251c5cf2212b3278ac0aae1c06afb87da9516afed864bef034cae0fd3"
     },
     {
-      "path": "frontend/dist/assets/main-BRscV9H0.js",
-      "bytes": 398261,
-      "sha256": "b3a72422efc2fe846966fad42609ae67feecc9dddcdaae095f130103c7eafca7"
+      "path": "frontend/dist/assets/main-BEyp2mD9.js",
+      "bytes": 398272,
+      "sha256": "1565651d23ff1a122c96f81331c5b81e61fea261a430a68aa423609346ec5b1a"
     },
     {
-      "path": "frontend/dist/assets/main-DBrw35KC.css",
-      "bytes": 84477,
-      "sha256": "d22c504b7a3dec1c05aee58f1966df96b9507d08f3245e309852a88bbb2472b9"
+      "path": "frontend/dist/assets/main-C1wiruT8.css",
+      "bytes": 84393,
+      "sha256": "140e747e0ad90cd512c3e54e65c43441a1cc6703610535663aeb0bc6db34d224"
     },
     {
       "path": "frontend/dist/assets/podcast-cover-Dk3QfbkM.png",
@@ -654,9 +655,9 @@
       "sha256": "ec571f0ebb710c9f2fc2f8f79644793f97317b98323cb1d93cce34e608d79bdc"
     },
     {
-      "path": "frontend/dist/assets/pptxgen.es-madbp2Vw.js",
+      "path": "frontend/dist/assets/pptxgen.es-CGr1VThG.js",
       "bytes": 372399,
-      "sha256": "8084689ad07f11038fd21399272f2a8c49913e8875c0414a25eb03ca4064e44e"
+      "sha256": "b6ee8c8458ddf9bc89fea47dc6551f373ffbf4622097c61ec8e42f982d875b90"
     },
     {
       "path": "frontend/dist/assets/presentation-preview-D7TtxRTR.png",
@@ -701,22 +702,22 @@
     {
       "path": "frontend/dist/facilitator.html",
       "bytes": 10746,
-      "sha256": "eaab6d2633254debd4d3a1b785128c6808175160bc20f2b6c442ed3067837b0a"
+      "sha256": "1b705a40f3c92ed6cbb640a78c292a08aed767af4e62804dc7a1abc7a6519865"
     },
     {
       "path": "frontend/dist/game/LICENSE.txt",
-      "bytes": 3144,
-      "sha256": "1154804c6fbcf75d6fb15feb051c6caa87949ffd3e3af1ae77e37aeafaf09cbe"
+      "bytes": 3393,
+      "sha256": "c359f14303cccac98d02cbe222a76481f51eeb907a290ce43b2b00d0dcec9ac2"
     },
     {
-      "path": "frontend/dist/game/island.png",
-      "bytes": 472664,
-      "sha256": "bc496ad20bc0cf7f42e8acc42130cc60aeeeaa0cb8b7b19fd7411da7be96424a"
+      "path": "frontend/dist/game/island-v1.3.png",
+      "bytes": 98410,
+      "sha256": "2437967864ee874b1951064c046197c0f349111f94a5f6432e81fec87dd82c76"
     },
     {
-      "path": "frontend/dist/game/notice.png",
-      "bytes": 662598,
-      "sha256": "3c69bb58b859709fbc6953edbd0b55f1e6f2e6d2c54bcdc70eb776ab41c3e34f"
+      "path": "frontend/dist/game/notice-v1.3.png",
+      "bytes": 102851,
+      "sha256": "781a8335c96dccda3163f91ea14bbeb11e0fb99d237bcc1ffc620bcacf9cc4ab"
     },
     {
       "path": "frontend/dist/game/reveal.png",
@@ -826,7 +827,7 @@
     {
       "path": "frontend/dist/index.html",
       "bytes": 3156,
-      "sha256": "ea521efd02ab35c4cc45963be7cb521bb30fea8e20b07ab1fa40d9bb6404cd84"
+      "sha256": "9fbe031fb5a5dd0567de2b61bda9b23252072b6bec2d8c7b0a06ad8a1eac8094"
     },
     {
       "path": "frontend/dist/sitemap.xml",
@@ -936,12 +937,12 @@
     {
       "path": "frontend/public/about-local.html",
       "bytes": 6565,
-      "sha256": "7d52624094964d3a8a9170d24e1d21bd9dba65f834f12c8b204fac519a94168c"
+      "sha256": "4803dda7cf219577c110f53c21519baf733ac2dc8fec6928c66d701e61d3bd9f"
     },
     {
       "path": "frontend/public/about.html",
       "bytes": 10916,
-      "sha256": "00d6ee2c6a70e10bf90122aed9290373906ce6f6176dae2ea2d9c9e38fcf164b"
+      "sha256": "bbfd374211729c0ab80b34ec2d662998f57af2efffa676ff1d58a5e12cd8c632"
     },
     {
       "path": "frontend/public/branding/mmu-logo.png",
@@ -970,18 +971,18 @@
     },
     {
       "path": "frontend/public/game/LICENSE.txt",
-      "bytes": 3144,
-      "sha256": "1154804c6fbcf75d6fb15feb051c6caa87949ffd3e3af1ae77e37aeafaf09cbe"
+      "bytes": 3393,
+      "sha256": "c359f14303cccac98d02cbe222a76481f51eeb907a290ce43b2b00d0dcec9ac2"
     },
     {
-      "path": "frontend/public/game/island.png",
-      "bytes": 472664,
-      "sha256": "bc496ad20bc0cf7f42e8acc42130cc60aeeeaa0cb8b7b19fd7411da7be96424a"
+      "path": "frontend/public/game/island-v1.3.png",
+      "bytes": 98410,
+      "sha256": "2437967864ee874b1951064c046197c0f349111f94a5f6432e81fec87dd82c76"
     },
     {
-      "path": "frontend/public/game/notice.png",
-      "bytes": 662598,
-      "sha256": "3c69bb58b859709fbc6953edbd0b55f1e6f2e6d2c54bcdc70eb776ab41c3e34f"
+      "path": "frontend/public/game/notice-v1.3.png",
+      "bytes": 102851,
+      "sha256": "781a8335c96dccda3163f91ea14bbeb11e0fb99d237bcc1ffc620bcacf9cc4ab"
     },
     {
       "path": "frontend/public/game/reveal.png",
@@ -1330,8 +1331,8 @@
     },
     {
       "path": "frontend/src/components/GameView.tsx",
-      "bytes": 10734,
-      "sha256": "7bd3b9e7ec226579384c8df9b29bde9a35fd1e912b7c98fc5465f33000544b48"
+      "bytes": 10745,
+      "sha256": "c2049ab81dfa2fb07a5c539e9780570218ee8120818d7344d659ef211d8c0411"
     },
     {
       "path": "frontend/src/components/GraphView.tsx",
@@ -1440,8 +1441,8 @@
     },
     {
       "path": "frontend/src/game.css",
-      "bytes": 5802,
-      "sha256": "18c579f5bbab287d56520a1a9c62fdb8fb2e80775c128cd8a654a658cca62c2f"
+      "bytes": 5714,
+      "sha256": "5b8b62a0cb2239af56ccfc4771be84fbe6b363fc4e6262a5714743efee45c5d3"
     },
     {
       "path": "frontend/src/lib.ts",
@@ -2205,18 +2206,19 @@
     }
   ],
   "game_integration": {
-    "revision": "game-tab-2026-10-08.1",
+    "revision": "game-tab-2026-10-08.2",
     "source_repository": "https://github.com/Synthetic-Realities/hearsay-harbour",
-    "inspected_commit": "bfe0cd2d039fe09e6d7952a5911e159671a3f882",
-    "inspected_version": "1.2.0",
+    "inspected_commit": "5d4ca0124f07de53fff71d2374ea041081e40247",
+    "inspected_version": "1.3.0",
     "live_url": "https://synthetic-realities.github.io/hearsay-harbour/",
-    "concept_doi": "10.5281/zenodo.23237554",
+    "concept_doi": "10.5281/zenodo.23243671",
     "entry_points": [
       "https://sdavision.io/#game",
       "https://sdavision.io/#game-dev"
     ],
     "loading": "External game frame is loaded after Play here; removed when leaving Game or Demo. Dev Studio is local.",
     "source_of_findings": "Scripted teaching activities in the game; separate from SDA Vision analysis records.",
-    "verification": "docs/Game_Integration_2026-10-08.md"
+    "verification": "docs/Game_Integration_2026-10-08.md",
+    "screenshot_revision": "Island and Notice captured from live game 1.3.0; other screenshots unchanged in the source repository."
   }
 }

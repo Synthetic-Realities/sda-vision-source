@@ -40,14 +40,14 @@
 .harbour-steps li:nth-child(4) { background:#ffe2cf; }
 .harbour-steps span { font-weight:750; }
 .harbour-steps p { margin:10px 0 0; font-size:.94rem; }
-.harbour-context { margin:34px 0; max-width:100ch; }
+.harbour-context { margin:34px 0; width:100%; }
 .harbour-context h2, .harbour-resources h2 { font-size:1.45rem; }
 .harbour-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin:26px 0; }
 .harbour-preview { margin:0; border:1px solid #dce5e6; padding:12px; border-radius:12px; background:#fff; }
 .harbour-preview img { display:block; width:100%; height:auto; border-radius:6px; }
 .harbour-preview figcaption { margin:12px 4px 2px; font-size:.92rem; font-weight:600; }
-.harbour-dev-intro { background:#f5f1fb; border:1px solid #e5dcf2; border-radius:18px; padding:32px; }
-.harbour-dev-intro p { max-width:85ch; }
+.harbour-dev-intro { margin:0 0 28px; }
+.harbour-dev-intro p { max-width:none; }
 .harbour-dev-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin:28px 0; }
 .harbour-dev-grid article { border:1px solid #dce5e6; border-radius:10px; padding:24px; min-width:0; }
 .harbour-page pre { white-space:pre-wrap; overflow-wrap:anywhere; padding:14px; border:1px solid #dce5e6; border-radius:6px; background:#f1f6f6; color:#192b35; }
@@ -56,4 +56,4 @@
 .harbour-resources details { margin-top:22px; }
 .harbour-resources summary { cursor:pointer; font-weight:700; color:#166e78; padding:8px 0; }
 @media(max-width:900px) { .harbour-hero { grid-template-columns:1fr; } .harbour-dev-grid { grid-template-columns:1fr; } .harbour-steps { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-@media(max-width:600px) { .harbour-page { padding:22px 16px 32px; } .harbour-heading { gap:12px; } .harbour-heading img { width:190px; } .harbour-hero, .harbour-dev-intro { padding:22px; } .harbour-gallery { grid-template-columns:1fr; } .harbour-steps { gap:10px; } .harbour-steps li { padding:14px; } .harbour-frame { height:78vh; min-height:520px; } .harbour-actions { align-items:flex-start; flex-direction:column; } .harbour-player-toolbar strong { flex-basis:100%; } }
+@media(max-width:600px) { .harbour-page { padding:22px 16px 32px; } .harbour-heading { gap:12px; } .harbour-heading img { width:190px; } .harbour-hero { padding:22px; } .harbour-gallery { grid-template-columns:1fr; } .harbour-steps { gap:10px; } .harbour-steps li { padding:14px; } .harbour-frame { height:78vh; min-height:520px; } .harbour-actions { align-items:flex-start; flex-direction:column; } .harbour-player-toolbar strong { flex-basis:100%; } }

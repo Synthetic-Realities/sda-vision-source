@@ -1,6 +1,6 @@
 # Hearsay Harbour in SDA Vision
 
-Website integration revision: `game-tab-2026-10-08.1`.
+Website integration revision: `game-tab-2026-10-08.2`.
 
 The main navigation offers Community Workshop, Facilitator guide, Game and
 Developer. The Community Workshop remains the default opening view.
@@ -26,17 +26,27 @@ Developer. The Community Workshop remains the default opening view.
 ## Sources and credits
 
 - [Game repository](https://github.com/Synthetic-Realities/hearsay-harbour),
-  inspected at `bfe0cd2d039fe09e6d7952a5911e159671a3f882`, version 1.2.0.
+  inspected at `5d4ca0124f07de53fff71d2374ea041081e40247`, version 1.3.0.
 - [Public game](https://synthetic-realities.github.io/hearsay-harbour/).
-- [Game Concept DOI](https://doi.org/10.5281/zenodo.23237554), verified as the
-  parent of version record `10.5281/zenodo.23240413` (v1.2.0).
-- Five original repository screenshots accompany the introduction and local
-  Studio guidance. Their MIT licence and third-party acknowledgements are
+- [Game Concept DOI](https://doi.org/10.5281/zenodo.23243671), verified as the
+  parent of version record `10.5281/zenodo.23243672` (1.3.0).
+- Two current live-game captures (island and Notice) and three unchanged repository
+  screenshots accompany the introduction and local Studio guidance. Their MIT
+  licence and third-party acknowledgements are
   bundled in `frontend/public/game/LICENSE.txt` and each generated build.
 - Citation and credits name Dr Sam Martin, Synthetic Realities, Manchester
   Metropolitan University, Smart Data Research UK (UKRI), grant UKRI4010 and
   ORCID 0000-0002-4466-8374. Hivebound by zernonia is acknowledged as recorded
   by the game repository.
+
+## Layout and current game resources
+
+The session introduction and Dev introduction use the available page width.
+The Dev introduction has an open layout with its heading, text and actions aligned
+to the page content. The game citation uses “cosy” and the verified 1.3.0 Concept DOI.
+Island and Notice previews show the deployed GUI; versioned image filenames keep
+previously cached previews separate. Reveal and Studio screenshots match the
+current repository assets, which were unchanged in the GUI update.
 
 ## Verification
 
