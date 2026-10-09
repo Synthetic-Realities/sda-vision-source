@@ -2,7 +2,7 @@
 
 # SDA Vision — version 0.1.2
 
-[**Play Hearsay Harbour**](https://sdavision.io/#game), the SDA Vision island game. **Game → Demo** offers individual play and Workshop mode; **Game → Dev mode** introduces the local tools for adapting picture packs. [Game source and credits](https://github.com/Synthetic-Realities/hearsay-harbour) · [Game downloads and Concept DOI](https://doi.org/10.5281/zenodo.23243671).
+[**Play Hearsay Harbour**](https://sdavision.io/#game), the SDA Vision island game. **Game → Demo** offers individual play, Workshop mode and an Arcade / TV remote launch link. Optional keeper or group names appear on certificates, recaps and exported findings; **Game → Dev mode** introduces the local tools for adapting picture packs. [Game source and credits](https://github.com/Synthetic-Realities/hearsay-harbour#hearsay-harbour) · [Game downloads and Concept DOI](https://doi.org/10.5281/zenodo.23243671).
 
 [![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23008102.svg)](https://zenodo.org/doi/10.5281/zenodo.23008102) · [![Facilitator guide DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23008188.svg)](https://zenodo.org/doi/10.5281/zenodo.23008188)
 

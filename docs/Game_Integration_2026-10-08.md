@@ -1,6 +1,6 @@
 # Hearsay Harbour in SDA Vision
 
-Website integration revision: `game-tab-2026-10-08.2`.
+Website integration revision: `game-arcade-2026-10-09.1`.
 
 The main navigation offers Community Workshop, Facilitator guide, Game and
 Developer. The Community Workshop remains the default opening view.
@@ -25,12 +25,13 @@ Developer. The Community Workshop remains the default opening view.
 
 ## Sources and credits
 
-- [Game repository](https://github.com/Synthetic-Realities/hearsay-harbour),
-  inspected at `5d4ca0124f07de53fff71d2374ea041081e40247`, version 1.3.0.
+- [Game repository](https://github.com/Synthetic-Realities/hearsay-harbour#hearsay-harbour),
+  inspected at `ca29499d857a7488eabdeb37ae20f967bf872d65`, after the 1.3.0 release.
+  Its Pages deployment completed successfully at this commit.
 - [Public game](https://synthetic-realities.github.io/hearsay-harbour/).
 - [Game Concept DOI](https://doi.org/10.5281/zenodo.23243671), verified as the
   parent of version record `10.5281/zenodo.23243672` (1.3.0).
-- Two current live-game captures (island and Notice) and three unchanged repository
+- Three live-game captures (island, Notice and the Arcade title screen) and three unchanged repository
   screenshots accompany the introduction and local Studio guidance. Their MIT
   licence and third-party acknowledgements are
   bundled in `frontend/public/game/LICENSE.txt` and each generated build.
@@ -44,11 +45,41 @@ Developer. The Community Workshop remains the default opening view.
 The session introduction and Dev introduction use the available page width.
 The Dev introduction has an open layout with its heading, text and actions aligned
 to the page content. The game citation uses “cosy” and the verified 1.3.0 Concept DOI.
-Island and Notice previews show the deployed GUI; versioned image filenames keep
+Island and Notice previews show the standard game; an Arcade title-screen preview shows
+the remote/controller option and focus highlight. Versioned image filenames keep
 previously cached previews separate. Reveal and Studio screenshots match the
 current repository assets, which were unchanged in the GUI update.
 
+## Arcade, TV controls and named findings
+
+The Game introduction covers individual play and Workshop mode. The full-width
+session text explains the optional keeper or group/class name on the certificate,
+final recap and exported findings. The game stores the name with progress locally
+in browser storage. Nicknames or session labels can be used. Findings downloads
+work from the game's own tab; its embedded export path presents an image preview.
+
+A big-screen section explains arrow/D-pad navigation, OK/Enter/A to choose and
+Back/Escape/B to close. A new-tab action opens the live game with `?arcade`.
+The game itself offers large Back and Continue side zones on suitable screens.
+Dev guidance includes trying packs with the intended controls and accounting for
+names in research exports. All game GitHub links open the README's Hearsay Harbour
+heading, including the setup and full-credits links.
+
+Zenodo's latest published record checked on 9 October is version 1.3.0,
+`10.5281/zenodo.23243672`, under Concept DOI `10.5281/zenodo.23243671`.
+The named recap and arcade commits follow that release. The site distinguishes
+current GitHub source/live features from published Zenodo downloads. No Zenodo
+record or game repository was changed by this SDA Vision presentation update.
+
 ## Verification
+
+Current revision: TypeScript, all three builds and the existing Game component
+suite; browser checks of Game and Dev copy, new-tab URLs, image loading and
+desktop layout at 1600 CSS pixels. The Arcade title screen and welcome guide were opened in
+the live game. Named recap/CSV behaviour was confirmed from its implementation.
+Physical TV/gamepad checks and a full six-picture completion were not repeated.
+
+Earlier integration verification:
 
 - TypeScript and production builds passed for research, public demo and Conference.
 - Component checks cover deferred game loading, local Studio scope, external

@@ -11,7 +11,8 @@
     "workshop-layout-2026-10-06.1",
     "podcast-attribution-2026-10-06.1",
     "game-tab-2026-10-08.1",
-    "game-tab-2026-10-08.2"
+    "game-tab-2026-10-08.2",
+    "game-arcade-2026-10-09.1"
   ],
   "files": [
     {
@@ -46,8 +47,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8124,
-      "sha256": "e803b01240b077f43e6bb01435887f58bac801bdcbbcaf05a04a48806d3c6bee"
+      "bytes": 8260,
+      "sha256": "6f0d57460ae1247180b1e0369afa1e8efb18080b3ab068cfeaead91e21b3cdf2"
     },
     {
       "path": "RELEASE_ORIGIN.md",
@@ -316,8 +317,8 @@
     },
     {
       "path": "docs/Game_Integration_2026-10-08.md",
-      "bytes": 4124,
-      "sha256": "4a0779e8b3f8313e4ea75c26affdcfcd7d827a9621696f63078046fcbfb2c081"
+      "bytes": 6048,
+      "sha256": "e127fa872ce5982ea11d9f828258b19e1c60179359cba74a4b061c297841b41a"
     },
     {
       "path": "docs/Image_Search_Scope_2026-09-29.md",
@@ -591,13 +592,13 @@
     },
     {
       "path": "frontend/dist/about-local.html",
-      "bytes": 6565,
-      "sha256": "4803dda7cf219577c110f53c21519baf733ac2dc8fec6928c66d701e61d3bd9f"
+      "bytes": 7341,
+      "sha256": "37e65b2a24262f99637ae45d09016497fef1df7f53ddc11266d590d0ac6516f8"
     },
     {
       "path": "frontend/dist/about.html",
-      "bytes": 10916,
-      "sha256": "bbfd374211729c0ab80b34ec2d662998f57af2efffa676ff1d58a5e12cd8c632"
+      "bytes": 11450,
+      "sha256": "7c0e620a456aaef627a5c43e7a2ed4902b8a71d2abfce2e19082c9b993e37700"
     },
     {
       "path": "frontend/dist/assets/NotoSans-Regular-Dpf_lrdO.ttf",
@@ -625,9 +626,9 @@
       "sha256": "7b07a9ca175c614e8e7de447198d35b0d161dd50db2c63b5f7fd6ea0e1e876f2"
     },
     {
-      "path": "frontend/dist/assets/index.es-Dt_Ys5sb.js",
+      "path": "frontend/dist/assets/index.es-CkwBK6rB.js",
       "bytes": 158947,
-      "sha256": "1602132553cf97ab0f2c26cdf1dc0626c3d469ec3664b721bfc89e9d78f4715e"
+      "sha256": "b530a943f0db3d5f227d52de5f7eaabd404f64645e2c35074db770ee99c39952"
     },
     {
       "path": "frontend/dist/assets/infographic-preview-BnI6beWM.png",
@@ -635,19 +636,19 @@
       "sha256": "d06c42c3dbe400be9d827dd42ad89b4b2d20df29b99ac8b906e611c459c23e5a"
     },
     {
-      "path": "frontend/dist/assets/jspdf.es.min-BAX1I8KS.js",
+      "path": "frontend/dist/assets/jspdf.es.min-1LHS1l4g.js",
       "bytes": 386188,
-      "sha256": "66dc089251c5cf2212b3278ac0aae1c06afb87da9516afed864bef034cae0fd3"
+      "sha256": "20ec5257c258bfd8bb9b64c69cae37e4cebe3ed718072429a66ac29063211478"
     },
     {
-      "path": "frontend/dist/assets/main-BEyp2mD9.js",
-      "bytes": 398272,
-      "sha256": "1565651d23ff1a122c96f81331c5b81e61fea261a430a68aa423609346ec5b1a"
+      "path": "frontend/dist/assets/main-CtuUIoD3.css",
+      "bytes": 84671,
+      "sha256": "44e65a1642eb48179e5d94f011505110401dd7e49ad0ead92dfe9a385c4c3c6c"
     },
     {
-      "path": "frontend/dist/assets/main-C1wiruT8.css",
-      "bytes": 84393,
-      "sha256": "140e747e0ad90cd512c3e54e65c43441a1cc6703610535663aeb0bc6db34d224"
+      "path": "frontend/dist/assets/main-xhLhqo2f.js",
+      "bytes": 400745,
+      "sha256": "55f96ca9cbf99f29e400ca3f7de563becee4fb4c17fb6569ce27a28522e29641"
     },
     {
       "path": "frontend/dist/assets/podcast-cover-Dk3QfbkM.png",
@@ -655,9 +656,9 @@
       "sha256": "ec571f0ebb710c9f2fc2f8f79644793f97317b98323cb1d93cce34e608d79bdc"
     },
     {
-      "path": "frontend/dist/assets/pptxgen.es-CGr1VThG.js",
+      "path": "frontend/dist/assets/pptxgen.es-B8vS7VTY.js",
       "bytes": 372399,
-      "sha256": "b6ee8c8458ddf9bc89fea47dc6551f373ffbf4622097c61ec8e42f982d875b90"
+      "sha256": "6241b3ae58b7f0b5c3c7a1b24b9fb65e16779488ae8e2eb29309292c76a92bec"
     },
     {
       "path": "frontend/dist/assets/presentation-preview-D7TtxRTR.png",
@@ -702,12 +703,17 @@
     {
       "path": "frontend/dist/facilitator.html",
       "bytes": 10746,
-      "sha256": "1b705a40f3c92ed6cbb640a78c292a08aed767af4e62804dc7a1abc7a6519865"
+      "sha256": "a09b098021ba191f5326e65fc4808aa774f8fdbfc088c4f93d7d1cc63df60735"
     },
     {
       "path": "frontend/dist/game/LICENSE.txt",
-      "bytes": 3393,
-      "sha256": "c359f14303cccac98d02cbe222a76481f51eeb907a290ce43b2b00d0dcec9ac2"
+      "bytes": 3505,
+      "sha256": "f5a3d79b028612a07681567946dd0e5cdcb2123ff4334ddc1e10cbc53d4e1482"
+    },
+    {
+      "path": "frontend/dist/game/arcade-2026-10-09.png",
+      "bytes": 74028,
+      "sha256": "dfc3f2e194a3e1d929f9f8e379a075d2da78ab6d72238d65c4222f2ed73039f3"
     },
     {
       "path": "frontend/dist/game/island-v1.3.png",
@@ -827,7 +833,7 @@
     {
       "path": "frontend/dist/index.html",
       "bytes": 3156,
-      "sha256": "9fbe031fb5a5dd0567de2b61bda9b23252072b6bec2d8c7b0a06ad8a1eac8094"
+      "sha256": "2536b236fae0977c3c1d487d7eb40035e7168ad516f3cb22b7bb04eff27e7fa1"
     },
     {
       "path": "frontend/dist/sitemap.xml",
@@ -936,13 +942,13 @@
     },
     {
       "path": "frontend/public/about-local.html",
-      "bytes": 6565,
-      "sha256": "4803dda7cf219577c110f53c21519baf733ac2dc8fec6928c66d701e61d3bd9f"
+      "bytes": 7341,
+      "sha256": "37e65b2a24262f99637ae45d09016497fef1df7f53ddc11266d590d0ac6516f8"
     },
     {
       "path": "frontend/public/about.html",
-      "bytes": 10916,
-      "sha256": "bbfd374211729c0ab80b34ec2d662998f57af2efffa676ff1d58a5e12cd8c632"
+      "bytes": 11450,
+      "sha256": "7c0e620a456aaef627a5c43e7a2ed4902b8a71d2abfce2e19082c9b993e37700"
     },
     {
       "path": "frontend/public/branding/mmu-logo.png",
@@ -971,8 +977,13 @@
     },
     {
       "path": "frontend/public/game/LICENSE.txt",
-      "bytes": 3393,
-      "sha256": "c359f14303cccac98d02cbe222a76481f51eeb907a290ce43b2b00d0dcec9ac2"
+      "bytes": 3505,
+      "sha256": "f5a3d79b028612a07681567946dd0e5cdcb2123ff4334ddc1e10cbc53d4e1482"
+    },
+    {
+      "path": "frontend/public/game/arcade-2026-10-09.png",
+      "bytes": 74028,
+      "sha256": "dfc3f2e194a3e1d929f9f8e379a075d2da78ab6d72238d65c4222f2ed73039f3"
     },
     {
       "path": "frontend/public/game/island-v1.3.png",
@@ -1326,13 +1337,13 @@
     },
     {
       "path": "frontend/src/components/Footer.tsx",
-      "bytes": 4321,
-      "sha256": "c2a0197d4501935783826fcda2e91736f6e24e8666b5cdd2cdb3093caf9c593e"
+      "bytes": 4432,
+      "sha256": "564a04f9916247086f0ed0e7d669b6c8707cbabad9353a94b6eb05041c5165d2"
     },
     {
       "path": "frontend/src/components/GameView.tsx",
-      "bytes": 10745,
-      "sha256": "c2049ab81dfa2fb07a5c539e9780570218ee8120818d7344d659ef211d8c0411"
+      "bytes": 12905,
+      "sha256": "b26343d7f92199c540e91d02e07928dcf2c23e759f770c35100838c3bd330719"
     },
     {
       "path": "frontend/src/components/GraphView.tsx",
@@ -1441,8 +1452,8 @@
     },
     {
       "path": "frontend/src/game.css",
-      "bytes": 5714,
-      "sha256": "5b8b62a0cb2239af56ccfc4771be84fbe6b363fc4e6262a5714743efee45c5d3"
+      "bytes": 6021,
+      "sha256": "96ac2ef0966a2a2b7c9326ed3f4f21a3594c5cc06a3307361c78f5fd2fb85e53"
     },
     {
       "path": "frontend/src/lib.ts",
@@ -2206,10 +2217,10 @@
     }
   ],
   "game_integration": {
-    "revision": "game-tab-2026-10-08.2",
-    "source_repository": "https://github.com/Synthetic-Realities/hearsay-harbour",
-    "inspected_commit": "5d4ca0124f07de53fff71d2374ea041081e40247",
-    "inspected_version": "1.3.0",
+    "revision": "game-arcade-2026-10-09.1",
+    "source_repository": "https://github.com/Synthetic-Realities/hearsay-harbour#hearsay-harbour",
+    "inspected_commit": "ca29499d857a7488eabdeb37ae20f967bf872d65",
+    "inspected_version": "post-1.3.0 development",
     "live_url": "https://synthetic-realities.github.io/hearsay-harbour/",
     "concept_doi": "10.5281/zenodo.23243671",
     "entry_points": [
@@ -2219,6 +2230,9 @@
     "loading": "External game frame is loaded after Play here; removed when leaving Game or Demo. Dev Studio is local.",
     "source_of_findings": "Scripted teaching activities in the game; separate from SDA Vision analysis records.",
     "verification": "docs/Game_Integration_2026-10-08.md",
-    "screenshot_revision": "Island and Notice captured from live game 1.3.0; other screenshots unchanged in the source repository."
+    "screenshot_revision": "Arcade title screen captured from the live game on 9 October 2026; standard-game and Studio previews retained after comparison.",
+    "published_zenodo_version": "1.3.0",
+    "arcade_url": "https://synthetic-realities.github.io/hearsay-harbour/?arcade",
+    "named_findings": "Optional keeper/group name on certificate, recap and PNG/PDF/CSV output; saved in game browser storage."
   }
 }
