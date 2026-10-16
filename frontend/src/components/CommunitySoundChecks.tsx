@@ -31,7 +31,7 @@ export default function CommunitySoundChecks({ report }: { report: Report }) {
       evidence: provenance?.status === "ok" ? <ProviderEvidence provider={provenance} /> : <p>{provenance?.summary || (provenance ? checkStatus(provenance) : "No original-file credential result is recorded.")}</p> },
   ];
   return <div className="community-sound-checks">
-    <p className="community-small">Soundtrack observations describe the recording and remain separate from the combined assessment.{report.meta.kind !== "audio" && " AI-origin detection from the sound itself is outside this workflow."}</p>
+    <p className="community-small">Soundtrack observations describe the recording and remain separate from the combined assessment.{report.meta.kind !== "audio" && " Built-in audio checks: AI-origin detection from the sound itself is outside this workflow. External watermark records have their own file and coverage."}</p>
     <ul className="community-mini-models" aria-label="Recorded sound checks">
       {rows.map(row => <li key={row.name}>
         <div className="community-mini-name"><strong>{row.name}</strong><span>{row.status}</span></div>

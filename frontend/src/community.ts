@@ -1,3 +1,4 @@
+import { externalChecksMarkdown } from "./externalChecks";
 import { citationRows, softwareCitationRows } from "./citation";
 import { ratingBasis } from "./assessmentNotes";
 import type { ProviderResult, Report, Verdict } from "./types";
@@ -61,7 +62,7 @@ export function assessmentScope(report: Report): string {
     const coverage = excerpt
       ? `The models reviewed the first ${Number(excerpt[1]).toLocaleString("en-GB")} characters of the recording’s ${Number(excerpt[2]).toLocaleString("en-GB")}-character transcript (about ${Math.round(Number(excerpt[1]) / Number(excerpt[2]) * 100)}% of its characters).`
       : "The models reviewed this recording’s transcript; its available coverage is described in the detailed record.";
-    return `${coverage} AI-origin detection from the sound itself is outside this workflow.`;
+    return `${coverage} Built-in audio checks: AI-origin detection from the sound itself is outside this workflow. External watermark records have their own file and coverage.`;
   }
   if (kind === "text") return "Content assessment covers the submitted text.";
   if (textAssessment(report)) return "Content assessment covers text extracted from this document. Consult the detailed record for extraction coverage.";
@@ -237,7 +238,7 @@ export function workshopOverview(report: Report | null, kind: string): OverviewR
     rows.push({ label: "Soundtrack", finding: !a ? "Not checked" : a.status === "present" ? "Audio track found" : a.status === "absent" ? "No audio track" : a.status === "error" ? "Inspection failed" : "Inspection unavailable",
       detail: report ? soundtrackFinding(report) : "Local inspection checks whether an audio track is present. A track can include silence." });
     rows.push({ label: "Sound description", finding: report?.audio_assessment ? report.audio_assessment.status === "ok" ? "Excerpt described" : "Check failed" : "Not checked",
-      detail: "An optional Google check describes a short excerpt. AI-origin detection from the sound itself is outside this workflow." });
+      detail: "An optional Google check describes a short excerpt. Built-in audio checks: AI-origin detection from the sound itself is outside this workflow. External watermark records have their own file and coverage." });
     if (report?.suno_check) rows.push({ label: "Suno credentials", finding: report.suno_check.status !== "ok" ? "Check failed" : ({ verified_suno: "Suno reports a match", no_suno_provenance: "No Suno provenance reported", inconclusive: "Suno result inconclusive" }[report.suno_check.verdict ?? "inconclusive"]), detail: report.suno_check.note });
   }
   rows.push({ label: "Shared claim", question: "What evidence supports its claim?", finding: "Claim accuracy: not assessed",
@@ -273,7 +274,7 @@ export function communitySummary(report: Report, reflection: string, impression:
   const fileRecord = fileRecordSummary(report);
   lines.push("", "## About this file", md(fileRecord.finding), ...fileRecord.lines.map(md));
   if (["video", "audio"].includes(report.meta.kind)) {
-    lines.push("", "## Soundtrack", soundtrackFinding(report), "AI-origin detection from the sound itself is outside this workflow.");
+    lines.push("", "## Soundtrack", soundtrackFinding(report), "Built-in audio checks: AI-origin detection from the sound itself is outside this workflow. External watermark records have their own file and coverage.");
     const a = report.audio_assessment;
     lines.push(a ? `Excerpt check: ${md(a.provider)}, ${md(a.model)}; status: ${md(a.status)}. Track ${a.track_index}, ${a.start_seconds}s + ${a.duration_seconds}s.` : "Excerpt description: not checked.");
     if (a?.status === "ok") lines.push(...a.observations.map(o => `- ${md(o)}`));
@@ -290,7 +291,7 @@ export function communitySummary(report: Report, reflection: string, impression:
   lines.push("", "## Questions to take away", "- Who originally shared this item?", "- What do the date, source and context tell us?",
     "- What evidence supports the accompanying claim?", "", "An item's origin and the accuracy of its accompanying claim are separate questions.",
     "Model ratings are not calibrated probabilities. The full research report retains the detailed evidence and check statuses.");
-  return lines.join("\n") + "\n";
+  return lines.join("\n") + "\n" + externalChecksMarkdown(report.external_checks);
 }
 
 function workshopResponseLines(responses: WorkshopResponses): string[] {

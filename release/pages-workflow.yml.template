@@ -1,0 +1,40 @@
+# Inactive template. Install as .github/workflows/pages.yml only after review.
+# Place the exact reviewed saved-results bundle in site/ first.
+name: Publish reviewed SDA Vision demo
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Require a prepared saved-results site
+        run: |
+          test -s site/index.html
+          test -s site/showcase/manifest.json
+          test -s site/showcase/CREDITS.md
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy reviewed bundle
+        id: deployment
+        uses: actions/deploy-pages@v4

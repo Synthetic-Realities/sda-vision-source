@@ -1,0 +1,21 @@
+{
+  "title": "SDA Vision: Facilitator field guide",
+  "version": "1.4",
+  "date": "2026-09-28",
+  "creator": "Dr Sam Martin",
+  "affiliation": "Manchester Metropolitan University (MMU)",
+  "role": "Smart Data Research UK (UKRI) Fellow (Grant number UKRI4010)",
+  "orcid": "https://orcid.org/0000-0002-4466-8374",
+  "funding": "This work was supported by Smart Data Research UK, a UKRI investment; Grant number UKRI4010.",
+  "license": "MIT",
+  "status": "Unpublished Zenodo draft prepared 28 September 2026",
+  "doi": "10.5281/zenodo.23008189",
+  "website": "https://sdavision.io/",
+  "description": "SDA means Synthetic-media Discourse Analysis. Six-page illustrated facilitator guide for exploring AI-generated and traditional media, with current workshop screenshots, integrated guide navigation, media-specific reflection guidance and transcript assessment scope.",
+  "guide_website": "https://sdavision.io/#facilitator",
+  "guide_introduction": "https://sdavision.io/#facilitator",
+  "publication_status": "GitHub distribution authorised; Zenodo deposit pending",
+  "doi_status": "reserved; registration occurs on publication",
+  "software_doi": "10.5281/zenodo.23008103",
+  "copy_revision": "media-scope-2026-09-28.1"
+}

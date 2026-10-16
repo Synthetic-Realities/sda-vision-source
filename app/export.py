@@ -12,9 +12,11 @@ from __future__ import annotations
 import base64
 import csv
 import io
+from datetime import datetime, timezone
 
 from .audio import inspection_lines
 from .citation import citation_rows
+from .external_checks import records as external_records, rows as external_rows
 
 
 def _audio_sections(report: dict) -> list[tuple[str, list[str]]]:
@@ -353,6 +355,13 @@ def build_markdown(report: dict) -> str:
     if c.get("vaccine_codes"):
         lines += ["", "## Vaccine research codes", "", ", ".join(c["vaccine_codes"])]
 
+    for i, check in enumerate(external_records(report), 1):
+        lines += ["", f"## External watermark check {i}", ""]
+        for key, value in external_rows(check):
+            # Literal fences preserve service text without interpreting pasted markup.
+            fence = "`" * max(3, max((len(run) + 1 for run in __import__("re").findall(r"`+", value)), default=3))
+            lines += [f"### {key}", "", f"{fence}text", value, fence, ""]
+
     opinions = _second_opinions(report)
     if opinions:
         lines += ["", "## Second-opinion notes (pasted by the researcher)", "", SESSION_SCOPE]
@@ -459,6 +468,9 @@ def _csv_rows(report: dict):
     for title, entries in _audio_sections(report):
         yield file_cols + ["audio_context", title, "separate_observation", "", "", "", "", "", "not_decisive",
                            " | ".join(entries)] + so_cols
+    for check in external_records(report):
+        yield file_cols + ["external_check", check["service"], "manual_watermark_record", check["status"], "", "", "", "", "not_decisive",
+                           " | ".join(f"{key}: {value}" for key, value in external_rows(check))] + so_cols
     # Annotation lane: one row per pointer and one per recorded human check.
     # The provider_verdict column stays empty by design (pointers never carry
     # one); the check row's outcome is the human's audit outcome and lives in
@@ -569,6 +581,8 @@ def _report_sections(report: dict) -> list[dict]:
         for e in c.get(key, []):
             rows.append((e["name"], e.get("note", "")))
         section(title, rows or [("Record", "No entries recorded.")])
+    for index, check in enumerate(external_records(report), 1):
+        section(f"External watermark check / {index}", external_rows(check))
     for op in _second_opinions(report):
         rows = [("Record type", "Second-opinion note pasted by the researcher"),
                 ("Session", _fresh_label(op["fresh"])), ("Session scope", SESSION_SCOPE)]
@@ -642,9 +656,23 @@ def _pptx_add_graph_slide(prs, g) -> None:
     cap.text_frame.paragraphs[0].font.size = Pt(9)
 
 
+def _pptx_metadata(prs, batch: bool = False) -> None:
+    # Describe this export, leaving the report's recorded analysis date intact.
+    core = prs.core_properties
+    core.title = "SDA Vision: Batch analysis reports" if batch else "SDA Vision: Analysis report"
+    core.author = "SDA Vision"
+    core.last_modified_by = "SDA Vision"
+    core.subject = "Research assessment export"
+    core.comments = ""
+    core.keywords = ""
+    core.revision = 1
+    core.created = core.modified = datetime.now(timezone.utc)
+
+
 def build_pptx(report: dict, image_b64: str | None = None) -> bytes:
     from pptx import Presentation
     prs = Presentation()
+    _pptx_metadata(prs)
     _pptx_add_report(prs, report, image_b64)
     buf = io.BytesIO()
     prs.save(buf)
@@ -654,6 +682,7 @@ def build_pptx(report: dict, image_b64: str | None = None) -> bytes:
 def build_batch_pptx(items: list[dict]) -> bytes:
     from pptx import Presentation
     prs = Presentation()
+    _pptx_metadata(prs, batch=True)
     for it in items:
         _pptx_add_report(prs, it["report"], it.get("image"))
     g = _batch_graph([it["report"] for it in items])
@@ -676,12 +705,15 @@ def _pdf_flowables(report: dict, image_b64: str | None, styles) -> list:
                         report["meta"].get("tool", "SDA Vision"), _decode_image(image_b64))
 
 
-def _pdf_doc(buf):
+def _pdf_doc(buf, batch: bool = False):
     from reportlab.lib.pagesizes import A4
     from reportlab.lib.units import cm
     from reportlab.platypus import SimpleDocTemplate
     return SimpleDocTemplate(buf, pagesize=A4, topMargin=1.5 * cm, bottomMargin=1.5 * cm,
-                             leftMargin=1.5 * cm, rightMargin=1.5 * cm)
+                             leftMargin=1.5 * cm, rightMargin=1.5 * cm,
+                             title="SDA Vision: Batch analysis reports" if batch else "SDA Vision: Analysis report",
+                             author="SDA Vision", creator="SDA Vision",
+                             subject="Research assessment export")
 
 
 def build_pdf(report: dict, image_b64: str | None = None) -> bytes:
@@ -720,5 +752,5 @@ def build_batch_pdf(items: list[dict]) -> bytes:
                 pass
             story.append(Paragraph(_esc(_graph_stats_line(g)), styles["Normal"]))
     buf = io.BytesIO()
-    _pdf_doc(buf).build(story, onFirstPage=pdf_page, onLaterPages=pdf_page)
+    _pdf_doc(buf, batch=True).build(story, onFirstPage=pdf_page, onLaterPages=pdf_page)
     return buf.getvalue()

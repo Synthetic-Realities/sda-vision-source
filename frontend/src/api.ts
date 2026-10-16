@@ -72,15 +72,24 @@ export async function analyseDeep(
 // without manual screenshotting. Full tool only (needs the backend).
 export async function downloadFrameImage(file: File, label: string): Promise<boolean> {
   if (EXAMPLES_ONLY) return false;
+  try {
+    const frame = await frameImageFile(file, label);
+    triggerDownload(URL.createObjectURL(frame), frame.name, true);
+    return true;
+  } catch { return false; }
+}
+
+export async function frameImageFile(file: File, label: string): Promise<File> {
+  if (EXAMPLES_ONLY) throw new Error("Local frame extraction is available in the installed app.");
   const form = new FormData();
   form.append("file", file);
   form.append("label", label);
   const res = await fetch("/api/frame", { method: "POST", body: form });
-  if (!res.ok) return false;
+  if (!res.ok) throw new Error("This frame could not be extracted from the original file.");
   const dispo = res.headers.get("Content-Disposition") || "";
   const match = /filename="([^"]+)"/.exec(dispo);
-  triggerDownload(URL.createObjectURL(await res.blob()), match ? match[1] : `sda-frame-${label.replace(/\W+/g, "_")}.jpg`, true);
-  return true;
+  const blob = await res.blob();
+  return new File([blob], match ? match[1] : `sda-frame-${label.replace(/\W+/g, "_")}.jpg`, { type: blob.type });
 }
 
 // Annotation lane (opt-in, pointer-not-verdict): the server runs the vision

@@ -16,3 +16,12 @@ The development repository remains private. This public repository carries only 
 The software Concept DOI is [10.5281/zenodo.23008102](https://zenodo.org/doi/10.5281/zenodo.23008102); the guide Concept DOI is [10.5281/zenodo.23008188](https://zenodo.org/doi/10.5281/zenodo.23008188). These identify separate version series. Use the version DOIs above for exact citations. The approved deposit files remain byte-for-byte unchanged.
 
 Software 0.1.1 includes the image-only Google Lens scope and collapsed Reflect review. The current root archive manifest identifies its release files; the original 0.1.0 manifest and deposit remain preserved. See [0.1.1 release details](release/RELEASE_0.1.1.md).
+
+## Software 0.1.3
+
+On 16 October 2026, the researcher approved the recorded-demo click-through and
+publication of software 0.1.3 and companion guide resources 1.7. The source retains
+its full public scope. Selected original media and saved findings are unchanged;
+current example credits include the researcher-confirmed fictional faces and
+maternal-vaccination source paper. The root archive manifest now records 0.1.3;
+earlier release manifests remain historical.

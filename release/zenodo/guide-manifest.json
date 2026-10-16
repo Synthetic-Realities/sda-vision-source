@@ -1,0 +1,92 @@
+{
+  "version": "1.4",
+  "pack_revision": "workshop-review-2026-09-27.2",
+  "status": "Prepared for Zenodo; deposit pending",
+  "files": [
+    {
+      "path": "ARTWORK_CREDITS.md",
+      "bytes": 527,
+      "sha256": "05fcc773aeb43358ee3e7fd7537954f0e556568819dc3fcc5e511a491e84cf71"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1342,
+      "sha256": "7c52c27f79367566500db1953bff7359747230dc5c09d121cf5ea7df12a8bfe6"
+    },
+    {
+      "path": "PowerPoint_Preview_Setup.md",
+      "bytes": 3151,
+      "sha256": "b7fcdcc6beca056f102491f9f96f6542ff25f6d8c3ab5f161b8fb53c1cceb0c4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3350,
+      "sha256": "43d2fbe3feec53cba262159ff78cb0de1f022253128fd428f130bd9d97de8e9c"
+    },
+    {
+      "path": "SDA_Vision_Facilitator_Guide_v1.4-cover.png",
+      "bytes": 849868,
+      "sha256": "109d9da18cd0680bd5553afc8f6523ddb90e99e9b2fd4b0ab2b8cae191c67306"
+    },
+    {
+      "path": "SDA_Vision_Facilitator_Guide_v1.4.pdf",
+      "bytes": 5219654,
+      "sha256": "571289f1b1f693e12f03085cdacaf675f4c8652719f4ad6190da2f7cde04ca41"
+    },
+    {
+      "path": "community-workshop.png",
+      "bytes": 207061,
+      "sha256": "86fc10ac4f8e59233896d66b1319fc14bc100d37f1939026b549f6c79dee1580"
+    },
+    {
+      "path": "metadata.json",
+      "bytes": 1004,
+      "sha256": "1723091f4783d6314711d3c6c8e31e959efabbc5f1bf43e9f5d03162000dfac5"
+    },
+    {
+      "path": "mmu-logo.png",
+      "bytes": 39828,
+      "sha256": "0f6b5b8df140c5472adec7cd0c1cd789f5fb50b218cd4d561640e1d99fb7f70c"
+    },
+    {
+      "path": "sda-vision-favicon.png",
+      "bytes": 303632,
+      "sha256": "00da5898583c16855d4ec7a7a133662f23301aad9e551b16c3db4bb7610bf937"
+    },
+    {
+      "path": "sda-vision-logo.png",
+      "bytes": 541068,
+      "sha256": "a574b18a6806ce7a6d2e6a14d6a7c758f2c7499e573f2cc6b87ac282ae9600f1"
+    },
+    {
+      "path": "sdruk-logo.png",
+      "bytes": 95904,
+      "sha256": "62b706f3f304cde0c6dabee1664fc817da31d2f2e52ac9edd872ddcc660dc190"
+    },
+    {
+      "path": "ukri-logo.png",
+      "bytes": 77516,
+      "sha256": "98a2c182f09d1acb3d318907b3866f7e2272e37b8e0b58c984cb01d0431bd8ea"
+    },
+    {
+      "path": "workshop-activity-1-notice-v1.4.png",
+      "bytes": 627718,
+      "sha256": "de35e04415c11ca774a671f0e28d7a24ba21ce698fb4ba2994d1c03e58522529"
+    },
+    {
+      "path": "workshop-activity-2-discuss-v1.4.png",
+      "bytes": 562612,
+      "sha256": "eb0ef85dc2f244a343dcf300f325af2efd0ba704c76f334ce9ae46cd61ad54aa"
+    },
+    {
+      "path": "workshop-activity-3-check-v1.4.png",
+      "bytes": 256477,
+      "sha256": "1e7660d66bb8a39774e153f23623fe5e17ed01d80531690800d046d56f539a87"
+    },
+    {
+      "path": "workshop-activity-4-reflect-v1.4.png",
+      "bytes": 365941,
+      "sha256": "cd721ea66e78dba0288a38a8f181a08c0abfd867bced89d8161f562edd010eb3"
+    }
+  ]
+}

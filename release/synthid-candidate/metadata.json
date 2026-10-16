@@ -1,0 +1,17 @@
+{
+  "status": "LOCAL_REVIEW_ONLY",
+  "software_candidate": "0.1.3-rc.1",
+  "proposed_software_release": "0.1.3",
+  "guide_candidate": "1.6 review",
+  "proposed_guide_release": "1.6",
+  "date": "2026-10-11",
+  "software_concept_doi": "10.5281/zenodo.23008102",
+  "guide_concept_doi": "10.5281/zenodo.23008188",
+  "creator": "Dr Sam Martin",
+  "orcid": "0000-0002-4466-8374",
+  "affiliation": "Manchester Metropolitan University (MMU)",
+  "funding": "Smart Data Research UK (UKRI), Grant number UKRI4010",
+  "licence": "MIT",
+  "description": "External SynthID Detector workflow with exact-file identity and participant-entered evidence outside model scores. The illustrated guide adds a watermark activity alongside the podcast source comparison and Notice, Discuss, Check and Reflect.",
+  "publication": "Not published; reconcile existing remote versions and drafts before approval."
+}

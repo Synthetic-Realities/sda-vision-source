@@ -4,37 +4,35 @@ SDA means **Synthetic-media Discourse Analysis**.
 
 An academic research project of **Synthetic Realities**, led by **Dr Sam Martin**, Smart Data Research UK (UKRI) Fellow (Grant number UKRI4010), Manchester Metropolitan University (MMU). [ORCID: 0000-0002-4466-8374](https://orcid.org/0000-0002-4466-8374).
 
-[![Guide cover](images/SDA_Vision_Facilitator_Guide_v1.5-cover.png)](guides/SDA_Vision_Facilitator_Guide_v1.5.pdf)
+[![Guide cover](images/SDA_Vision_Facilitator_Guide_v1.7-review-cover.png)](guides/SDA_Vision_Facilitator_Guide_v1.7-review.pdf)
 
-[Download the seven-page facilitator guide (PDF)](guides/SDA_Vision_Facilitator_Guide_v1.5.pdf).
+[Download the eight-page facilitator guide (PDF)](guides/SDA_Vision_Facilitator_Guide_v1.7-review.pdf).
 
 For community facilitators, trainers, educators and researchers leading workshops, conference sessions and online discussions about AI-generated and traditional media. Use the guide alongside SDA Vision’s **Community Workshop**, adapting the questions to your group. The four activities invite first impressions, comparison of ideas, exploration of recorded findings and practical next steps.
 
-Start with the clearly labelled practice illustration or choose an example for which you have permission. Participants can record a first impression before seeing the project’s creation note at Check. The model table offers expandable evidence, while **About this file** summarises any embedded creation labels. Podcasts separate the assessed transcript excerpt from observations about sound.
+Start with the clearly labelled practice illustration or another prepared example agreed for your session. This recorded demo accepts prepared media only. Participants can record a first impression before seeing the project’s creation note at Check. The model table offers expandable evidence, while **About this file** summarises any embedded creation labels. Podcasts separate the assessed transcript excerpt from observations about sound.
 
-The guide includes the four activity pages below. Read the preparation notes before a session; at the end, invite reflection and download session notes before using **New session**. Responses and pasted Second Opinion notes remain separate from the recorded model findings.
+The guide includes the four activity pages below. Read the preparation notes before a session; at the end, invite reflection and download session notes before using **New session**. Responses and pasted checker replies remain separate from the recorded model findings. [Participant instructions](Participant_External_Checks.md) provide the short return-and-paste workflow and a printable one-page sheet.
 
 ## Workshop Activity 1 — Notice
 
-[![Notice activity and facilitator questions](images/workshop-activity-1-notice-v1.5.png)](images/workshop-activity-1-notice-v1.5.png)
+[![Notice activity and facilitator questions](images/workshop-activity-1-notice-v1.7-review.png)](images/workshop-activity-1-notice-v1.7-review.png)
 
 ## Workshop Activity 2 — Discuss
 
-[![Discuss activity and facilitator questions](images/workshop-activity-2-discuss-v1.5.png)](images/workshop-activity-2-discuss-v1.5.png)
+[![Discuss activity and facilitator questions](images/workshop-activity-2-discuss-v1.7-review.png)](images/workshop-activity-2-discuss-v1.7-review.png)
 
 ## Workshop Activity 3 — Check
 
-[![Check activity and facilitator questions](images/workshop-activity-3-check-v1.5.png)](images/workshop-activity-3-check-v1.5.png)
+[![Check activity and facilitator questions](images/workshop-activity-3-check-v1.7-review.png)](images/workshop-activity-3-check-v1.7-review.png)
 
 ## Workshop Activity 4 — Reflect
 
-[![Reflect activity and facilitator questions](images/workshop-activity-4-reflect-v1.5.png)](images/workshop-activity-4-reflect-v1.5.png)
+[![Reflect activity and facilitator questions](images/workshop-activity-4-reflect-v1.7-review.png)](images/workshop-activity-4-reflect-v1.7-review.png)
 
 ## Version and publication
 
-Version 1.5, prepared 27 September 2026 with the scope wording reviewed on 28 September, accompanies the current interface. The PDF is distributed with the GitHub demo and source repository. Its Zenodo draft has reserved DOI **10.5281/zenodo.23008189**, which registers on publication. The editable conference PowerPoint is separate and is excluded from this pack.
-
-The original media and analysis records have separate credits and scope. The withdrawn Illustration 2 is excluded from the current example catalogue; it does not appear in this guide. The practice illustration remains available.
+Version 1.7 review, prepared 15 October 2026, updates the guide and participant instructions for the visible SynthID Detector / OpenAI checker pair. It replaces the longer file-identity form in the demo instructions. Earlier guide editions remain available as historical records. This is a local candidate for researcher review; it has not been published. The [guide Concept DOI](https://zenodo.org/doi/10.5281/zenodo.23008188) remains the identifier for the version family. Existing remote records and any drafts will be reconciled before a release is uploaded. The editable conference PowerPoint stays local and is excluded from release packs.
 
 ## Affiliation and funding
 
@@ -59,6 +57,24 @@ The final, source-informed workshop verdict is **Mix of human and AI**: human-au
 
 After first impressions, participants can open **Explore the source behind this example** at Check or Reflect. Dr Sam Martin supplied the creation record: she made the podcast with Google NotebookLM using the research she co-authored with Samantha Vanderslott. A publication match establishes a source connection; comparing statements helps assess how the adaptation summarises, simplifies or extends the research.
 
-The saved findings assess the first 12,000 characters (about 46%) of the transcript. AI-origin detection from the sound itself is outside this workflow. The 78, 90 and 95/100 model ratings are not calibrated probabilities. The source activity and participant reflections remain separate from those findings.
+The saved findings assess the first 12,000 characters (about 46%) of the transcript. Built-in audio checks: AI-origin detection from the sound itself is outside this workflow. External watermark records have their own file and coverage. The 78, 90 and 95/100 model ratings are not calibrated probabilities. The source activity and participant reflections remain separate from those findings.
 
 The session PDF and PowerPoint include the displayed cover or document preview where available, with a caption distinguishing it from analysed frames. The source reveal enters the session summary only after it has been opened. Original reports and their thumbnails remain unchanged.
+
+## External Checks: Compare The Replies
+
+The eight-page guide includes both visible checkers. At **Check**, open the recorded findings and find **External checks** in the Evidence box. SynthID Detector and the OpenAI image checker sit side by side, each with a paste-results box; they stack on narrow screens.
+
+Returning from a service takes one step: paste its complete reply into **SynthID results** or **OpenAI results**. There is no upload back into SDA, separate save button, date field or outcome form. Pasted replies stay in browser memory and accompany session downloads separately from the recorded model scores. SDA does not independently confirm the service response or the submitted file.
+
+For an optional external check, download the agreed prepared example and open the chosen service. For a document, use its prepared page or slide image and paste with that material selected. The OpenAI shortcut remains enabled for image examples only. The dedicated SynthID Detector replaces the former Gemini chat shortcut in this demo; recorded Google Gemini model findings remain unchanged.
+
+Before participants choose an external upload, explain that Google or OpenAI receives the selected file or image, including retained metadata, under that service's account settings, current terms and any charges, separately from SDA's API accounts. Opening the link sends no media. Offer a facilitator demonstration or previously recorded reply as an alternative. Check access and current service limits in advance.
+
+Download session notes before changing examples, reloading or closing the page. Use **Take the findings with you** in Community, or **Download session with your notes** in Developer. Original recorded-report downloads retain the earlier findings.
+
+Invite the group to ask: What material does the reply cover? What does it add to the source evidence? What would we include when sharing our interpretation?
+
+[Participant quick guide](Participant_External_Checks.md) | [Printable participant sheet](guides/SDA_Vision_Participant_Checks_v1.7-review.pdf) | [Workflow and coverage](External_Watermark_Checks.md).
+
+[![External watermark activity](images/workshop-watermark-v1.7-review.png)](images/workshop-watermark-v1.7-review.png)

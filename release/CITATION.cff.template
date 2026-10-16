@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "Please cite the exact software version used in your research."
+type: software
+title: "SDA Vision"
+authors:
+  - family-names: "Martin"
+    given-names: "Dr Sam"
+    affiliation: "Manchester Metropolitan University (MMU)"
+    # Researcher-selected citation name: Dr Sam Martin (26 September 2026).
+    # Sole software author confirmed in the submitted release-credit form.
+    # Preview rendered citations before publication.
+    orcid: "https://orcid.org/0000-0002-4466-8374"
+version: "TODO_RELEASE"
+date-released: "TODO_RELEASE YYYY-MM-DD"
+repository-code: "https://github.com/Synthetic-Realities/sda-vision"
+license: MIT
+notes: >-
+  This work was supported by Smart Data Research UK, a UKRI investment; Grant number UKRI4010.
+# doi: "TODO_RELEASE actual software version DOI once assigned; omit until then"
+abstract: >-
+  A local, bring-your-own-key research instrument for synthetic-media review,
+  displaying model interpretations, provenance and forensic cues with explicit
+  uncertainty and human review. Ratings are not calibrated probabilities.
+keywords:
+  - synthetic media
+  - provenance
+  - research software
+  - C2PA
+
+# An academic research project of Synthetic Realities, led by Dr Sam Martin, Smart Data Research UK (UKRI) Fellow (Grant number UKRI4010.), Manchester Metropolitan University (MMU). ORCID: https://orcid.org/0000-0002-4466-8374.

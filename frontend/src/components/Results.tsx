@@ -9,6 +9,9 @@ import ConsensusBanner from "./ConsensusBanner";
 import ProviderTable from "./ProviderTable";
 import DecisionPanel from "./DecisionPanel";
 import SecondOpinion from "./SecondOpinion";
+import ExternalWatermarkCheck from "./ExternalWatermarkCheck";
+import DemoExternalChecks from "./DemoExternalChecks";
+import type { ExternalCheck, DemoDetectorReply } from "../externalChecks";
 import AnnotationLane from "./AnnotationLane";
 import Extras from "./Extras";
 import AudioPanel from "./AudioPanel";
@@ -27,6 +30,21 @@ export default function Results(
       onOpenSaved?: () => void; savedBusy?: boolean; savedLoading?: boolean },
 ) {
   const tabId = useId();
+  const [externalChecks, setExternalChecks] = useState<ExternalCheck[]>((SHOWCASE ? sessionNotes(report).externalChecks : report?.external_checks) ?? []);
+  const [synthidReplies, setSynthidReplies] = useState<DemoDetectorReply[]>(sessionNotes(report).synthidReplies ?? []);
+  function updateSynthidReplies(value: DemoDetectorReply[]) {
+    if (!SHOWCASE || !report) return;
+    setSynthidReplies(value);
+    updateSessionNotes(report, { synthidReplies: value });
+    onNotesChange?.();
+  }
+  function updateExternalChecks(value: ExternalCheck[]) {
+    if (!report) return;
+    setExternalChecks(value);
+    if (SHOWCASE) updateSessionNotes(report, { externalChecks: value });
+    else report.external_checks = value;
+    onNotesChange?.();
+  }
   const [mediaTab, setMediaTab] = useState<"visual" | "audio">("visual");
   // Pasted second-opinion text is held here (one box per LLM) so the paste boxes
   // and the Extras display stay in sync, while also being written onto the
@@ -51,6 +69,8 @@ export default function Results(
   const latestReport = useRef<Report | null>(report);
   useEffect(() => {
     latestReport.current = report;
+    setExternalChecks((SHOWCASE ? sessionNotes(report).externalChecks : report?.external_checks) ?? []);
+    setSynthidReplies(sessionNotes(report).synthidReplies ?? []);
     setMediaTab("visual");
     setGemini((SHOWCASE ? sessionNotes(report).gemini : report?.second_opinion_gemini) ?? "");
     setChatgpt((SHOWCASE ? sessionNotes(report).openai : report?.second_opinion_chatgpt) ?? "");
@@ -190,13 +210,19 @@ export default function Results(
 
   // Render one editor in the active workspace while keeping notes and in-flight
   // score guards owned here, shared with research exports and the graph.
-  const secondOpinion = !HIDE_SECOND_OPINION && <SecondOpinion
+  const secondOpinion = !HIDE_SECOND_OPINION && (SHOWCASE ? <DemoExternalChecks
+    key={`${meta.input_sha256}-${meta.generated_at}`} report={report} originalUrl={originalUrl}
+    replies={synthidReplies} onReplyChange={updateSynthidReplies} openai={chatgpt} onOpenai={updateChatgpt} /> : <>
+    <ExternalWatermarkCheck key={`${meta.input_sha256}-${meta.generated_at}`} report={report} originalUrl={originalUrl} sourceFile={sourceFile}
+      community={Boolean(secondOpinionTarget)} checks={externalChecks} onChange={updateExternalChecks}
+      replies={synthidReplies} onReplyChange={updateSynthidReplies} />
+    <details className="other-checking-tools"><summary>OpenAI image checker and Gemini</summary><SecondOpinion
     community={Boolean(secondOpinionTarget)} filename={previewName || meta.filename} kind={meta.kind} originalUrl={originalUrl}
     frameLabels={frames.map(f => f.frame)} frameDownloads={Boolean(onFrameDownload) && frames.length > (secondOpinionTarget ? 0 : 1)}
     gemini={gemini} chatgpt={chatgpt} onGemini={updateGemini} onChatgpt={updateChatgpt}
     onScoreGemini={EXAMPLES_ONLY ? undefined : scoreGemini} onScoreChatgpt={EXAMPLES_ONLY ? undefined : scoreChatgpt} geminiMeta={gemMeta} chatgptMeta={gptMeta}
     geminiFresh={gemFresh} chatgptFresh={gptFresh} onGeminiFresh={updateGeminiFresh} onChatgptFresh={updateChatgptFresh}
-  />;
+  /></details></>);
 
   if (community) return secondOpinionTarget ? createPortal(secondOpinion, secondOpinionTarget) : null;
 
@@ -272,9 +298,9 @@ export default function Results(
                 <button
                   className="frame-dl"
                   onClick={() => onFrameDownload(f.frame)}
-                  title="Re-extracts this exact analysed frame locally (no API cost) so you can attach it to Gemini's SynthID check, which refuses document files."
+                  title="Re-extracts this analysed frame locally for a separate external image check."
                 >
-                  Download this frame as an image for Gemini
+                  Download this frame as an image
                 </button>
               )}
             </div>

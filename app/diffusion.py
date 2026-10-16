@@ -50,9 +50,12 @@ def _thumb_data_url(img: "Image.Image", size: int = 140) -> str:
     return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
+from .external_checks import records as external_records, rows as external_rows, description as external_description, LABELS as EXTERNAL_LABELS
+
+
 class Item:
     def __init__(self, node_id, label, verdict, rating, confidence, provenance, source, phashes,
-                 thumb=None, provider="", second_opinions="", audio_observations=""):
+                 thumb=None, provider="", second_opinions="", audio_observations="", external_checks=""):
         self.id = node_id
         self.label = label
         self.verdict = verdict
@@ -64,6 +67,7 @@ class Item:
         self.provider = provider
         self.second_opinions = second_opinions
         self.audio_observations = audio_observations
+        self.external_checks = external_checks
         self.phashes = []
         for h in phashes or []:
             try:
@@ -157,7 +161,7 @@ def _item_from_report(rep: dict, node_id: str, fallback_label: str = "") -> Item
                 cons.get("overall_verdict", "inconclusive"), _node_rating(rep, cons),
                 cons.get("confidence"), prov, meta.get("kind", ""), rep.get("phashes", []),
                 thumb=meta.get("thumbnail"), provider=_lead_provider(providers),
-                second_opinions=_opinions_str(rep), audio_observations=_audio_str(rep))
+                second_opinions=_opinions_str(rep), audio_observations=_audio_str(rep), external_checks=external_description(rep))
 
 
 def from_runs() -> list[Item]:
@@ -262,7 +266,7 @@ def build(items: list[Item], threshold: int = 10, min_component: int = 1,
                    rating=(it.rating if it.rating is not None else -1),
                    confidence=it.confidence or "", provenance=it.provenance, source=it.source,
                    provider=it.provider or "", second_opinions=it.second_opinions or "",
-                   audio_observations=it.audio_observations,
+                   audio_observations=it.audio_observations, external_checks=it.external_checks,
                    thumb=it.thumb or "")
     if edge_mode == "attributes":
         _add_knn_edges(g, items)
@@ -394,6 +398,7 @@ def graph_to_json(g: nx.Graph) -> dict:
         "signal_kind": d.get("signal_kind") or None,
         "second_opinions": d.get("second_opinions") or "",
         "audio_observations": d.get("audio_observations") or "",
+        "external_checks": d.get("external_checks") or "",
         "status": d.get("status") or "", "finding": d.get("finding") or "",
         "detail": d.get("detail") or "", "input_sha256": d.get("input_sha256") or "",
         "cluster": d.get("cluster"), "community": d.get("community", 0), "degree": deg.get(n, 0),
@@ -417,14 +422,14 @@ def csv_zip_bytes(g: nx.Graph) -> bytes:
     nw = csv.writer(nbuf)
     nw.writerow(["id", "label", "verdict", "rating", "confidence", "provenance", "source",
                  "provider", "cluster", "community", "degree", "betweenness", "second_opinions",
-                 "signal_kind", "status", "finding", "detail", "input_sha256", "audio_observations"])
+                 "signal_kind", "status", "finding", "detail", "input_sha256", "audio_observations", "external_checks"])
     for n, d in g.nodes(data=True):
         nw.writerow([n, d.get("label", ""), d.get("verdict"), d.get("rating"), d.get("confidence"),
                      d.get("provenance"), d.get("source"), d.get("provider", ""), d.get("cluster"),
                      d.get("community"), g.degree(n), d.get("betweenness", 0.0),
                      d.get("second_opinions", ""), d.get("signal_kind", ""), d.get("status", ""),
                      d.get("finding", ""), d.get("detail", ""), d.get("input_sha256", ""),
-                     d.get("audio_observations", "")])
+                     d.get("audio_observations", ""), d.get("external_checks", "")])
     ebuf = io.StringIO()
     ew = csv.writer(ebuf)
     ew.writerow(["source", "target", "weight", "hamming", "variant_type"])
@@ -521,6 +526,15 @@ def verdict_map(report: dict) -> nx.Graph:
             ra, rb = g.nodes[a]["rating"], g.nodes[b]["rating"]
             w = 0.6 if -1 in (ra, rb) else round(max(0.45, 1 - abs(ra - rb) / 100), 3)
             g.add_edge(a, b, weight=w, kind="agree", hamming=-1)
+    for i, check in enumerate(external_records(report)):
+        nid = f"external_{i}"
+        g.add_node(nid, label=f"SynthID: {EXTERNAL_LABELS[check['status']]} (manual)",
+                   signal_kind="external_watermark", provider="synthid_manual", status=check["status"],
+                   finding=EXTERNAL_LABELS[check["status"]],
+                   detail="; ".join(f"{k}: {v}" for k, v in external_rows(check)),
+                   input_sha256=check["checked_sha256"], verdict="not_applicable", rating=-1, confidence="",
+                   provenance="", source="observation", second_opinions="", thumb="")
+        g.add_edge(centre, nid, weight=0.25, kind="observation", hamming=-1)
     for observation in _audio_observations(report):
         value = dict(observation)
         nid = "obs_" + value.pop("id")
@@ -647,9 +661,9 @@ def render_png(g: nx.Graph, out: Path, anonymise: bool, labels: bool = False,
     d.text((24, H - 28), "Distribution history: not assessed. Ratings are not calibrated probabilities.",
            fill=chrome["label"], font=ImageFont.load_default(size=16))
     if any(data.get("source") == "observation" for _, data in g.nodes(data=True)):
-        d.text((24, H - 70), "Teal: unscored audio/vendor observations. Dashed links: additional context.",
+        d.text((24, H - 70), "Teal: unscored observations, including manual external checks. Dashed links: additional context.",
                fill=chrome["label"], font=ImageFont.load_default(size=16))
-        d.text((24, H - 49), "AI-origin detection from sound is outside this workflow.",
+        d.text((24, H - 49), "Built-in audio checks: AI-origin detection from sound is outside this workflow.",
                fill=chrome["label"], font=ImageFont.load_default(size=16))
     population = g.graph.get("population")
     if population:

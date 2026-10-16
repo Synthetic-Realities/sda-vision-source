@@ -20,6 +20,29 @@ Required attribution for the selected originals is recorded below. The researche
 
 Copies retain their original bytes and metadata. The private facilitator source key is stored separately.
 
+## Researcher Confirmations And Source Attribution
+
+Dr Sam Martin confirmed that Chloe Dubois in `illustration-2.png`, including the
+name and likeness, is entirely fictional. The faces in `journal-image.png` are
+entirely fictional and AI-generated, rather than based on identifiable people.
+
+The maternal-vaccination infographic (`infographic.pdf`) draws on:
+
+Martin, S., Kilich, E., Dada, S., Kummervold, P.E., Denny, C., Paterson, P. and
+Larson, H.J. (2020). “Vaccines for pregnant women…?! Absurd”–Mapping maternal
+vaccination discourse and stance on social media over six months. *Vaccine*,
+*38*(42), pp. 6627–6637.
+
+The researcher identified the four quotations on page 4 as verbatim research
+quotations from that paper. This source is distinct from the podcast's paper
+below. The infographic's original bytes are preserved, including the printed
+`@link` placeholder. This accompanying reference supplies the source attribution;
+an independent full-text quotation comparison was not performed for this release.
+
+The researcher reviewed `podcast.m4a` and `animated-video.mov` in full on
+16 October 2026 and confirmed no further content or attribution issues. This
+content review does not extend the coverage of the saved model assessments.
+
 The three newly supplied article/poster-style images are educational material for examining media claims. Their headlines and diagrams are discussion material, not clinical guidance or evidence that a study exists. The original image content is preserved.
 
 Project-created examples retain Dr Sam Martin’s credit; ask the maintainer before onward reuse where no separate licence is stated. The NASA source and Adobe sample have the separate terms identified above. The podcast is not represented here as an already-published Zenodo record.

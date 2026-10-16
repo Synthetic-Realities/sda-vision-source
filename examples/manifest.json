@@ -10,10 +10,6 @@
       "sha256": "a4bad2aba040fd992aff7483eee6166943e232061b82d7149b2060786719753b"
     },
     {
-      "filename": "illustration-1.png",
-      "sha256": "137f1b7c292c882be741e1a6c881ab4a2082c7dd6ab2181d63304000a0d92252"
-    },
-    {
       "filename": "illustration-2.png",
       "sha256": "6693be931db5fb33a8cacfae382bf3bc79fc23b0d9f8e967015a663688d8c8f5"
     },
@@ -44,6 +40,10 @@
     {
       "filename": "animated-video.mov",
       "sha256": "af5b2c84950d66ce32b4d7f603314a7fc70a9353d397ca71aa78d35e2327ce23"
+    },
+    {
+      "filename": "illustration-1.png",
+      "sha256": "137f1b7c292c882be741e1a6c881ab4a2082c7dd6ab2181d63304000a0d92252"
     }
   ]
 }

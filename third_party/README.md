@@ -14,3 +14,8 @@ archive, blob 268f9ec650e2adcb63c806a9a8ffc224c4bd06f9. Adobe's sample licence a
 to the matching C2PA example, not to other example media. See the example credits.
 The Python environment retains installed packages' own notices; binary wheels,
 including PDFium, must keep their bundled dependency licences when redistributed.
+
+The 1.7 review guide PDFs embed Noto Sans and Bitstream Vera Bold. The exact
+Bitstream Vera notice, supplied with the project's installed ReportLab font
+files, is retained as `Bitstream-Vera-LICENSE.txt`. Keep the font notices with
+the guide resources when distributing them.

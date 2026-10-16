@@ -1,0 +1,6 @@
+test_id,platform,creator_app,declared_model,acquisition_route,variant,parent_asset_id,input_sha256,checked_at_utc,c2pa_sdk,c2pa_integrity,c2pa_trust,c2pa_declaration,external_service,external_response,evidence_reference,reviewer,status
+PLAT-01,ByteDance Dreamina,TODO_RELEASE,TODO_RELEASE,original download,original,,TODO_RELEASE,TODO_RELEASE,0.37.12,TODO_RELEASE,TODO_RELEASE,TODO_RELEASE,not checked,,TODO_RELEASE,TODO_RELEASE,NOT_RUN
+PLAT-02,Adobe,TODO_RELEASE,TODO_RELEASE,original export,mixed edit,,TODO_RELEASE,TODO_RELEASE,0.37.12,TODO_RELEASE,TODO_RELEASE,TODO_RELEASE,not checked,,TODO_RELEASE,TODO_RELEASE,NOT_RUN
+PLAT-03,Runway,TODO_RELEASE,TODO_RELEASE,original download,first-party original,,TODO_RELEASE,TODO_RELEASE,0.37.12,TODO_RELEASE,TODO_RELEASE,TODO_RELEASE,not checked,,TODO_RELEASE,TODO_RELEASE,NOT_RUN
+PLAT-04,Midjourney,TODO_RELEASE,TODO_RELEASE,original download,original,,TODO_RELEASE,TODO_RELEASE,0.37.12,TODO_RELEASE,TODO_RELEASE,TODO_RELEASE,not checked,,TODO_RELEASE,TODO_RELEASE,NOT_RUN
+PLAT-05,LinkedIn,TODO_RELEASE,TODO_RELEASE,platform download,derivative,TODO_RELEASE,TODO_RELEASE,TODO_RELEASE,0.37.12,TODO_RELEASE,TODO_RELEASE,TODO_RELEASE,not checked,,TODO_RELEASE,TODO_RELEASE,NOT_RUN

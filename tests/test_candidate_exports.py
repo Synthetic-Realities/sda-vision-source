@@ -82,10 +82,13 @@ def test_package_can_use_review_build_without_replacing_working_frontend(monkeyp
     review = tmp_path / ".review-cache/fresh-frontend"; review.mkdir(parents=True)
     (review / "index.html").write_text("Reviewed current frontend")
     (review / "app.js").write_text("Reviewed current JavaScript")
+    (review / "guides").mkdir()
+    (review / "guides/SDA_Vision_Facilitator_Guide_v1.6-review.pdf").write_bytes(b"Reviewed guide")
     output = candidate.package(tmp_path, review)
     with zipfile.ZipFile(output) as archive:
         assert archive.read("sda-vision-candidate/frontend/dist/index.html") == b"Reviewed current frontend"
         assert archive.read("sda-vision-candidate/frontend/dist/app.js") == b"Reviewed current JavaScript"
+        assert archive.read("sda-vision-candidate/frontend/dist/guides/SDA_Vision_Facilitator_Guide_v1.6-review.pdf") == b"Reviewed guide"
         assert not any(".review-cache/" in name for name in archive.namelist())
     assert (working / "index.html").read_text() == "Historical working frontend"
 
@@ -102,3 +105,34 @@ def test_candidate_keeps_extensionless_notices_and_skips_directories(monkeypatch
     (notices / "linked-folder").symlink_to(notices, target_is_directory=True)
     with pytest.raises(ValueError, match="unsafe"):
         candidate.candidate_files(tmp_path)
+
+
+def test_current_guide_and_game_assets_are_packaged():
+    paths = {p.relative_to(candidate.ROOT).as_posix() for p in candidate.candidate_files()}
+    for name in candidate.GUIDE_REVIEW_ASSETS | candidate.GUIDE_RELEASE_ASSETS:
+        assert "frontend/public/guides/" + name in paths
+        assert ("docs/guides/" if name.endswith(".pdf") else "docs/images/") + name in paths
+        assert "frontend/dist/guides/" + name in candidate.BUILD_FILES
+    for path in (candidate.ROOT / "frontend/public/game").iterdir():
+        assert path.relative_to(candidate.ROOT).as_posix() in paths
+    for name in ("facilitator_workflow", "analysis_citation", "game_view"):
+        assert f"tests/{name}.mjs" in paths
+
+
+def test_review_build_keeps_current_pdfs_and_game_notice(monkeypatch, tmp_path):
+    import zipfile
+    monkeypatch.setattr(candidate, "FILES", {"README.md"})
+    monkeypatch.setattr(candidate, "TREES", {"frontend/dist": {".html", ".js", ".png"}})
+    (tmp_path / "README.md").write_text("Source candidate")
+    review = tmp_path / ".review-cache/fresh-frontend"
+    (review / "guides").mkdir(parents=True)
+    (review / "game").mkdir()
+    (review / "index.html").write_text("Reviewed frontend")
+    for name in candidate.GUIDE_REVIEW_ASSETS:
+        (review / "guides" / name).write_bytes(name.encode())
+    (review / "game/LICENSE.txt").write_text("Game artwork notice")
+    output = candidate.package(tmp_path, review)
+    with zipfile.ZipFile(output) as archive:
+        for name in candidate.GUIDE_REVIEW_ASSETS:
+            assert archive.read("sda-vision-candidate/frontend/dist/guides/" + name) == name.encode()
+        assert archive.read("sda-vision-candidate/frontend/dist/game/LICENSE.txt") == b"Game artwork notice"

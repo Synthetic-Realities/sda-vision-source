@@ -1,6 +1,8 @@
 import type { Report } from "./types";
 
 export interface SessionNotes {
+  externalChecks?: import("./externalChecks").ExternalCheck[];
+  synthidReplies?: import("./externalChecks").DemoDetectorReply[];
   gemini: string;
   openai: string;
   geminiFresh?: boolean;

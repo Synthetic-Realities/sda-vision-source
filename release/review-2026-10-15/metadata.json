@@ -1,0 +1,42 @@
+{
+  "status": "LOCAL_REVIEW_ONLY",
+  "prepared_on": "2026-10-15",
+  "metadata_format": "Human-review worksheet; not an API upload payload",
+  "software": {
+    "title": "SDA Vision: Synthetic-media Discourse Analysis",
+    "packaged_version": "0.1.3-rc.1",
+    "proposed_final_version": "0.1.3",
+    "concept_doi_from_local_record": "10.5281/zenodo.23008102",
+    "new_version_doi": null,
+    "source_repository_from_local_record": "https://github.com/Synthetic-Realities/sda-vision-source",
+    "demo_repository_from_local_record": "https://github.com/Synthetic-Realities/sda-vision-demo",
+    "description": "Research software and a separate prepared-example demonstration for examining AI-generated and traditional media. The recorded demo offers side-by-side SynthID Detector and OpenAI paste-results boxes. Session notes remain separate from recorded model assessments and content-credential findings."
+  },
+  "guide_resources": {
+    "title": "SDA Vision: Facilitator field guide and participant checks",
+    "packaged_version": "1.7 review",
+    "proposed_final_version": "1.7",
+    "concept_doi_from_local_record": "10.5281/zenodo.23008188",
+    "new_version_doi": null,
+    "description": "Eight-page illustrated facilitator guide and one-page participant sheet for Notice, Discuss, Check and Reflect, with a simplified prepared-example SynthID Detector and OpenAI workflow. Editable Markdown and HTML/CSS accompany the PDFs."
+  },
+  "creator": {
+    "name": "Sam Martin",
+    "display_name": "Dr Sam Martin",
+    "orcid": "0000-0002-4466-8374",
+    "affiliation": "Manchester Metropolitan University (MMU)"
+  },
+  "funding": "Smart Data Research UK (UKRI), Grant number UKRI4010",
+  "code_and_documentation_licence_from_local_record": "MIT",
+  "media_terms": "Separate per-file permissions and notices; MIT does not relicense media or institutional marks.",
+  "review": {
+    "final_versions_and_titles": "TODO_RELEASE",
+    "publication_date": "TODO_RELEASE",
+    "existing_remote_versions_and_drafts": "TODO_RELEASE",
+    "participant_sheet_deposit_relationship": "TODO_RELEASE",
+    "permitted_public_approval_reference_or_statement": "TODO_RELEASE",
+    "media_and_font_notice_clearance": "TODO_RELEASE",
+    "github_source_demo_destinations": "TODO_RELEASE",
+    "final_checksums_and_publication_authorisation": "TODO_RELEASE"
+  }
+}

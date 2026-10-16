@@ -207,7 +207,7 @@ export default function DiffusionPanel(
           {source === "item" ? (
             <>A map of relationships within this analysis: the media sits at the centre, joined to every
             signal that assessed it (vision models, C2PA, forensics, and any pasted second
-            opinions). Audio and vendor observations are unscored context, joined by dashed links.
+            opinions). Audio, vendor and manual external-check observations are unscored context, joined by dashed links.
             Links between scored signals mark <strong>agreeing verdicts</strong>; size =
             synthetic rating; recolour by verdict or provider.</>
           ) : (
@@ -217,6 +217,7 @@ export default function DiffusionPanel(
             {demo && !SHOWCASE && " This is an illustrative example - explore the nodes, recolour, and download the GEXF to see how the real graph works."}
             {demo && SHOWCASE && " This is the full cached example set, separate from any selected batch. It includes recorded notes only; newly pasted session replies are in your session downloads."}</>
           )}
+          {SHOWCASE && " These graphs retain the saved analysis. Your added external checks and replies are included in session downloads."}
           {" "}Distribution history: not assessed.
         </p>
       </div>

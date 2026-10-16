@@ -1,9 +1,9 @@
-"""Google SynthID / AI Content Detection provider.
+"""Legacy configurable watermark endpoint adapter.
 
-The SynthID Detector API is gated (you are on the waitlist). Until an endpoint
-and token are configured this returns a clean "pending" row rather than a fake
-result. When SYNTHID_ENDPOINT + SYNTHID_ACCESS_TOKEN are set, it POSTs the image
-and maps the returned probability to the table.
+This is not an integration with the public synthid.com website. Its endpoint
+contract needs separate validation before configuration. The legacy PENDING
+machine status is retained when unconfigured; no request is scheduled.
+Participant-entered portal results use external_checks instead.
 """
 from __future__ import annotations
 
@@ -23,8 +23,8 @@ async def run(client: httpx.AsyncClient, media: Media) -> ProviderResult:
     if not (settings.synthid_endpoint and settings.synthid_token):
         return ProviderResult(
             ID, NAME, Kind.WATERMARK, Status.PENDING,
-            summary="Awaiting SynthID Detector access. Set SYNTHID_ENDPOINT + "
-                    "SYNTHID_ACCESS_TOKEN in .env once granted.",
+            summary="Automatic watermark adapter is unconfigured. "
+                    "Use the separate external-check workflow for synthid.com.",
             evidence=["No live watermark verification was run."],
         )
 

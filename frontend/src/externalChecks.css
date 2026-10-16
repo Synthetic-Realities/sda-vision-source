@@ -1,0 +1,44 @@
+.external-check { border-top: 1px solid var(--line, #cbd5da); margin-top: 1.5rem; padding-top: 1rem; min-width: 0; }
+.external-check h3 { display: flex; align-items: center; gap: .5rem; }
+.external-check-actions { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem 1.5rem; }
+.external-check-actions > div { flex: 1 1 17rem; min-width: 0; }
+.external-check label { display: block; font-weight: 600; margin: .7rem 0 .3rem; }
+.external-check select, .external-check input:not([type=checkbox]), .external-check textarea { box-sizing: border-box; width: 100%; max-width: 100%; font: inherit; padding: .6rem; border: 1px solid #8a9ca8; border-radius: 5px; color: inherit; background: var(--panel, #fff); }
+.external-check-actions button { margin-top: .7rem; }
+.external-check button, .external-check-link { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 44px; white-space: normal; }
+.external-check-link { padding: .65rem 1rem; border: 2px solid #bd0057; border-radius: 5px; color: #a9004c; font-weight: 700; background: #fff5f9; text-decoration: none; }
+.external-check-link:hover { background: #fbe0ec; }
+.external-check-small { font-size: .9rem; line-height: 1.55; }
+.external-check details { margin: .8rem 0; }
+.external-check summary { cursor: pointer; font-weight: 700; padding: .65rem 0; overflow-wrap: anywhere; }
+.external-check-editor { padding: .5rem 1rem 1rem; background: var(--panel, #f5f9fa); border: 1px solid #b5c9ce; border-radius: 6px; }
+.external-check-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 0 1rem; }
+.external-check-file { margin: 1rem 0; padding: .8rem; border-left: 3px solid #167c82; overflow-wrap: anywhere; }
+.external-check code { white-space: normal; overflow-wrap: anywhere; font-size: .8rem; }
+.external-check label.external-check-attest { display: flex; gap: .65rem; align-items: start; font-weight: 400; }
+.external-check-attest input { flex: 0 0 auto; margin-top: .2rem; width: 1.15rem; height: 1.15rem; }
+.external-check-message { border-left: 3px solid #ed116f; padding: .75rem; background: #fff2f7; color: #192b36; }
+.external-check-records dl > div { display: grid; grid-template-columns: minmax(8rem, 1fr) minmax(0, 3fr); gap: .8rem; border-top: 1px solid #d6e0e4; padding: .5rem 0; }
+.external-check-records dt { font-weight: 600; }
+.external-check-records dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.other-checking-tools { margin: 1rem 0; }
+.other-checking-tools > summary { font-weight: 700; cursor: pointer; padding: .6rem 0; }
+.demo-external-checks { min-width: 0; border-top: 1px solid var(--line, #cbd5da); margin-top: 1rem; padding-top: 1rem; }
+.demo-external-checks h3 { margin: 0 0 1rem; }
+.demo-checker-material { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; align-items: end; margin-bottom: 1rem; }
+.demo-checker-material > div { flex: 1 1 15rem; min-width: 0; }
+.demo-checker-material p { margin: 0; }
+.demo-checker-material button { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; white-space: normal; }
+.demo-checker-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 1.5rem; }
+.demo-checker-column { min-width: 0; display: flex; flex-direction: column; border-top: 3px solid #bd0057; padding-top: .8rem; }
+.demo-checker-column h4 { display: flex; align-items: center; gap: .5rem; font-size: 1.1rem; margin: 0 0 .8rem; }
+.demo-checker-column h4 svg { flex: 0 0 auto; }
+.demo-checker-column .external-check-link { box-sizing: border-box; width: 100%; text-align: center; min-height: 50px; }
+.demo-checker-openai { border-color: #a94a12; }
+.demo-checker-openai .external-check-link { border-color: #a94a12; color: #85390b; background: #fff4e9; }
+.demo-checker-openai .external-check-link:hover { background: #ffe7d2; }
+.demo-checker-paste { margin-top: auto; }
+.demo-external-checks label { display: block; font-weight: 600; margin: .5rem 0; }
+.demo-external-checks select, .demo-external-checks textarea { box-sizing: border-box; width: 100%; min-width: 0; max-width: 100%; font: inherit; padding: .6rem; border: 1px solid #8a9ca8; border-radius: 5px; color: inherit; background: var(--panel, #fff); }
+.demo-external-checks textarea { min-height: 150px; resize: vertical; }
+@media(max-width: 550px) { .external-check-records dl > div { grid-template-columns: 1fr; gap: .25rem; } .external-check-actions > div { flex-basis: 100%; } .external-check-link { box-sizing: border-box; width: 100%; } }

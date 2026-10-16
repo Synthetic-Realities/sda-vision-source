@@ -219,7 +219,7 @@ def _carry_researcher_fields(prior: dict, report: dict) -> None:
     pointers and check records. The prefix tuple is load-bearing: a researcher
     field outside it is silently dropped on every deep pass."""
     for k, v in prior.items():
-        if k.startswith(("second_opinion", "annotation")):
+        if k == "external_checks" or k.startswith(("second_opinion", "annotation")):
             report[k] = v
 
 

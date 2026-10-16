@@ -58,7 +58,7 @@ export default function AudioPanel({ report, file, onChange }:
 
   return <section className="soundtrack-section" aria-label="Soundtrack and vendor checks">
     <h3>Soundtrack</h3>
-    <p className="muted small">Soundtrack checks cover track details, excerpt descriptions and credential findings. AI-origin detection from the sound itself is outside this workflow.</p>
+    <p className="muted small">Soundtrack checks cover track details, excerpt descriptions and credential findings. Built-in audio checks: AI-origin detection from the sound itself is outside this workflow. External watermark records have their own file and coverage.</p>
     <div className="table-wrap audio-table-wrap responsive-report-wrap" role="region" aria-label="Audio evidence table" tabIndex={0}>
       <table className="report audio-table responsive-report" role="table" aria-label="Audio findings">
         <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Check</th><th scope="col" role="columnheader">Status</th><th scope="col" role="columnheader">Finding</th><th scope="col" role="columnheader">Evidence and scope</th></tr></thead>

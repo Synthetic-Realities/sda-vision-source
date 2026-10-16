@@ -1,3 +1,4 @@
+import { externalCheckRows, demoDetectorReplyRows } from "./externalChecks";
 import { citationRows } from "./citation";
 import type { Report } from "./types";
 import { sessionRecord } from "./sessionNotes";
@@ -21,7 +22,7 @@ export async function buildSessionExport(reports: Report[], format: SessionForma
   const sections: SummarySection[] = [
     { heading: "SDA session scope", lines: [], rows: [
       ["Downloaded at", record.downloaded_at], ["Coverage", record.scope],
-      ["Audio scope", "AI-origin detection from the sound itself is outside this workflow."],
+      ["Audio scope", "Built-in audio checks: AI-origin detection from the sound itself is outside this workflow. External watermark records have their own file and coverage."],
       ["Record structure", "Findings are followed by Second Opinion notes and the session record. JSON retains every original field; readable formats omit combined-confidence labels and include individual check findings and evidence."],
     ] },
   ];
@@ -36,6 +37,12 @@ export async function buildSessionExport(reports: Report[], format: SessionForma
     for (const provider of providers) {
       const { raw: _raw, ...evidence } = provider;
       sections.push({ heading: `${meta.filename}: ${provider.name}`, lines: [], rows: rows(evidence) });
+    }
+    for (const [index, check] of (item.visitor_notes.externalChecks ?? []).entries()) {
+      sections.push({ heading: `${meta.filename}: External watermark check ${index + 1}`, lines: [], rows: externalCheckRows(check) });
+    }
+    for (const reply of item.visitor_notes.synthidReplies ?? []) {
+      sections.push({ heading: `${meta.filename}: SynthID Detector reply`, lines: [], rows: demoDetectorReplyRows(reply) });
     }
     sections.push({ heading: `${meta.filename}: Second Opinion notes`, lines: [], rows: rows({
       Gemini_reply: item.visitor_notes.gemini || "No session reply entered",

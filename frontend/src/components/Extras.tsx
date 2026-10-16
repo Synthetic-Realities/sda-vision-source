@@ -136,7 +136,7 @@ export default function Extras(
           <button className="ghost" onClick={() => exportAs("pptx")}>PPTX</button>
           <button className="ghost" onClick={() => exportAs("pdf")}>PDF</button>
         </div>
-        {SHOWCASE && <p className="muted small">These prepared downloads contain the original recorded report. Use the session downloads above to include your newly pasted replies.</p>}
+        {SHOWCASE && <p className="muted small">These prepared downloads contain the original recorded report. Use the session downloads above to include your added evidence and replies.</p>}
       </div>
     </div>
   );

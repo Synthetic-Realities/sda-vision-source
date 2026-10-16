@@ -1,4 +1,5 @@
 import brandLogo from "../assets/sda-vision-logo.png";
+import { externalChecksMarkdown, demoDetectorRepliesMarkdown } from "../externalChecks";
 import { sessionNotes } from "../sessionNotes";
 import { useEffect, useId, useRef, useState } from "react";
 import { ArrowDownToLine, BookOpen, Eye, FileText, Info, MessageCircle, Search, Upload, ZoomIn, X } from "lucide-react";
@@ -114,10 +115,10 @@ export default function CommunityView(p: Props) {
   const summaryBase = report ? communitySummary(report, "", "", SHOWCASE, includeNotes ? responses : undefined,
     sourceNote ?? (podcastExample ? sourceRevealed ? PODCAST_SOURCE_NOTE : "Podcast source exploration is included below; the source reveal has not been opened in this session." : undefined))
     : workshopSessionSummary(itemName, includeNotes ? responses : undefined, p.status);
-  const browserNotes = SHOWCASE ? sessionNotes(report) : { gemini: "", openai: "" };
+  const browserNotes = SHOWCASE ? sessionNotes(report) : { gemini: "", openai: "", externalChecks: [] };
   const quoteNote = (text: string) => text.replace(/([\\`*_{}\[\]()#+.!<>|~-])/g, "\\$1");
   const noteSession = (fresh?: boolean) => fresh === true ? "Fresh chat/check (participant stated)" : fresh === false ? "Existing chat (participant stated)" : "Not stated";
-  const summary = summaryBase + (podcastExample ? podcastActivitySummary(sourceRevealed) : "") + (SHOWCASE && (browserNotes.gemini || browserNotes.openai)
+  const summary = summaryBase + externalChecksMarkdown(browserNotes.externalChecks) + demoDetectorRepliesMarkdown(browserNotes.synthidReplies) + (podcastExample ? podcastActivitySummary(sourceRevealed) : "") + (SHOWCASE && (browserNotes.gemini || browserNotes.openai)
     ? "\n## Second Opinion notes\nSession entries; separate from the recorded findings and combined score.\n"
       + (browserNotes.gemini ? `\nGemini reply: ${quoteNote(browserNotes.gemini)}\nGemini session: ${noteSession(browserNotes.geminiFresh)}\n` : "")
       + (browserNotes.openai ? `\nOpenAI reply: ${quoteNote(browserNotes.openai)}\nOpenAI session: ${noteSession(browserNotes.openaiFresh)}\n` : "") : "");
@@ -256,10 +257,10 @@ export default function CommunityView(p: Props) {
                 <textarea id={`${id}-source-note`} rows={3} value={responses.sourceSearchNote} onChange={e => setResponses(current => ({ ...current, sourceSearchNote: e.target.value }))} />
                 <p className="community-small">Local workshop note. Included in your summary when you choose to include workshop responses; kept separate from SDA's scoring.</p>
               </details>}
-              {!HIDE_SECOND_OPINION && <details className="community-second-opinions">
-                <summary>Second opinions</summary>
+              {!HIDE_SECOND_OPINION && (SHOWCASE ? <div ref={p.onSecondOpinionTarget} /> : <details className="community-second-opinions">
+                <summary>External checks and second opinions</summary>
                 <div ref={p.onSecondOpinionTarget} />
-              </details>}
+              </details>)}
               {p.onFrameDownload && ["video", "pdf", "pptx"].includes(kind) && report.frames.length > 0 && <details className="community-frame-tools">
                 <summary>Frame images for external checks</summary>
                 <p className="community-small">Saved locally from the analysed frames. You choose any external upload; extracted images have different credentials from the original file.</p>

@@ -6,7 +6,8 @@ research records, not server-signed attestations.
 from typing import Annotated, Any, Literal
 
 from fastapi import HTTPException
-from pydantic import BaseModel, ConfigDict, Field, ValidationError
+from pydantic import BaseModel, ConfigDict, Field, ValidationError, model_validator
+from .external_checks import ExternalCheck
 
 Score = Annotated[int | float, Field(ge=0, le=100)]
 VerdictValue = Literal["authentic_likely", "partially_synthetic", "synthetic_likely",
@@ -143,6 +144,7 @@ class SunoCheck(Record):
 
 
 class Report(Record):
+    external_checks: Annotated[list[ExternalCheck], Field(max_length=30)] = Field(default_factory=list)
     meta: Meta
     consensus: Consensus
     providers: list[Provider]
@@ -162,6 +164,13 @@ class Report(Record):
     audio_inspection: AudioInspection | None = None
     audio_assessment: AudioAssessment | None = None
     suno_check: SunoCheck | None = None
+
+    @model_validator(mode="after")
+    def bind_external_checks(self):
+        digest = getattr(self.meta, "input_sha256", None)
+        if digest and any(check.source_sha256 != digest for check in self.external_checks):
+            raise ValueError("External check belongs to a different item.")
+        return self
 
 
 class GraphRequest(Record):

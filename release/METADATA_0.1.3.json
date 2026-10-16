@@ -1,0 +1,31 @@
+{
+  "title": "SDA Vision: Synthetic-media Discourse Analysis",
+  "description": "SDA Vision (Synthetic-media Discourse Analysis) supports research, teaching and community discussion about AI-generated and traditional media. It brings together model interpretations, C2PA content-credential findings, local file observations and participant reflection. The Research app uses configured external providers for live analysis; a separate recorded demo uses prepared examples and saved findings through Notice, Discuss, Check and Reflect.\n\nVersion 0.1.3 presents links to SynthID Detector and the OpenAI image checker side by side in the recorded demo, with a paste-results box for each. Pasted replies remain browser-session notes, separate from recorded scores, and can be included in session downloads.\n\nAnalysis covers images, sampled video frames, document pages, slides and audio transcripts. Ratings are not calibrated probabilities. AI-origin detection from the sound itself is outside this workflow. Graphs show analysis relationships or image similarities; distribution history is not assessed.",
+  "creators": [
+    {
+      "given_names": "Sam",
+      "family_names": "Martin",
+      "display_credit": "Dr Sam Martin",
+      "orcid": "0000-0002-4466-8374",
+      "affiliation": "Manchester Metropolitan University (MMU)"
+    }
+  ],
+  "keywords": [
+    "synthetic media",
+    "media provenance",
+    "C2PA",
+    "content credentials",
+    "SynthID",
+    "community workshops",
+    "digital research methods"
+  ],
+  "funding_statement": "This work was supported by Smart Data Research UK, a UKRI investment; Grant number UKRI4010.",
+  "licence_scope": "Project code and associated documentation; selected media, artwork, institutional marks and dependencies retain their separate terms.",
+  "version": "0.1.3",
+  "publication_date": "2026-10-16",
+  "concept_doi": "10.5281/zenodo.23008102",
+  "license": "MIT",
+  "acknowledgement": "Codex and Claude Code provided AI-assisted development support under Dr Sam Martin's direction and review.",
+  "website": "https://sdavision.io/",
+  "source_repository": "https://github.com/Synthetic-Realities/sda-vision-source"
+}

@@ -173,6 +173,12 @@ def graph_summary(data: dict, source: str = "") -> dict:
         caption += " " + note_text
         paragraph += " " + note_text
 
+    with_external = sum(bool(n.get("external_checks")) for n in nodes)
+    if with_external:
+        note = f"Manually recorded external watermark checks accompany {_w(with_external)} item(s), separately from the ratings and similarity links."
+        caption += " " + note
+        paragraph += " " + note
+
     if data.get("population"):
         from .diffusion import population_text
         coverage = population_text(data["population"])
@@ -183,7 +189,7 @@ def graph_summary(data: dict, source: str = "") -> dict:
     if with_audio:
         note = (f"Separate audio/vendor observations accompany {_w(with_audio)} item(s); "
                 "they are recorded separately from the ratings and similarity links. "
-                "AI-origin detection from sound is outside this workflow.")
+                "Built-in audio checks: AI-origin detection from sound is outside this workflow.")
         caption += " " + note
         paragraph += " " + note
     return {"headline": _check(headline), "caption": _check(caption), "paragraph": _check(paragraph)}
@@ -238,7 +244,10 @@ def verdict_map_summary(data: dict) -> dict:
     if observations:
         bits.append("Audio observations and vendor findings appear as additional, unscored context. "
                     "Dashed links connect them to the item; the visual model count is unchanged. "
-                    "AI-origin detection from sound is outside this workflow.")
+                    "Built-in audio checks: AI-origin detection from sound is outside this workflow.")
+    external = [n for n in observations if n.get("signal_kind") == "external_watermark"]
+    if external:
+        bits.append("External watermark entries are manual records of identified files; they sit outside the model agreement links.")
     bits.append("Distribution history: not assessed.")
     caption = " ".join(bits)
 

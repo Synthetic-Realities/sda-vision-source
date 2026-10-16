@@ -1,17 +1,17 @@
 cff-version: 1.2.0
 message: "If you use SDA Vision in your research, please cite it as below."
-title: "SDA Vision"
-abstract: >-
-  SDA stands for Synthetic-media Discourse Analysis.
-  A research tool for examining AI-generated and traditional media using model interpretations,
-  content credentials and local forensic cues. Community Workshop and an illustrated facilitator guide
-  support discussion and export, with participant responses kept separate from
-  automated findings. The public website uses prepared examples and saved results.
+title: "SDA Vision: Synthetic-media Discourse Analysis"
+abstract: |-
+  SDA Vision (Synthetic-media Discourse Analysis) supports research, teaching and community discussion about AI-generated and traditional media. It brings together model interpretations, C2PA content-credential findings, local file observations and participant reflection. The Research app uses configured external providers for live analysis; a separate recorded demo uses prepared examples and saved findings through Notice, Discuss, Check and Reflect.
+
+  Version 0.1.3 presents links to SynthID Detector and the OpenAI image checker side by side in the recorded demo, with a paste-results box for each. Pasted replies remain browser-session notes, separate from recorded scores, and can be included in session downloads.
+
+  Analysis covers images, sampled video frames, document pages, slides and audio transcripts. Ratings are not calibrated probabilities. AI-origin detection from the sound itself is outside this workflow. Graphs show analysis relationships or image similarities; distribution history is not assessed.
 type: software
-version: 0.1.2
+version: 0.1.3
 authors:
   - family-names: Martin
-    given-names: "Dr Sam"
+    given-names: "Sam"
     affiliation: "Manchester Metropolitan University (MMU)"
     orcid: "https://orcid.org/0000-0002-4466-8374"
 license: MIT
@@ -25,7 +25,9 @@ keywords:
   - digital methods
   - Synthetic-media Discourse Analysis
 # This work was supported by Smart Data Research UK, a UKRI investment; Grant number UKRI4010.
-# Version 0.1.2 prepared: 6 October 2026. Version DOI pending Zenodo publication.
+date-released: 2026-10-16
+url: "https://sdavision.io/"
+# Codex and Claude Code provided AI-assisted development support under Dr Sam Martin's direction and review.
 # Software Concept DOI (all versions): 10.5281/zenodo.23008102
 
 # An academic research project of Synthetic Realities, led by Dr Sam Martin, Smart Data Research UK (UKRI) Fellow (Grant number UKRI4010.), Manchester Metropolitan University (MMU). ORCID: https://orcid.org/0000-0002-4466-8374.

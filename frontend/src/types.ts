@@ -83,6 +83,8 @@ export interface Meta {
 }
 
 export interface Report {
+  // Manually recorded external evidence; outside provider voting and scores.
+  external_checks?: import("./externalChecks").ExternalCheck[];
   consensus: Consensus;
   providers: ProviderResult[];
   frames: FrameSummary[];
@@ -234,6 +236,7 @@ export interface GraphNode {
   detail?: string;
   input_sha256?: string;
   audio_observations?: string;
+  external_checks?: string;
   cluster: number | null;
   community: number;
   degree: number;

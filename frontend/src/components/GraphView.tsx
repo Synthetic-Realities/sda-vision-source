@@ -273,6 +273,7 @@ export default function GraphView(
             {shown.finding && <p className="small">{shown.finding}</p>}
             {shown.detail && <p className="muted small">{shown.detail}</p>}
             {shown.audio_observations && <p className="muted small">{shown.audio_observations}</p>}
+            {shown.external_checks && <p className="muted small">{shown.external_checks}</p>}
             <dl>
               <div><dt>rating</dt><dd>{shown.rating == null ? "Not scored" : `${shown.rating}/100`}</dd></div>
               {shown.status && <div><dt>check status</dt><dd>{shown.status}</dd></div>}

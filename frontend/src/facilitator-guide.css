@@ -43,6 +43,13 @@
 .facilitator-guide .download { background:#eef7f7; border-left:5px solid #007e83; padding:28px; border-radius:8px; margin:24px 0 40px; }
 .facilitator-guide .download small { display:block; margin-top:14px; color:#425960; }
 .facilitator-guide .guide-credit { border-top:1px solid #d5e2e3; padding-top:24px; font-size:.875rem; color:#425960; }
+.facilitator-guide .checker-activity, .facilitator-guide .participant-steps { padding:30px 0; border-top:1px solid #d5e2e3; }
+.facilitator-guide .checker-activity figure { margin:24px 0; max-width:994px; }
+.facilitator-guide .checker-activity img { display:block; width:100%; height:auto; }
+.facilitator-guide .checker-activity figcaption { font-size:.875rem; margin-top:10px; color:#4a6067; }
+.facilitator-guide .participant-steps ol { padding-left:24px; display:grid; gap:16px; }
+.facilitator-guide .participant-steps p, .facilitator-guide .participant-steps ol, .facilitator-guide .checker-activity p { max-width:960px; }
+.facilitator-guide .participant-steps a { overflow-wrap:anywhere; }
 @media(max-width:650px) {
  .facilitator-guide { padding:8px 20px 20px; }
  .facilitator-guide .hero { grid-template-columns:1fr; grid-template-areas:"brand" "intro" "cover" "actions"; gap:20px; padding:0 0 16px; }

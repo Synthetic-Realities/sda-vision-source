@@ -50,10 +50,20 @@ check. Signer trust and content-binding integrity have separate recorded statuse
 Suno's optional API response records the vendor's credential finding separately
 from local validation. Failed requests and missing provenance leave origin
 unresolved by that check. Each optional audio/vendor request has its own consent
-control. AI-origin detection from the sound itself is outside this workflow.
+control. Built-in audio checks: AI-origin detection from the sound itself is outside this workflow.
+Manually recorded external watermark findings have their own file and coverage.
 
 Each vendor has its own terms and data-retention / training policies. Review provider terms
 alongside SDA's local storage and access settings when choosing which services to enable.
+
+The **External watermark check** downloads a selected original or derived image
+and links to SynthID Detector. Opening the link sends no media. Participants
+choose the upload on Google's website; Google receives that file and its
+metadata under its account settings and current terms, separately from SDA's
+API accounts. Selecting the checked file in SDA reads its hash in the browser.
+Its name, hash, size, reported scope, exact reply and optional operator name
+enter the browser-held manual record. Session exports retain those fields;
+saved research files on disk are not rewritten by this entry.
 
 The **Second Opinion** controls open the selected external service when clicked;
 the Gemini control also copies a checking prompt to the clipboard. You choose

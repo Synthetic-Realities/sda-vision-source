@@ -1,9 +1,32 @@
-# SDA Vision: prepared example archive
+# SDA Vision: Selected Prepared Examples
 
-The private preparation archive retains eleven examples: eight images, one PDF,
-one PPTX and one podcast. The current public demo uses ten of these;
-`illustration-1.png` and its recorded analysis remain in this private archive. Descriptive filenames indicate the type of material without naming its creator, generation service or source classification. Copies retain original bytes, embedded metadata, signatures and visible credits.
+Selected examples for software 0.1.3, 16 October 2026.
 
-All eleven examples now have fresh recorded Claude, OpenAI and Gemini assessments from the September 2026 refresh. Images were assessed individually; the PDF and presentation used four sampled images each. Podcast content was assessed from the first 12,000 characters (or less) of a fresh transcription; the report retains the first 4,000 characters and states its exact coverage. AI-origin detection from the sound itself is outside this workflow. Acquisition dates, models, uncertainty and local credential checks are recorded separately. Earlier reports remain preserved in the private preparation records and Git history.
+The recorded demo has ten menu examples: six images, one PDF, one presentation,
+one podcast and one animated video. A separate opening practice illustration
+brings the prepared-original total to eleven.
 
-The manifest records exact SHA-256 checksums. Originals sit alongside this file in the repository and in originals/ in a preparation bundle. See CREDITS.md for required attribution. See the separate media terms before onward reuse. The private facilitator source key is stored separately.
+| Role | Original files |
+| --- | --- |
+| Menu images | `animal-portrait.jpg`, `earth-image.jpg`, `illustration-2.png`, `journal-diagram.png`, `journal-image.png`, `social-media-image.png` |
+| Menu document and slides | `infographic.pdf`, `presentation.pptx` |
+| Menu audio and video | `podcast.m4a`, `animated-video.mov` |
+| Opening practice illustration | `illustration-1.png` |
+
+The release-pack builder records the exact ten menu entries and the separate
+opening practice illustration from the demo manifest. The original files and
+saved reports are copied unchanged and checked by SHA-256. No personal platform
+test films or new audio samples are added.
+
+The source archive contains the same eleven selected originals for
+researcher-operated use. Its live-analysis workflow is separate from the
+participant-facing recorded demo.
+
+An earlier preparation README described a private illustration and an older
+media count. This current inventory supersedes that description for this pack.
+The frozen media, reports and original credits are preserved. See
+`CREDITS.md` beside the selected originals for attribution and separate media
+terms. Private source keys and participant material are excluded.
+
+These examples include generated educational claims and are used for discussion.
+Their content and model assessments retain their recorded dates and scope.
